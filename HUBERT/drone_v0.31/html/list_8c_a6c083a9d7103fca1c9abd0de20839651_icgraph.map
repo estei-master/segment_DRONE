@@ -1,0 +1,17 @@
+<map id="vListRemove" name="vListRemove">
+<area shape="rect" id="node3" href="$croutine_8h.html#ab079c8617df3a965355be09a08a31342" title="vCoRoutineAddToDelayedList" alt="" coords="167,5,364,38"/>
+<area shape="rect" id="node5" href="$croutine_8c.html#a9f93b2dc51b9304e5d39091cb272d761" title="prvCheckPendingReadyList" alt="" coords="173,61,357,94"/>
+<area shape="rect" id="node9" href="$croutine_8c.html#ad2a4bb12a7662f26acca88b343e4c0fe" title="prvCheckDelayedList" alt="" coords="192,117,339,150"/>
+<area shape="rect" id="node12" href="$croutine_8h.html#a9d3b6fc4612f417a42fc92f072a19686" title="xCoRoutineRemoveFromEventList" alt="" coords="153,173,377,206"/>
+<area shape="rect" id="node14" href="$tasks_8c.html#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="205,374,325,407"/>
+<area shape="rect" id="node20" href="$tasks_8c.html#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="428,518,649,551"/>
+<area shape="rect" id="node24" href="$tasks_8c.html#a2d5845c73b2a52b45aadd74a7b539bc8" title="vTaskPlaceOnEventList" alt="" coords="457,411,620,445"/>
+<area shape="rect" id="node28" href="$tasks_8c.html#a981b9243e998fe9974993e48b4b2aa12" title="xTaskRemoveFromEventList" alt="" coords="171,229,360,262"/>
+<area shape="rect" id="node7" href="$croutine_8h.html#a5333c649a2c063006ca3cd7a3b5b9240" title="vCoRoutineSchedule" alt="" coords="467,35,611,69"/>
+<area shape="rect" id="node16" href="$queue_8c.html#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="708,385,849,418"/>
+<area shape="rect" id="node18" href="$queue_8c.html#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="699,281,859,314"/>
+<area shape="rect" id="node22" href="$tasks_8c.html#a36c7cc58985d41c2cb1b263563dbbaa1" title="portTASK_FUNCTION" alt="" coords="701,518,856,551"/>
+<area shape="rect" id="node31" href="$queue_8c.html#a6cf5fbaaec7bad15c9dfba98972e6888" title="xQueueGenericSendFromISR" alt="" coords="441,142,636,175"/>
+<area shape="rect" id="node34" href="$queue_8c.html#a90c76e200be70a810387a0f7429d810a" title="xQueueReceiveFromISR" alt="" coords="455,198,623,231"/>
+<area shape="rect" id="node36" href="$queue_8c.html#a3975057ee08e7c83269a256422ea9b38" title="prvUnlockQueue" alt="" coords="480,254,597,287"/>
+</map>

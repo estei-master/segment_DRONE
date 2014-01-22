@@ -1,0 +1,5 @@
+<map id="RCC_APB2PeriphResetCmd" name="RCC_APB2PeriphResetCmd">
+<area shape="rect" id="node3" href="$group__ADC__Group1.html#ga1962afdd9eebe5c896bbba2e4f26fe09" title="Deinitializes all ADCs peripherals registers to their default reset values. " alt="" coords="260,5,353,38"/>
+<area shape="rect" id="node5" href="$group__SYSCFG__Private__Functions.html#gaf2f9faa2df9a59a68ae17fae23bc478e" title="Deinitializes the Alternate Functions (remap and EXTI configuration) registers to their default reset..." alt="" coords="248,61,365,94"/>
+<area shape="rect" id="node7" href="$group__USART__Group1.html#ga2f8e1ce72da21b6539d8e1f299ec3b0d" title="Deinitializes the USARTx peripheral registers to their default reset values. " alt="" coords="252,117,361,150"/>
+</map>

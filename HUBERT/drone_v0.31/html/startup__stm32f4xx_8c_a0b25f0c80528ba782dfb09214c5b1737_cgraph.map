@@ -1,0 +1,51 @@
+<map id="Default_Reset_Handler" name="Default_Reset_Handler">
+<area shape="rect" id="node3" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="213,1326,264,1359"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a464ac1a014942c092b752b720c4ff294" title="prvSetupHardware" alt="" coords="319,61,449,94"/>
+<area shape="rect" id="node13" href="$drone_8c.html#a0724fb0f205cdcd54445b0bbb246dd44" title="prvInitDroneConfig" alt="" coords="319,117,449,150"/>
+<area shape="rect" id="node15" href="$drone_8c.html#aa93cacd884464cad591e6bb9bc161bcd" title="prvInitTestPeriph" alt="" coords="532,617,652,650"/>
+<area shape="rect" id="node19" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="977,673,1071,706"/>
+<area shape="rect" id="node21" href="$task_8h.html#a25ba1c4490c7e3ae11bc1e25192b12dc" title="xTaskGetTickCount" alt="" coords="955,1045,1093,1078"/>
+<area shape="rect" id="node45" href="$drone_8c.html#ae263682a12eb5f65afe246a9931efb07" title="prvSendError" alt="" coords="335,1665,433,1698"/>
+<area shape="rect" id="node47" href="$zigbee_8c.html#a086880a41e9dcff0444893eaa3aa5eac" title="vZigbeeReceiveData" alt="" coords="743,1178,887,1211"/>
+<area shape="rect" id="node53" href="$drone_8c.html#a1a48012129930abc6fec3f10590867f4" title="prvReboot" alt="" coords="343,1721,425,1754"/>
+<area shape="rect" id="node57" href="$drone_8c.html#ade91bfc77ee5354a85d413273f19ac0f" title="prvShutdown" alt="" coords="335,1777,433,1810"/>
+<area shape="rect" id="node59" href="$queue_8h.html#ab3b70d2ace0dea373bc8057dc2718046" title="xQueueCreate" alt="" coords="331,1833,437,1866"/>
+<area shape="rect" id="node61" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="513,1149,671,1182"/>
+<area shape="rect" id="node93" href="$drone_8c.html#abbdcc9b7762286ffa0216c945cb83a42" title="prvBatteryMonitoringTask" alt="" coords="507,1849,677,1882"/>
+<area shape="rect" id="node121" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="324,1558,444,1591"/>
+<area shape="rect" id="node162" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="515,1371,669,1405"/>
+<area shape="rect" id="node174" href="$drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="520,1265,664,1298"/>
+<area shape="rect" id="node183" href="$task_8h.html#aaf9dca1065c60abdeb309d56ab7293cb" title="vTaskStartScheduler" alt="" coords="313,1889,455,1922"/>
+<area shape="rect" id="node7" href="$group__CMSIS__Core__NVICFunctions.html#ga87c9aa8a70d937ab29cd805249846972" title="Set Priority Grouping. " alt="" coords="505,61,679,94"/>
+<area shape="rect" id="node9" href="$group__STM32F4xx__System__Private__Functions.html#ga93f514700ccf00d08dbdcff7f1224eb2" title="Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the Syst..." alt="" coords="549,117,635,150"/>
+<area shape="rect" id="node11" href="$group__STM32F4xx__System__Private__Functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f" title="Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable cont..." alt="" coords="507,5,677,38"/>
+<area shape="rect" id="node17" href="$gps_8c.html#afaa59ead95954d284cef53931b8a9b39" title="ucGPSInitTest" alt="" coords="761,589,868,622"/>
+<area shape="rect" id="node23" href="$imu_8c.html#a585f070e778f42d47703fb0b2b3402a4" title="ucIMUInitTest" alt="" coords="763,645,867,678"/>
+<area shape="rect" id="node27" href="$zigbee_8c.html#a3b7d284c2e4806df0c9b676ded44670b" title="ucZigbeeInitTest" alt="" coords="756,274,873,307"/>
+<area shape="rect" id="node31" href="$telemeter_8c.html#a0a690aa29f9fb858829e2f23df838068" title="ucTelemeterInitTest" alt="" coords="747,533,883,566"/>
+<area shape="rect" id="node35" href="$drone_8c.html#a2157f133b73a40a4e5f788ec29e842e5" title="ucBatteryInitTest" alt="" coords="755,701,875,734"/>
+<area shape="rect" id="node39" href="$task_8h.html#a9f1840f3a1d2527e76d301fc1a6aba37" title="pcTaskGetTaskName" alt="" coords="951,1503,1097,1537"/>
+<area shape="rect" id="node41" href="$task_8h.html#a77e34af34b3eb5b0cb8be413eee6b180" title="uxTaskPriorityGet" alt="" coords="961,1773,1087,1806"/>
+<area shape="rect" id="node55" href="$group__CMSIS__Core__NVICFunctions.html#gae543a9b5917245bd8ba7212744d2038d" title="System Reset. " alt="" coords="521,2519,663,2553"/>
+<area shape="rect" id="node64" href="$drone_8c.html#a52ed89dea0bcfffadeca6535234ee8a6" title="prvSafeGetDroneConfig" alt="" coords="735,1341,895,1374"/>
+<area shape="rect" id="node66" href="$drone_8c.html#a95e9ad134d650153cb01a06003aeb343" title="prvSafeGetDroneState" alt="" coords="737,1610,892,1643"/>
+<area shape="rect" id="node68" href="$telemeter_8c.html#ab4fff6ea13609ac80d79fdfeab2b472b" title="vTelemeterGetData" alt="" coords="748,858,881,891"/>
+<area shape="rect" id="node70" href="$telemeter_8c.html#a4dffe6c395c7511da8b58f4108f07b9f" title="ucTelemeterIsDataValid" alt="" coords="735,1071,895,1105"/>
+<area shape="rect" id="node76" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="739,1503,891,1537"/>
+<area shape="rect" id="node82" href="$drone_8c.html#afe4bece13abfc26bfff4fc4a4c80a175" title="prvSafeSetTelemeterData" alt="" coords="729,965,900,998"/>
+<area shape="rect" id="node88" href="$task_8h.html#a3033ef5b1abc8618ea205d1082b21bb6" title="vTaskDelayUntil" alt="" coords="756,1285,873,1318"/>
+<area shape="rect" id="node99" href="$drone_8c.html#a20dca1b3854cdf78a615e59568f885af" title="prvGetBatteryLvl" alt="" coords="755,1885,875,1918"/>
+<area shape="rect" id="node106" href="$drone_8c.html#abfc35b7fc0649dac5fb29fc313d4e1dc" title="prvBatteryValid" alt="" coords="760,2255,869,2289"/>
+<area shape="rect" id="node108" href="$drone_8c.html#a60082ba0309194b6c32f3c0385e135f3" title="prvSafeSetBatteryData" alt="" coords="736,1829,893,1862"/>
+<area shape="rect" id="node114" href="$drone_8c.html#a1c264049cf21d075ca999e8baed2b722" title="prvSafeGetBatteryData" alt="" coords="736,2362,893,2395"/>
+<area shape="rect" id="node118" href="$drone_8c.html#a933cc0454396f7bcf7739819287e8403" title="prvBatteryCritical" alt="" coords="753,2143,876,2177"/>
+<area shape="rect" id="node129" href="$imu_8c.html#ac4ad027278ff7ebbcd4b4f1686aaa404" title="vIMUGetData" alt="" coords="764,1773,865,1806"/>
+<area shape="rect" id="node135" href="$imu_8c.html#a11e78f1736ae8585497eff9eafe5ea07" title="eIMUIsDataValid" alt="" coords="755,1447,875,1481"/>
+<area shape="rect" id="node141" href="$drone_8c.html#a7108c3d763912fb80781465b0b15f0a7" title="prvSafeGetIMUData" alt="" coords="744,2199,885,2233"/>
+<area shape="rect" id="node144" href="$drone_8c.html#a6e476734aad041a30d224248842252ee" title="prvSafeSetIMUData" alt="" coords="745,1717,884,1750"/>
+<area shape="rect" id="node150" href="$drone_8c.html#a7cf7884f575110d3c64162edc8e1fa95" title="prvSafeGetTelemeterData" alt="" coords="505,1742,679,1775"/>
+<area shape="rect" id="node153" href="$drone_8c.html#ad2163c1693d3186f6bf764a939764c90" title="prvSafeGetGPSData" alt="" coords="520,1955,664,1989"/>
+<area shape="rect" id="node155" href="$drone_8c.html#a02c9abf2df2882099febd3a5329e94ad" title="prvSafeGetZigbeeData" alt="" coords="515,1478,669,1511"/>
+<area shape="rect" id="node157" href="$drone_8c.html#ae749156ddeaadb095f1dab13cd3d4b0d" title="prvHandleTimouts" alt="" coords="528,1585,656,1618"/>
+<area shape="rect" id="node160" href="$drone_8c.html#a8675332e0b2080876b3a17ee1bcd17a3" title="prvObstacleDetected" alt="" coords="520,2413,664,2446"/>
+</map>

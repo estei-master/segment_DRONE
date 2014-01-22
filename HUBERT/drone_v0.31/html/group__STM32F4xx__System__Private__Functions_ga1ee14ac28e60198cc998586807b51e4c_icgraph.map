@@ -1,0 +1,6 @@
+<map id="SetSysClock" name="SetSysClock">
+<area shape="rect" id="node3" href="$group__STM32F4xx__System__Exported__Functions.html#ga93f514700ccf00d08dbdcff7f1224eb2" title="Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the Syst..." alt="" coords="152,5,237,38"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a464ac1a014942c092b752b720c4ff294" title="prvSetupHardware" alt="" coords="285,5,416,38"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="464,5,515,38"/>
+<area shape="rect" id="node9" href="$startup__stm32f4xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="564,5,721,38"/>
+</map>

@@ -1,0 +1,30 @@
+<map id="cmsis_lib/include/stm32f4xx_usart.h" name="cmsis_lib/include/stm32f4xx_usart.h">
+<area shape="rect" id="node3" href="$stm32f4xx__usart_8c.html" title="This file provides firmware functions to manage the following functionalities of the Universal synchr..." alt="" coords="309,110,493,165"/>
+<area shape="rect" id="node5" href="$debug_8h.html" title="debug.h" alt="" coords="517,121,583,154"/>
+<area shape="rect" id="node7" href="$common_8h.html" title="common.h" alt="" coords="227,433,310,466"/>
+<area shape="rect" id="node54" href="$debug_8c.html" title="debug.c" alt="" coords="517,225,583,258"/>
+<area shape="rect" id="node56" href="$FreeRTOSConfig_8h.html" title="FreeRTOS/Source/include\l/FreeRTOSConfig.h" alt="" coords="691,214,865,269"/>
+<area shape="rect" id="node9" href="$drone_8h.html" title="drone.h" alt="" coords="22,609,86,642"/>
+<area shape="rect" id="node13" href="$zigbee_8h.html" title="zigbee.h" alt="" coords="26,691,95,725"/>
+<area shape="rect" id="node19" href="$flight_8h.html" title="flight.h" alt="" coords="238,609,299,642"/>
+<area shape="rect" id="node25" href="$imu_8h.html" title="imu.h" alt="" coords="177,526,230,559"/>
+<area shape="rect" id="node31" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="315,526,401,559"/>
+<area shape="rect" id="node37" href="$gps_8h.html" title="gps.h" alt="" coords="643,526,697,559"/>
+<area shape="rect" id="node42" href="$pwm_8h.html" title="pwm.h" alt="" coords="558,609,619,642"/>
+<area shape="rect" id="node49" href="$pid_8h.html" title="pid.h" alt="" coords="483,609,534,642"/>
+<area shape="rect" id="node11" href="$drone_8c.html" title="drone.c" alt="" coords="390,774,454,807"/>
+<area shape="rect" id="node16" href="$zigbee_8c.html" title="zigbee.c" alt="" coords="26,774,95,807"/>
+<area shape="rect" id="node23" href="$flight_8c.html" title="flight.c" alt="" coords="315,691,377,725"/>
+<area shape="rect" id="node29" href="$imu_8c.html" title="imu.c" alt="" coords="110,609,163,642"/>
+<area shape="rect" id="node35" href="$telemeter_8c.html" title="telemeter.c" alt="" coords="323,609,409,642"/>
+<area shape="rect" id="node40" href="$gps_8c.html" title="gps.c" alt="" coords="643,609,697,642"/>
+<area shape="rect" id="node45" href="$pid_8c.html" title="pid.c" alt="" coords="510,691,561,725"/>
+<area shape="rect" id="node47" href="$pwm_8c.html" title="pwm.c" alt="" coords="635,691,697,725"/>
+<area shape="rect" id="node58" href="$FreeRTOS_8h.html" title="FreeRTOS/Source/include\l/FreeRTOS.h" alt="" coords="734,318,907,373"/>
+<area shape="rect" id="node62" href="$croutine_8c.html" title="FreeRTOS/Source/croutine.c" alt="" coords="334,433,523,466"/>
+<area shape="rect" id="node64" href="$list_8c.html" title="FreeRTOS/Source/list.c" alt="" coords="547,433,707,466"/>
+<area shape="rect" id="node66" href="$port_8c.html" title="FreeRTOS/Source/portable\l/GCC/ARM_CM4F/port.c" alt="" coords="731,422,910,477"/>
+<area shape="rect" id="node68" href="$queue_8c.html" title="FreeRTOS/Source/queue.c" alt="" coords="934,433,1113,466"/>
+<area shape="rect" id="node70" href="$tasks_8c.html" title="FreeRTOS/Source/tasks.c" alt="" coords="1137,433,1313,466"/>
+<area shape="rect" id="node72" href="$timers_8c.html" title="FreeRTOS/Source/timers.c" alt="" coords="1337,433,1515,466"/>
+</map>

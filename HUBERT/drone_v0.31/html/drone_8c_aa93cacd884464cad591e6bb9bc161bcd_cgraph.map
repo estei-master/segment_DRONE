@@ -1,0 +1,8 @@
+<map id="prvInitTestPeriph" name="prvInitTestPeriph">
+<area shape="rect" id="node3" href="$gps_8c.html#afaa59ead95954d284cef53931b8a9b39" title="ucGPSInitTest" alt="" coords="192,5,299,35"/>
+<area shape="rect" id="node7" href="$imu_8c.html#a585f070e778f42d47703fb0b2b3402a4" title="ucIMUInitTest" alt="" coords="193,59,297,88"/>
+<area shape="rect" id="node10" href="$zigbee_8c.html#a3b7d284c2e4806df0c9b676ded44670b" title="ucZigbeeInitTest" alt="" coords="187,112,304,141"/>
+<area shape="rect" id="node13" href="$telemeter_8c.html#a0a690aa29f9fb858829e2f23df838068" title="ucTelemeterInitTest" alt="" coords="176,165,315,195"/>
+<area shape="rect" id="node16" href="$drone_8c.html#a2157f133b73a40a4e5f788ec29e842e5" title="ucBatteryInitTest" alt="" coords="184,219,307,248"/>
+<area shape="rect" id="node5" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="364,112,457,141"/>
+</map>

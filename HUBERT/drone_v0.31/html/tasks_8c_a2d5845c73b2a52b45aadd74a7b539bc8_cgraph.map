@@ -1,0 +1,6 @@
+<map id="vTaskPlaceOnEventList" name="vTaskPlaceOnEventList">
+<area shape="rect" id="node3" href="$list_8h.html#ae0c352207d36c7ba3fa1b970b1eadd51" title="vListInsert" alt="" coords="483,64,565,97"/>
+<area shape="rect" id="node5" href="$list_8h.html#a6c083a9d7103fca1c9abd0de20839651" title="vListRemove" alt="" coords="276,35,375,68"/>
+<area shape="rect" id="node7" href="$list_8h.html#aa234bf74629ff34fbd8494a0f0112b42" title="vListInsertEnd" alt="" coords="272,91,379,124"/>
+<area shape="rect" id="node9" href="$tasks_8c.html#a63b6676755c95a6ad2eb5587f374d14c" title="prvAddCurrentTaskToDelayedList" alt="" coords="217,147,433,180"/>
+</map>

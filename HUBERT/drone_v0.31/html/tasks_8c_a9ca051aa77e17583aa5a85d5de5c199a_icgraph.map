@@ -1,0 +1,9 @@
+<map id="vApplicationTickHook" name="vApplicationTickHook">
+<area shape="rect" id="node3" href="$tasks_8c.html#a1fa96a475aac1442de1fa279810e9723" title="vTaskIncrementTick" alt="" coords="204,33,343,66"/>
+<area shape="rect" id="node5" href="$port_8c.html#a78100b2d36913d0b45565be8975e5de8" title="xPortSysTickHandler" alt="" coords="392,5,539,38"/>
+<area shape="rect" id="node7" href="$tasks_8c.html#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="405,61,525,94"/>
+<area shape="rect" id="node9" href="$queue_8c.html#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="628,5,769,38"/>
+<area shape="rect" id="node11" href="$queue_8c.html#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="619,61,779,94"/>
+<area shape="rect" id="node13" href="$tasks_8c.html#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="588,117,809,150"/>
+<area shape="rect" id="node15" href="$tasks_8c.html#a36c7cc58985d41c2cb1b263563dbbaa1" title="portTASK_FUNCTION" alt="" coords="859,117,1013,150"/>
+</map>

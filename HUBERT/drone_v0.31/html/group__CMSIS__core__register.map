@@ -1,0 +1,9 @@
+<map id="CMSIS Core Register" name="CMSIS Core Register">
+<area shape="rect" id="node1" href="$group__CMSIS__CORE.html" title="CMSIS Core" alt="" coords="237,5,333,38"/>
+<area shape="rect" id="node2" href="$group__CMSIS__SysTick.html" title="CMSIS SysTick" alt="" coords="227,61,344,94"/>
+<area shape="rect" id="node3" href="$group__CMSIS__NVIC.html" title="CMSIS NVIC" alt="" coords="235,117,336,150"/>
+<area shape="rect" id="node4" href="$group__CMSIS__SCnSCB.html" title="CMSIS System Control\l and ID Register not\l in the SCB" alt="" coords="205,173,365,249"/>
+<area shape="rect" id="node5" href="$group__CMSIS__SCB.html" title="CMSIS SCB" alt="" coords="237,271,333,305"/>
+<area shape="rect" id="node6" href="$group__CMSIS__CoreDebug.html" title="CMSIS Core Debug" alt="" coords="216,327,355,361"/>
+<area shape="rect" id="node7" href="$group__CMSIS__ITM.html" title="CMSIS ITM" alt="" coords="240,383,331,417"/>
+</map>

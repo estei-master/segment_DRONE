@@ -1,0 +1,7 @@
+<map id="xTaskRemoveFromEventList" name="xTaskRemoveFromEventList">
+<area shape="rect" id="node3" href="$queue_8c.html#a1ff8f61508bc9c0fa0abc44750fc1981" title="xQueueGenericSend" alt="" coords="497,46,639,79"/>
+<area shape="rect" id="node5" href="$queue_8c.html#a6cf5fbaaec7bad15c9dfba98972e6888" title="xQueueGenericSendFromISR" alt="" coords="245,31,440,64"/>
+<area shape="rect" id="node7" href="$queue_8c.html#a0424dce690a6a65558f16cc229b767bf" title="xQueueGenericReceive" alt="" coords="488,128,648,162"/>
+<area shape="rect" id="node9" href="$queue_8c.html#a90c76e200be70a810387a0f7429d810a" title="xQueueReceiveFromISR" alt="" coords="259,143,427,176"/>
+<area shape="rect" id="node11" href="$queue_8c.html#a3975057ee08e7c83269a256422ea9b38" title="prvUnlockQueue" alt="" coords="284,87,401,120"/>
+</map>

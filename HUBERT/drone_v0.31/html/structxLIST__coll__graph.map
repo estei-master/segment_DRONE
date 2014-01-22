@@ -1,0 +1,4 @@
+<map id="xLIST" name="xLIST">
+<area shape="rect" id="node2" href="$structxMINI__LIST__ITEM.html" title="{xMINI_LIST_ITEM\n|+ xItemValue\l|}" alt="" coords="111,238,241,335"/>
+<area shape="rect" id="node4" href="$structxLIST__ITEM.html" title="{xLIST_ITEM\n|+ pvContainer\l+ pvOwner\l+ xItemValue\l|}" alt="" coords="24,6,128,146"/>
+</map>

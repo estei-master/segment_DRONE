@@ -1,0 +1,4 @@
+<map id="RCC_GetClocksFreq" name="RCC_GetClocksFreq">
+<area shape="rect" id="node3" href="$group__USART__Group1.html#ga98da340ea0324002ba1b4263e91ab2ff" title="Initializes the USARTx peripheral according to the specified parameters in the USART_InitStruct ..." alt="" coords="200,5,293,38"/>
+<area shape="rect" id="node5" href="$debug_8h.html#a1725f43d8313e898e39fa36b535ea337" title="vDebugUARTInit" alt="" coords="341,5,464,38"/>
+</map>

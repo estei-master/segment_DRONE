@@ -1,0 +1,4 @@
+<map id="vDebugUARTPutchar" name="vDebugUARTPutchar">
+<area shape="rect" id="node3" href="$group__USART.html#ga144630722defc9e312f0ad280b68e9da" title="Checks whether the specified USART flag is set or not. " alt="" coords="204,5,361,38"/>
+<area shape="rect" id="node5" href="$group__USART.html#ga0b43d42da9540f446d494bf69823c6fb" title="Transmits single data through the USARTx peripheral. " alt="" coords="216,61,349,94"/>
+</map>

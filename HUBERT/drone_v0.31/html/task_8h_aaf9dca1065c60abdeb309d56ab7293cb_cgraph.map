@@ -1,0 +1,6 @@
+<map id="vTaskStartScheduler" name="vTaskStartScheduler">
+<area shape="rect" id="node3" href="$timers_8h.html#afa1839b93b802bf35d83a517c28a7ddb" title="xTimerCreateTimerTask" alt="" coords="197,5,360,38"/>
+<area shape="rect" id="node5" href="$portable_8h.html#a753e556d14df28a4e9ebf5418a886e61" title="xPortStartScheduler" alt="" coords="209,61,348,94"/>
+<area shape="rect" id="node7" href="$port_8c.html#a397ed34de04a678dc71217c713763423" title="prvSetupTimerInterrupt" alt="" coords="408,33,563,66"/>
+<area shape="rect" id="node9" href="$port_8c.html#a5cfc38319f17c8e804020ec247b6325d" title="vPortStartFirstTask" alt="" coords="419,89,552,122"/>
+</map>

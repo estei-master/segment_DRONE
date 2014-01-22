@@ -1,0 +1,20 @@
+<map id="cmsis_lib/include/misc.h" name="cmsis_lib/include/misc.h">
+<area shape="rect" id="node3" href="$misc_8c.html" title="This file provides all the miscellaneous firmware functions (add&#45;on to CMSIS functions). " alt="" coords="127,89,290,122"/>
+<area shape="rect" id="node5" href="$common_8h.html" title="common.h" alt="" coords="314,89,397,122"/>
+<area shape="rect" id="node7" href="$drone_8h.html" title="drone.h" alt="" coords="22,254,86,287"/>
+<area shape="rect" id="node11" href="$zigbee_8h.html" title="zigbee.h" alt="" coords="26,337,95,370"/>
+<area shape="rect" id="node17" href="$flight_8h.html" title="flight.h" alt="" coords="366,254,427,287"/>
+<area shape="rect" id="node23" href="$imu_8h.html" title="imu.h" alt="" coords="293,171,346,205"/>
+<area shape="rect" id="node29" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="442,171,527,205"/>
+<area shape="rect" id="node35" href="$gps_8h.html" title="gps.h" alt="" coords="174,171,227,205"/>
+<area shape="rect" id="node40" href="$pwm_8h.html" title="pwm.h" alt="" coords="709,254,770,287"/>
+<area shape="rect" id="node47" href="$pid_8h.html" title="pid.h" alt="" coords="611,254,662,287"/>
+<area shape="rect" id="node9" href="$drone_8c.html" title="drone.c" alt="" coords="269,419,333,453"/>
+<area shape="rect" id="node14" href="$zigbee_8c.html" title="zigbee.c" alt="" coords="26,419,95,453"/>
+<area shape="rect" id="node21" href="$flight_8c.html" title="flight.c" alt="" coords="526,337,587,370"/>
+<area shape="rect" id="node27" href="$imu_8c.html" title="imu.c" alt="" coords="289,254,342,287"/>
+<area shape="rect" id="node33" href="$telemeter_8c.html" title="telemeter.c" alt="" coords="451,254,537,287"/>
+<area shape="rect" id="node38" href="$gps_8c.html" title="gps.c" alt="" coords="110,254,163,287"/>
+<area shape="rect" id="node43" href="$pid_8c.html" title="pid.c" alt="" coords="662,337,713,370"/>
+<area shape="rect" id="node45" href="$pwm_8c.html" title="pwm.c" alt="" coords="787,337,849,370"/>
+</map>

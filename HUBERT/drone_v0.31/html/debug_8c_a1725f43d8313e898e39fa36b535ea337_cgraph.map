@@ -1,0 +1,9 @@
+<map id="vDebugUARTInit" name="vDebugUARTInit">
+<area shape="rect" id="node3" href="$group__RCC.html#ga80c89116820d48bb38db2e7d5e5a49b9" title="Enables or disables the AHB1 peripheral clock. " alt="" coords="177,5,369,38"/>
+<area shape="rect" id="node5" href="$group__RCC.html#ga56ff55caf8d835351916b40dd030bc87" title="Enables or disables the High Speed APB (APB2) peripheral clock. " alt="" coords="177,61,369,94"/>
+<area shape="rect" id="node7" href="$group__GPIO.html#ga0a77617a322562ae84f8d72486032c5d" title="Changes the mapping of the specified pin. " alt="" coords="205,117,341,150"/>
+<area shape="rect" id="node9" href="$group__GPIO.html#ga71abf9404261370d03cca449b88d3a65" title="Initializes the GPIOx peripheral according to the specified parameters in the GPIO_InitStruct. " alt="" coords="233,173,313,206"/>
+<area shape="rect" id="node11" href="$group__USART.html#ga98da340ea0324002ba1b4263e91ab2ff" title="Initializes the USARTx peripheral according to the specified parameters in the USART_InitStruct ..." alt="" coords="227,229,320,262"/>
+<area shape="rect" id="node15" href="$group__USART.html#ga45e51626739c5f22a6567c8a85d1d85e" title="Enables or disables the specified USART peripheral. " alt="" coords="223,285,324,318"/>
+<area shape="rect" id="node13" href="$group__RCC.html#ga3e9944fd1ed734275222bbb3e3f29993" title="Returns the frequencies of different on chip clocks; SYSCLK, HCLK, PCLK1 and PCLK2. " alt="" coords="419,229,565,262"/>
+</map>

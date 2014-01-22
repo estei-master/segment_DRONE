@@ -1,0 +1,40 @@
+#ifndef TELEMETER_H
+#define TELEMETER_H
+
+#include "common.h"
+
+/* Telemeter identifiers. Values can be used as non-exclusive masks */
+enum telemeterId
+{
+	TLM_NONE = 0x00,	/* Null value, for mask initialization */
+	TLM_FRT = 0x01,		/* Front telemeter */
+	TLM_LFT_FRT = 0x02,	/* Left front telemeter */
+	TLM_LFT_BCK = 0X04,	/* Left back telemeter */
+	TLM_RGT_FRT = 0x08,	/* Right front telemeter */
+	TLM_RGT_BCK = 0x10,	/* Right back telemeter */
+	TLM_BCK = 0x20,		/* Back telemeter */
+	TLM_BOT	= 0x40		/* Bottom telemeter */
+};
+
+/* Measured distance for each 7 telemeter */
+struct telemeterData
+{
+	uint32_t ulFrontDist;		/* Front telemeter */
+	uint32_t ulLeftFrontDist;	/* Left front telemeter */
+	uint32_t ulLeftBackDist;	/* Left back telemeter */
+	uint32_t ulRightFrontDist;	/* Right front telemeter */
+	uint32_t ulRightBackDist;	/* Right back telemeter */
+	uint32_t ulBackDist;		/* Back telemeter */
+	uint32_t ulBottomDist;		/* Bottom telemeter */
+	enum telemeterId eIdMask;
+};
+
+inline void vTelemeterInit( void );
+inline uint8_t ucTelemeterInitTest( void );
+inline uint8_t ucTelemeterTest( void );
+inline uint32_t ulTelemeterGetDist( const enum telemeterId eTelemeterId );
+inline uint8_t ucTelemeterIsIdValid( const enum telemeterId eTelemeterId );
+inline uint8_t ucTelemeterIsDataValid( const struct telemeterData * const pxTelemeterData );
+inline void vTelemeterGetData( struct telemeterData * const pxNewTlmData );
+
+#endif /* TELEMETER_H */

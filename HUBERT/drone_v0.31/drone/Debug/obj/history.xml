@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DHSE_VALUE=8000000 -D__FPU_USED -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -IZ:\projet_drone\projet_CoIDE\drone_v0.31 -IZ:\projet_drone\projet_CoIDE -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS\Source\portable -IZ:\projet_drone\projet_CoIDE\drone_v0.31\semihosting -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS\Source\include -IZ:\projet_drone\projet_CoIDE\drone_v0.31\cmsis_lib\include -IZ:\projet_drone\projet_CoIDE\drone_v0.31\cmsis_boot -IZ:\projet_drone -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS\Source\portable\GCC\ARM_CM4F -IZ:\projet_drone\projet_CoIDE\drone_v0.31\cmsis_lib -IZ:\projet_drone\projet_CoIDE\drone_v0.31\cmsis -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS\Source\portable\GCC -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS -IZ:\projet_drone\projet_CoIDE\drone_v0.31\FreeRTOS\Source">
+      <target file="imu.o" lastModified="143b9ebe8b7">
+         <source file="..\..\..\imu.c" lastModified="143b6a64aa0"/>
+      </target>
+      <target file="stm32f4xx_exti.o" lastModified="143b9ec255d">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="142f7181d30"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="143b9ec0bcc">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="142e2005570"/>
+      </target>
+      <target file="drone.o" lastModified="143b9ec060e">
+         <source file="..\..\..\drone.c" lastModified="143b9eba800"/>
+      </target>
+      <target file="gps.o" lastModified="143b9ec17e3">
+         <source file="..\..\..\gps.c" lastModified="143a63f7060"/>
+      </target>
+      <target file="tasks.o" lastModified="143b9ec0a01">
+         <source file="..\..\..\FreeRTOS\Source\tasks.c" lastModified="1434490fff0"/>
+      </target>
+      <target file="stm32f4xx_syscfg.o" lastModified="143b9ebe5cb">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="142f7188a90"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="143b9ebf585">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="142e2005570"/>
+      </target>
+      <target file="croutine.o" lastModified="143b9ec23b6">
+         <source file="..\..\..\FreeRTOS\Source\croutine.c" lastModified="142e2002690"/>
+      </target>
+      <target file="stm32f4xx_adc.o" lastModified="143b9ebfc48">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_adc.c" lastModified="142e2008450"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="143b9ec109c">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="142e2005570"/>
+      </target>
+      <target file="printf.o" lastModified="143b9ec0204">
+         <source file="..\..\..\stdio\printf.c" lastModified="143778203f0"/>
+      </target>
+      <target file="misc.o" lastModified="143b9ec2709">
+         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="142f71882c0"/>
+      </target>
+      <target file="pid.o" lastModified="143b9ec29fc">
+         <source file="..\..\..\pid.c" lastModified="14379362460"/>
+      </target>
+      <target file="stm32f4xx_dma.o" lastModified="143b9ec147c">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="142e20074b0"/>
+      </target>
+      <target file="pwm.o" lastModified="143b9ebf352">
+         <source file="..\..\..\pwm.c" lastModified="143b6a54100"/>
+      </target>
+      <target file="zigbee.o" lastModified="143b9ebed7b">
+         <source file="..\..\..\zigbee.c" lastModified="1439cd2eed0"/>
+      </target>
+      <target file="queue.o" lastModified="143b9ec1e4b">
+         <source file="..\..\..\FreeRTOS\Source\queue.c" lastModified="14338d12820"/>
+      </target>
+      <target file="debug.o" lastModified="143b9ec20ca">
+         <source file="..\..\..\debug.c" lastModified="143b6b4aa50"/>
+      </target>
+      <target file="list.o" lastModified="143b9ec0f0c">
+         <source file="..\..\..\FreeRTOS\Source\list.c" lastModified="142e2002690"/>
+      </target>
+      <target file="stm32f4xx_rcc.o" lastModified="143b9ebf75f">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="142e2005d40"/>
+      </target>
+      <target file="port.o" lastModified="143b9ec1abe">
+         <source file="..\..\..\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c" lastModified="142e2002690"/>
+      </target>
+      <target file="stm32f4xx_dac.o" lastModified="143b9ebf517">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_dac.c" lastModified="1436946aca0"/>
+      </target>
+      <target file="telemeter.o" lastModified="143b9ebf056">
+         <source file="..\..\..\telemeter.c" lastModified="143b9e6171c"/>
+      </target>
+      <target file="timers.o" lastModified="143b9ebfa3c">
+         <source file="..\..\..\FreeRTOS\Source\timers.c" lastModified="142e2002690"/>
+      </target>
+      <target file="syscalls.o" lastModified="143b9ec1274">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="142e2000750"/>
+      </target>
+      <target file="sh_cmd.o" lastModified="143b9ec0beb">
+         <source file="..\..\..\semihosting\sh_cmd.s" lastModified="142e2000750"/>
+      </target>
+      <target file="flight.o" lastModified="143b9ebff43">
+         <source file="..\..\..\flight.c" lastModified="143b6a7e0e0"/>
+      </target>
+      <target file="semihosting.o" lastModified="143b9ebe42a">
+         <source file="..\..\..\semihosting\semihosting.c" lastModified="142eb65f160"/>
+      </target>
+      <target file="stm32f4xx_usart.o" lastModified="143b9ebea86">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_usart.c" lastModified="1436c45d340"/>
+      </target>
+   </processor>
+</history>

@@ -1,0 +1,49 @@
+<map id="cmsis/core_cm4.h" name="cmsis/core_cm4.h">
+<area shape="rect" id="node3" href="$stm32f4xx_8h.html" title="CMSIS Cortex&#45;M4 Device Peripheral Access Layer Header File. This file contains all the peripheral reg..." alt="" coords="1627,89,1792,122"/>
+<area shape="rect" id="node5" href="$system__stm32f4xx_8c.html" title="CMSIS Cortex&#45;M4 Device Peripheral Access Layer System Source File. This file contains the system cloc..." alt="" coords="517,182,731,215"/>
+<area shape="rect" id="node7" href="$misc_8h.html" title="This file contains all the functions prototypes for the miscellaneous firmware library functions (add..." alt="" coords="2555,182,2720,215"/>
+<area shape="rect" id="node11" href="$common_8h.html" title="common.h" alt="" coords="1597,598,1680,631"/>
+<area shape="rect" id="node58" href="$stm32f4xx__adc_8h.html" title="This file contains all the functions prototypes for the ADC firmware library. " alt="" coords="1616,171,1803,226"/>
+<area shape="rect" id="node62" href="$stm32f4xx__dac_8h.html" title="This file contains all the functions prototypes for the DAC firmware library. " alt="" coords="1827,171,2013,226"/>
+<area shape="rect" id="node66" href="$stm32f4xx__dma_8h.html" title="This file contains all the functions prototypes for the DMA firmware library. " alt="" coords="2037,171,2224,226"/>
+<area shape="rect" id="node70" href="$stm32f4xx__exti_8h.html" title="This file contains all the functions prototypes for the EXTI firmware library. " alt="" coords="2744,171,2931,226"/>
+<area shape="rect" id="node75" href="$stm32f4xx__gpio_8h.html" title="This file contains all the functions prototypes for the GPIO firmware library. " alt="" coords="939,171,1125,226"/>
+<area shape="rect" id="node80" href="$debug_8h.html" title="debug.h" alt="" coords="856,286,923,319"/>
+<area shape="rect" id="node85" href="$FreeRTOSConfig_8h.html" title="FreeRTOS/Source/include\l/FreeRTOSConfig.h" alt="" coords="608,379,781,434"/>
+<area shape="rect" id="node103" href="$stm32f4xx__rcc_8h.html" title="This file contains all the functions prototypes for the RCC firmware library. " alt="" coords="1405,171,1592,226"/>
+<area shape="rect" id="node117" href="$stm32f4xx__syscfg_8h.html" title="This file contains all the functions prototypes for the SYSCFG firmware library. " alt="" coords="2248,171,2435,226"/>
+<area shape="rect" id="node121" href="$stm32f4xx__usart_8h.html" title="This file contains all the functions prototypes for the USART firmware library. " alt="" coords="1153,171,1340,226"/>
+<area shape="rect" id="node9" href="$misc_8c.html" title="This file provides all the miscellaneous firmware functions (add&#45;on to CMSIS functions). " alt="" coords="2605,286,2768,319"/>
+<area shape="rect" id="node13" href="$drone_8h.html" title="drone.h" alt="" coords="1312,774,1376,807"/>
+<area shape="rect" id="node17" href="$zigbee_8h.html" title="zigbee.h" alt="" coords="1324,857,1393,890"/>
+<area shape="rect" id="node23" href="$flight_8h.html" title="flight.h" alt="" coords="1560,774,1621,807"/>
+<area shape="rect" id="node29" href="$imu_8h.html" title="imu.h" alt="" coords="1645,691,1699,725"/>
+<area shape="rect" id="node35" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="1481,691,1567,725"/>
+<area shape="rect" id="node41" href="$gps_8h.html" title="gps.h" alt="" coords="1773,691,1827,725"/>
+<area shape="rect" id="node46" href="$pwm_8h.html" title="pwm.h" alt="" coords="1993,774,2055,807"/>
+<area shape="rect" id="node53" href="$pid_8h.html" title="pid.h" alt="" coords="1901,774,1952,807"/>
+<area shape="rect" id="node15" href="$drone_8c.html" title="drone.c" alt="" coords="1559,939,1623,973"/>
+<area shape="rect" id="node20" href="$zigbee_8c.html" title="zigbee.c" alt="" coords="1324,939,1393,973"/>
+<area shape="rect" id="node27" href="$flight_8c.html" title="flight.c" alt="" coords="1765,857,1827,890"/>
+<area shape="rect" id="node33" href="$imu_8c.html" title="imu.c" alt="" coords="1645,774,1699,807"/>
+<area shape="rect" id="node39" href="$telemeter_8c.html" title="telemeter.c" alt="" coords="1400,774,1485,807"/>
+<area shape="rect" id="node44" href="$gps_8c.html" title="gps.c" alt="" coords="1773,774,1827,807"/>
+<area shape="rect" id="node49" href="$pid_8c.html" title="pid.c" alt="" coords="1952,857,2003,890"/>
+<area shape="rect" id="node51" href="$pwm_8c.html" title="pwm.c" alt="" coords="2077,857,2139,890"/>
+<area shape="rect" id="node60" href="$stm32f4xx__adc_8c.html" title="This file provides firmware functions to manage the following functionalities of the Analog to Digita..." alt="" coords="1621,275,1805,330"/>
+<area shape="rect" id="node64" href="$stm32f4xx__dac_8c.html" title="This file provides firmware functions to manage the following functionalities of the Digital&#45;to&#45;Analo..." alt="" coords="1829,275,2013,330"/>
+<area shape="rect" id="node68" href="$stm32f4xx__dma_8c.html" title="This file provides firmware functions to manage the following functionalities of the Direct Memory Ac..." alt="" coords="2037,275,2221,330"/>
+<area shape="rect" id="node72" href="$stm32f4xx__exti_8c.html" title="This file provides firmware functions to manage the following functionalities of the EXTI peripheral:..." alt="" coords="2843,275,3027,330"/>
+<area shape="rect" id="node77" href="$stm32f4xx__gpio_8c.html" title="This file provides firmware functions to manage the following functionalities of the GPIO peripheral:..." alt="" coords="947,275,1131,330"/>
+<area shape="rect" id="node83" href="$debug_8c.html" title="debug.c" alt="" coords="856,390,923,423"/>
+<area shape="rect" id="node87" href="$FreeRTOS_8h.html" title="FreeRTOS/Source/include\l/FreeRTOS.h" alt="" coords="608,483,781,538"/>
+<area shape="rect" id="node91" href="$croutine_8c.html" title="FreeRTOS/Source/croutine.c" alt="" coords="208,598,397,631"/>
+<area shape="rect" id="node93" href="$list_8c.html" title="FreeRTOS/Source/list.c" alt="" coords="421,598,581,631"/>
+<area shape="rect" id="node95" href="$port_8c.html" title="FreeRTOS/Source/portable\l/GCC/ARM_CM4F/port.c" alt="" coords="605,587,784,642"/>
+<area shape="rect" id="node97" href="$queue_8c.html" title="FreeRTOS/Source/queue.c" alt="" coords="808,598,987,631"/>
+<area shape="rect" id="node99" href="$tasks_8c.html" title="FreeRTOS/Source/tasks.c" alt="" coords="1011,598,1187,631"/>
+<area shape="rect" id="node101" href="$timers_8c.html" title="FreeRTOS/Source/timers.c" alt="" coords="5,598,184,631"/>
+<area shape="rect" id="node109" href="$stm32f4xx__rcc_8c.html" title="This file provides firmware functions to manage the following functionalities of the Reset and clock ..." alt="" coords="1413,275,1597,330"/>
+<area shape="rect" id="node111" href="$stm32f4xx__syscfg_8c.html" title="This file provides firmware functions to manage the SYSCFG peripheral. " alt="" coords="2245,275,2429,330"/>
+<area shape="rect" id="node113" href="$stm32f4xx__usart_8c.html" title="This file provides firmware functions to manage the following functionalities of the Universal synchr..." alt="" coords="1155,275,1339,330"/>
+</map>

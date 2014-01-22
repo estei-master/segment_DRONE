@@ -1,0 +1,21 @@
+<map id="xQueueGenericReceive" name="xQueueGenericReceive">
+<area shape="rect" id="node3" href="$queue_8c.html#a6fbe564255b2cdc870f581a2f1aadfbf" title="prvCopyDataFromQueue" alt="" coords="227,5,392,38"/>
+<area shape="rect" id="node5" href="$task_8h.html#a6661c782f8eef65c1edc0ae6a47c5a0d" title="xTaskGetCurrentTaskHandle" alt="" coords="215,61,404,94"/>
+<area shape="rect" id="node7" href="$task_8h.html#a0e7e66debaa8878d449d658a37d4b322" title="xTaskRemoveFromEventList" alt="" coords="455,226,644,259"/>
+<area shape="rect" id="node13" href="$task_8h.html#a85df14f56902e5eadee1b20789aa272d" title="vTaskSetTimeOutState" alt="" coords="231,330,388,363"/>
+<area shape="rect" id="node15" href="$task_8h.html#a366b302eba79d10b5ee2a3756f0fcc43" title="vTaskSuspendAll" alt="" coords="248,386,371,419"/>
+<area shape="rect" id="node17" href="$task_8h.html#a0f786f440ae1a3f491a3b1f44a580cf7" title="xTaskCheckForTimeOut" alt="" coords="228,442,391,475"/>
+<area shape="rect" id="node21" href="$queue_8c.html#a99857402f1050166b8c977df918b7948" title="prvIsQueueEmpty" alt="" coords="247,498,372,531"/>
+<area shape="rect" id="node23" href="$task_8h.html#a7a7ce24a330c32b4b904e1ef43ebde2c" title="vTaskPriorityInherit" alt="" coords="243,554,376,587"/>
+<area shape="rect" id="node25" href="$task_8h.html#a77790806f66f114dc628f321e005e357" title="vTaskPlaceOnEventList" alt="" coords="468,282,631,315"/>
+<area shape="rect" id="node34" href="$queue_8c.html#a3975057ee08e7c83269a256422ea9b38" title="prvUnlockQueue" alt="" coords="251,173,368,206"/>
+<area shape="rect" id="node39" href="$task_8h.html#afba2c0b51534051cef7f5f5c3fa804d0" title="xTaskResumeAll" alt="" coords="249,117,369,150"/>
+<area shape="rect" id="node9" href="$list_8h.html#a6c083a9d7103fca1c9abd0de20839651" title="vListRemove" alt="" coords="753,173,852,206"/>
+<area shape="rect" id="node11" href="$list_8h.html#aa234bf74629ff34fbd8494a0f0112b42" title="vListInsertEnd" alt="" coords="749,229,856,262"/>
+<area shape="rect" id="node19" href="$tasks_8c.html#ac362fd33878f952d14c42d77ba837627" title="vTaskSetTimeOutState" alt="" coords="471,442,628,475"/>
+<area shape="rect" id="node27" href="$list_8h.html#ae0c352207d36c7ba3fa1b970b1eadd51" title="vListInsert" alt="" coords="960,309,1043,342"/>
+<area shape="rect" id="node31" href="$tasks_8c.html#a63b6676755c95a6ad2eb5587f374d14c" title="prvAddCurrentTaskToDelayedList" alt="" coords="695,335,911,369"/>
+<area shape="rect" id="node37" href="$task_8h.html#a998c69e37431a3a32c637b31ff60089a" title="vTaskMissedYield" alt="" coords="485,170,613,203"/>
+<area shape="rect" id="node42" href="$tasks_8c.html#a1fa96a475aac1442de1fa279810e9723" title="vTaskIncrementTick" alt="" coords="480,63,619,97"/>
+<area shape="rect" id="node44" href="$tasks_8c.html#a9ca051aa77e17583aa5a85d5de5c199a" title="vApplicationTickHook" alt="" coords="729,63,876,97"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="RCC_AHB1PeriphResetCmd" name="RCC_AHB1PeriphResetCmd">
+<area shape="rect" id="node3" href="$group__GPIO__Group1.html#gaa60bdf3182c44b5fa818f237042f52ee" title="Deinitializes the GPIOx peripheral registers to their default reset values. " alt="" coords="249,5,345,38"/>
+</map>

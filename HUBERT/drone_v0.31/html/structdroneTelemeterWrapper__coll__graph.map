@@ -1,0 +1,3 @@
+<map id="droneTelemeterWrapper" name="droneTelemeterWrapper">
+<area shape="rect" id="node2" href="$structtelemeterData.html" title="{telemeterData\n|+ eIdMask\l+ usBackDist\l+ usBottomDist\l+ usFrontDist\l+ usLeftBackDist\l+ usLeftFrontDist\l+ usRightBackDist\l+ usRightFrontDist\l|}" alt="" coords="19,6,152,213"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="prvSetupHardware" name="prvSetupHardware">
+<area shape="rect" id="node3" href="$group__CMSIS__Core__NVICFunctions.html#ga87c9aa8a70d937ab29cd805249846972" title="Set Priority Grouping. " alt="" coords="185,5,359,38"/>
+<area shape="rect" id="node5" href="$group__STM32F4xx__System__Private__Functions.html#ga93f514700ccf00d08dbdcff7f1224eb2" title="Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the Syst..." alt="" coords="229,61,315,94"/>
+<area shape="rect" id="node9" href="$group__STM32F4xx__System__Private__Functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f" title="Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable cont..." alt="" coords="187,117,357,150"/>
+<area shape="rect" id="node7" href="$group__STM32F4xx__System__Private__Functions.html#ga1ee14ac28e60198cc998586807b51e4c" title="Configures the System clock source, PLL Multiplier and Divider factors, AHB/APBx prescalers and Flash..." alt="" coords="408,61,507,94"/>
+</map>

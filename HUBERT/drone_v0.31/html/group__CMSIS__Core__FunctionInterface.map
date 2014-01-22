@@ -1,0 +1,6 @@
+<map id="CMSIS Core Function Interface" name="CMSIS Core Function Interface">
+<area shape="rect" id="node2" href="$group__CMSIS__core__DebugFunctions.html" title="CMSIS Core Debug Functions" alt="" coords="205,5,405,38"/>
+<area shape="rect" id="node3" href="$group__CMSIS__Core__NVICFunctions.html" title="CMSIS Core NVIC Functions" alt="" coords="208,61,403,94"/>
+<area shape="rect" id="node4" href="$group__CMSIS__Core__SysTickFunctions.html" title="CMSIS Core SysTick\l Functions" alt="" coords="231,117,380,171"/>
+<area shape="rect" id="node5" href="$group__CMSIS__Core__RegAccFunctions.html" title="CMSIS Core Register\l Access Functions" alt="" coords="231,194,380,249"/>
+</map>

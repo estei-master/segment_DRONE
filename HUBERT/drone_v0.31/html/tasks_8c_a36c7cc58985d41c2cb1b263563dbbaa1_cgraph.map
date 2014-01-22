@@ -1,0 +1,13 @@
+<map id="portTASK_FUNCTION" name="portTASK_FUNCTION">
+<area shape="rect" id="node3" href="$tasks_8c.html#a903096c962a2bc907f4b902a7d42302a" title="prvCheckTasksWaitingTermination" alt="" coords="209,85,431,118"/>
+<area shape="rect" id="node16" href="$drone_8c.html#a97fd430f36f8b065226e2bff9bad1de5" title="vApplicationIdleHook" alt="" coords="248,223,392,257"/>
+<area shape="rect" id="node5" href="$tasks_8c.html#a084d232640bd1d04bcac0b8784417015" title="vTaskSuspendAll" alt="" coords="493,5,616,38"/>
+<area shape="rect" id="node7" href="$tasks_8c.html#ab173f313b22f1a57dfceb98cb01b0508" title="xTaskResumeAll" alt="" coords="495,111,615,145"/>
+<area shape="rect" id="node9" href="$list_8h.html#a6c083a9d7103fca1c9abd0de20839651" title="vListRemove" alt="" coords="699,58,797,91"/>
+<area shape="rect" id="node11" href="$tasks_8c.html#a1fa96a475aac1442de1fa279810e9723" title="vTaskIncrementTick" alt="" coords="679,114,817,147"/>
+<area shape="rect" id="node13" href="$tasks_8c.html#a9ca051aa77e17583aa5a85d5de5c199a" title="vApplicationTickHook" alt="" coords="868,114,1015,147"/>
+<area shape="rect" id="node18" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="508,167,601,201"/>
+<area shape="rect" id="node20" href="$task_8h.html#a25ba1c4490c7e3ae11bc1e25192b12dc" title="xTaskGetTickCount" alt="" coords="485,223,624,257"/>
+<area shape="rect" id="node22" href="$task_8h.html#a9f1840f3a1d2527e76d301fc1a6aba37" title="pcTaskGetTaskName" alt="" coords="481,279,628,313"/>
+<area shape="rect" id="node24" href="$task_8h.html#a77e34af34b3eb5b0cb8be413eee6b180" title="uxTaskPriorityGet" alt="" coords="492,335,617,369"/>
+</map>

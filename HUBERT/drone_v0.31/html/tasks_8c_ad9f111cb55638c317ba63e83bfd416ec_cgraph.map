@@ -1,0 +1,4 @@
+<map id="prvAllocateTCBAndStack" name="prvAllocateTCBAndStack">
+<area shape="rect" id="node3" href="$portable_8h.html#a237d63f90b28e0950bd86f76815cd6e3" title="pvPortMalloc" alt="" coords="224,5,323,38"/>
+<area shape="rect" id="node5" href="$portable_8h.html#a735cd3085bb7ba06ff8e47565bfd7016" title="vPortFree" alt="" coords="235,61,312,94"/>
+</map>

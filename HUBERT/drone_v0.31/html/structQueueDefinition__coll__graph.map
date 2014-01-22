@@ -1,0 +1,5 @@
+<map id="QueueDefinition" name="QueueDefinition">
+<area shape="rect" id="node2" href="$structxLIST.html" title="{xLIST\n|+ uxNumberOfItems\l|}" alt="" coords="9,406,151,503"/>
+<area shape="rect" id="node4" href="$structxMINI__LIST__ITEM.html" title="{xMINI_LIST_ITEM\n|+ xItemValue\l|}" alt="" coords="115,238,245,335"/>
+<area shape="rect" id="node6" href="$structxLIST__ITEM.html" title="{xLIST_ITEM\n|+ pvContainer\l+ pvOwner\l+ xItemValue\l|}" alt="" coords="28,6,132,146"/>
+</map>

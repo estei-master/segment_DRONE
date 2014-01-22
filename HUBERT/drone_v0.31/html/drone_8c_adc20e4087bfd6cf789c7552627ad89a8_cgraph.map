@@ -1,0 +1,18 @@
+<map id="prvZigbeeReceiveTask" name="prvZigbeeReceiveTask">
+<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="631,361,724,391"/>
+<area shape="rect" id="node5" href="$zigbee_8c.html#a086880a41e9dcff0444893eaa3aa5eac" title="vZigbeeReceiveData" alt="" coords="429,127,573,156"/>
+<area shape="rect" id="node8" href="$drone_8c.html#a52ed89dea0bcfffadeca6535234ee8a6" title="prvSafeGetDroneConfig" alt="" coords="212,101,372,131"/>
+<area shape="rect" id="node10" href="$drone_8c.html#a95e9ad134d650153cb01a06003aeb343" title="prvSafeGetDroneState" alt="" coords="215,155,369,184"/>
+<area shape="rect" id="node12" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="425,257,577,287"/>
+<area shape="rect" id="node15" href="$drone_8c.html#a6ed0192c590c18579fd803b7dfd4b6ee" title="prvSendStatus" alt="" coords="239,259,345,288"/>
+<area shape="rect" id="node17" href="$drone_8c.html#a3a3685ed7436c17274035fd5ab62a058" title="prvDroneConfigValid" alt="" coords="221,312,363,341"/>
+<area shape="rect" id="node19" href="$drone_8c.html#a7b501b8fd615ad95fb6d32f4bbadd9e6" title="prvSafeSetDroneConfig" alt="" coords="421,519,581,548"/>
+<area shape="rect" id="node22" href="$drone_8c.html#ae0c8b07d0be360e948fd5f870edc426d" title="prvEnableVideo" alt="" coords="445,361,557,391"/>
+<area shape="rect" id="node25" href="$drone_8c.html#a095421af495ba7c58b7595dc5bebeb86" title="prvDisableVideo" alt="" coords="443,415,560,444"/>
+<area shape="rect" id="node28" href="$drone_8c.html#a7108c3d763912fb80781465b0b15f0a7" title="prvSafeGetIMUData" alt="" coords="221,517,363,547"/>
+<area shape="rect" id="node30" href="$drone_8c.html#a55b04c7311a05ab6768750b627eaa78a" title="prvInitAltitude" alt="" coords="241,571,343,600"/>
+<area shape="rect" id="node33" href="$drone_8c.html#a31c6c01d7b7a525778a42d5d9d5ad22c" title="prvResetDroneConfig" alt="" coords="219,624,365,653"/>
+<area shape="rect" id="node36" href="$drone_8c.html#a487e133a34630d9ba54a1932e97d0383" title="prvSendConfig" alt="" coords="239,677,345,707"/>
+<area shape="rect" id="node38" href="$flight_8c.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0" title="ucFlightCmdValid" alt="" coords="229,731,355,760"/>
+<area shape="rect" id="node40" href="$drone_8c.html#a1cc2e07bf4ac9357c253fe77a21c47c4" title="prvSafeSetZigbeeData" alt="" coords="424,703,579,732"/>
+</map>

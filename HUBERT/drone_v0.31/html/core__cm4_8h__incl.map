@@ -1,0 +1,5 @@
+<map id="cmsis/core_cm4.h" name="cmsis/core_cm4.h">
+<area shape="rect" id="node5" href="$core__cmInstr_8h.html" title="CMSIS Cortex&#45;M Core Instruction Access Header File. " alt="" coords="93,89,200,122"/>
+<area shape="rect" id="node7" href="$core__cmFunc_8h.html" title="CMSIS Cortex&#45;M Core Function Access Header File. " alt="" coords="224,89,336,122"/>
+<area shape="rect" id="node9" href="$core__cm4__simd_8h.html" title="CMSIS Cortex&#45;M4 SIMD Header File. " alt="" coords="360,89,485,122"/>
+</map>

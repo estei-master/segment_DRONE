@@ -1,0 +1,5 @@
+<map id="SH_DoCommand" name="SH_DoCommand">
+<area shape="rect" id="node3" href="$semihosting_8h.html#ab14a79106ea7deb665df3726fa89616c" title="Transmit a char on semihosting mode. " alt="" coords="181,5,288,38"/>
+<area shape="rect" id="node5" href="$semihosting_8h.html#ab80fc3b4b45f0abf609d9459de441f96" title="Transmit a null&#45;terminated string on semihosting mode. " alt="" coords="179,61,291,94"/>
+<area shape="rect" id="node7" href="$semihosting_8h.html#ac8e991652ba22c072836a6daa358fe1f" title="Read a char on semihosting mode. " alt="" coords="187,117,283,150"/>
+</map>

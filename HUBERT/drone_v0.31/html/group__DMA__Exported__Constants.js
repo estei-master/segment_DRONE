@@ -1,0 +1,25 @@
+var group__DMA__Exported__Constants =
+[
+    [ "DMA_channel", "group__DMA__channel.html", "group__DMA__channel" ],
+    [ "DMA_circular_normal_mode", "group__DMA__circular__normal__mode.html", "group__DMA__circular__normal__mode" ],
+    [ "DMA_data_buffer_size", "group__DMA__data__buffer__size.html", "group__DMA__data__buffer__size" ],
+    [ "DMA_data_transfer_direction", "group__DMA__data__transfer__direction.html", "group__DMA__data__transfer__direction" ],
+    [ "DMA_fifo_direct_mode", "group__DMA__fifo__direct__mode.html", "group__DMA__fifo__direct__mode" ],
+    [ "DMA_fifo_status_level", "group__DMA__fifo__status__level.html", "group__DMA__fifo__status__level" ],
+    [ "DMA_fifo_threshold_level", "group__DMA__fifo__threshold__level.html", "group__DMA__fifo__threshold__level" ],
+    [ "DMA_flags_definition", "group__DMA__flags__definition.html", "group__DMA__flags__definition" ],
+    [ "DMA_flow_controller_definitions", "group__DMA__flow__controller__definitions.html", "group__DMA__flow__controller__definitions" ],
+    [ "DMA_interrupt_enable_definitions", "group__DMA__interrupt__enable__definitions.html", "group__DMA__interrupt__enable__definitions" ],
+    [ "DMA_interrupts_definitions", "group__DMA__interrupts__definitions.html", "group__DMA__interrupts__definitions" ],
+    [ "DMA_memory_burst", "group__DMA__memory__burst.html", "group__DMA__memory__burst" ],
+    [ "DMA_memory_data_size", "group__DMA__memory__data__size.html", "group__DMA__memory__data__size" ],
+    [ "DMA_memory_incremented_mode", "group__DMA__memory__incremented__mode.html", "group__DMA__memory__incremented__mode" ],
+    [ "DMA_memory_targets_definitions", "group__DMA__memory__targets__definitions.html", "group__DMA__memory__targets__definitions" ],
+    [ "DMA_peripheral_burst", "group__DMA__peripheral__burst.html", "group__DMA__peripheral__burst" ],
+    [ "DMA_peripheral_data_size", "group__DMA__peripheral__data__size.html", "group__DMA__peripheral__data__size" ],
+    [ "DMA_peripheral_increment_offset", "group__DMA__peripheral__increment__offset.html", "group__DMA__peripheral__increment__offset" ],
+    [ "DMA_peripheral_incremented_mode", "group__DMA__peripheral__incremented__mode.html", "group__DMA__peripheral__incremented__mode" ],
+    [ "DMA_priority_level", "group__DMA__priority__level.html", "group__DMA__priority__level" ],
+    [ "IS_DMA_ALL_CONTROLLER", "group__DMA__Exported__Constants.html#gaad08400369c8c129927cdb9cf1baae29", null ],
+    [ "IS_DMA_ALL_PERIPH", "group__DMA__Exported__Constants.html#gabcab9fa1c48b148703a8f41c1d99e0c8", null ]
+];

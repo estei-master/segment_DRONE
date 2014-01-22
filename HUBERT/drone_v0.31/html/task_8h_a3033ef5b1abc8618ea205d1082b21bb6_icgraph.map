@@ -1,0 +1,8 @@
+<map id="vTaskDelayUntil" name="vTaskDelayUntil">
+<area shape="rect" id="node3" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="180,5,337,38"/>
+<area shape="rect" id="node9" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="181,61,336,94"/>
+<area shape="rect" id="node12" href="$drone_8c.html#abbdcc9b7762286ffa0216c945cb83a42" title="prvBatteryMonitoringTask" alt="" coords="173,117,344,150"/>
+<area shape="rect" id="node15" href="$drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="187,173,331,206"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="392,89,443,122"/>
+<area shape="rect" id="node7" href="$startup__stm32f4xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="492,89,649,122"/>
+</map>

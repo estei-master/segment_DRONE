@@ -1,0 +1,5 @@
+<map id="NVIC_SystemReset" name="NVIC_SystemReset">
+<area shape="rect" id="node3" href="$drone_8c.html#a1a48012129930abc6fec3f10590867f4" title="prvReboot" alt="" coords="197,5,280,38"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="328,5,379,38"/>
+<area shape="rect" id="node7" href="$startup__stm32f4xx_8c.html#a0b25f0c80528ba782dfb09214c5b1737" title="This is the code that gets called when the processor first starts execution following a reset event..." alt="" coords="428,5,585,38"/>
+</map>
