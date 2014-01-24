@@ -1,0 +1,5 @@
+<map id="usTelemeterGetDist" name="usTelemeterGetDist">
+<area shape="rect" id="node3" href="$telemeter_8h.html#ab4fff6ea13609ac80d79fdfeab2b472b" title="vTelemeterGetData" alt="" coords="192,5,328,35"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="376,5,536,35"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="584,5,635,35"/>
+</map>

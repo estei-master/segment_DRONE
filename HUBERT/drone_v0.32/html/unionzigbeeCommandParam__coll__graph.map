@@ -1,0 +1,4 @@
+<map id="zigbeeCommandParam" name="zigbeeCommandParam">
+<area shape="rect" id="node2" href="$structdroneConfig.html" title="{droneConfig\n|+ ulCritBatteryLvl\l+ ulCritZigbeeSignalLvl\l+ ulMaxAngle\l+ ulRefAltitude\l+ ulTakeoffAltitude\l+ usCritObstacleDist\l+ usMinAltitude\l+ xBatteryMonitoringPeriod\l+ xBatteryTimeout\l+ xDetectObstaclePeriod\l+ xFlightCtrlPeriod\l+ xGPSReceivePeriod\l+ xGPSTimeout\l+ xIMUDataTimeout\l+ xTelemeterTimeout\l+ xZigbeeCmdTimeout\l+ xZigbeeReceivePeriod\l+ xZigbeeReceiveTimeout\l|}" alt="" coords="5,6,184,466"/>
+<area shape="rect" id="node4" href="$structflightCommand.html" title="{flightCommand\n|+ cRotZ\l+ cTransX\l+ cTransY\l+ cTransZ\l|}" alt="" coords="208,155,317,317"/>
+</map>

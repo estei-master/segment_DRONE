@@ -1,0 +1,3 @@
+<map id="droneIMUWrapper" name="droneIMUWrapper">
+<area shape="rect" id="node2" href="$structIMUData.html" title="{IMUData\n|+ lAltitude\l+ plAngle\l|}" alt="" coords="29,6,109,125"/>
+</map>

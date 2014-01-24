@@ -1,0 +1,5 @@
+<map id="usart_init" name="usart_init">
+<area shape="rect" id="node3" href="$imu_8h.html#aa04aa36cb66d8820b22c7138373c114a" title="vIMUInit" alt="" coords="128,5,200,38"/>
+<area shape="rect" id="node5" href="$drone_8c.html#ad206e1ad4b3ef2b7b810c1c7bc9bb881" title="prvInitPeriph" alt="" coords="249,5,343,38"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="392,5,443,38"/>
+</map>

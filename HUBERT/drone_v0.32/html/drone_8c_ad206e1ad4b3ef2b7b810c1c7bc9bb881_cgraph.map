@@ -1,0 +1,9 @@
+<map id="prvInitPeriph" name="prvInitPeriph">
+<area shape="rect" id="node3" href="$gps_8c.html#a864834e128d8d0ce2a9dc12f203987c5" title="vGPSInit" alt="" coords="164,5,239,38"/>
+<area shape="rect" id="node7" href="$imu_8c.html#aa04aa36cb66d8820b22c7138373c114a" title="vIMUInit" alt="" coords="165,173,237,206"/>
+<area shape="rect" id="node12" href="$zigbee_8c.html#a3f7e0caf4297d7b7c8a8dfc675465406" title="vZigbeeInit" alt="" coords="159,61,244,94"/>
+<area shape="rect" id="node15" href="$telemeter_8c.html#ad678b2e6df6594950ddb7529f93ad777" title="vTelemeterInit" alt="" coords="149,117,253,150"/>
+<area shape="rect" id="node18" href="$drone_8c.html#a8b31e9a2dce476e9add26d89bc6fb5b9" title="prvBatteryInit" alt="" coords="152,229,251,262"/>
+<area shape="rect" id="node5" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="303,89,396,122"/>
+<area shape="rect" id="node10" href="$imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771" title="usart_init" alt="" coords="312,173,387,206"/>
+</map>

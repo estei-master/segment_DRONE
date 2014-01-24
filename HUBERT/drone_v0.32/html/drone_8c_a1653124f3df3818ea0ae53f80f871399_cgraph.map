@@ -1,0 +1,8 @@
+<map id="prvGPSReceiveTask" name="prvGPSReceiveTask">
+<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="412,61,505,90"/>
+<area shape="rect" id="node5" href="$gps_8c.html#aaa3d2c0fda8bcf02ddafd59a372da8ac" title="vGPSGetData" alt="" coords="228,34,335,63"/>
+<area shape="rect" id="node8" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="205,87,357,117"/>
+<area shape="rect" id="node11" href="$gps_8c.html#adc5f7af9a7366aee60e4d949043bda6c" title="eGPSIsDataValid" alt="" coords="219,141,344,170"/>
+<area shape="rect" id="node13" href="$drone_8c.html#a877358e4b568f286c9e983dacbe76b90" title="prvSafeSetGPSData" alt="" coords="211,194,352,223"/>
+<area shape="rect" id="node16" href="$drone_8c.html#a52ed89dea0bcfffadeca6535234ee8a6" title="prvSafeGetDroneConfig" alt="" coords="201,247,361,277"/>
+</map>
