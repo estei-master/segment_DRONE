@@ -12,6 +12,7 @@ var drone_8c =
     [ "droneGPS_RECEIVE_PRIO", "drone_8c.html#ab91090a6f723202776a4ca66ccc521d9", null ],
     [ "droneVIDEO_TOGGLE_PRIO", "drone_8c.html#a65947b9ee1dbe41a04e280f585aa5d6f", null ],
     [ "droneZIGBEE_RECEIVE_PRIO", "drone_8c.html#a2131e59c4f7534bc6c28daf2ec6f80a2", null ],
+    [ "MODULE", "drone_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486", null ],
     [ "droneError", "drone_8c.html#aad4124e5a34e185d704fe88506ecf352", [
       [ "DRN_ERR_NONE", "drone_8c.html#aad4124e5a34e185d704fe88506ecf352a4eb8e22beceecc6e83a76fc46f56e03a", null ],
       [ "DRN_ERR_TLM_TOUT", "drone_8c.html#aad4124e5a34e185d704fe88506ecf352a6490e84f47f8baed82eb8ec0c3635ee5", null ],
@@ -79,7 +80,7 @@ var drone_8c =
     [ "prvSafeSetZigbeeData", "drone_8c.html#a1cc2e07bf4ac9357c253fe77a21c47c4", null ],
     [ "prvSelectErrorState", "drone_8c.html#af8aba28838d473eae5660936d6f2f71c", null ],
     [ "prvSendConfig", "drone_8c.html#a487e133a34630d9ba54a1932e97d0383", null ],
-    [ "prvSendError", "drone_8c.html#ae263682a12eb5f65afe246a9931efb07", null ],
+    [ "prvSendError", "drone_8c.html#a4c36cb68c18ae4771d296bacf08055dd", null ],
     [ "prvSendStatus", "drone_8c.html#a41ae700abc3d220b884bd34daca67ac7", null ],
     [ "prvSetupHardware", "drone_8c.html#a464ac1a014942c092b752b720c4ff294", null ],
     [ "prvShutdown", "drone_8c.html#ade91bfc77ee5354a85d413273f19ac0f", null ],

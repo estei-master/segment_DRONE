@@ -1,8 +1,8 @@
 <map id="zigbee.h" name="zigbee.h">
-<area shape="rect" id="node3" href="$common_8h.html" title="common.h" alt="" coords="344,237,427,267"/>
-<area shape="rect" id="node30" href="$drone_8h.html" title="drone.h" alt="" coords="321,83,385,112"/>
-<area shape="rect" id="node33" href="$flight_8h.html" title="flight.h" alt="" coords="413,83,475,112"/>
-<area shape="rect" id="node17" href="$debug_8h.html" title="debug.h" alt="" coords="293,315,360,344"/>
-<area shape="rect" id="node36" href="$imu_8h.html" title="imu.h" alt="" coords="423,160,476,189"/>
-<area shape="rect" id="node39" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="500,160,585,189"/>
+<area shape="rect" id="node2" href="$common_8h.html" title="common.h" alt="" coords="345,229,428,256"/>
+<area shape="rect" id="node14" href="$drone_8h.html" title="drone.h" alt="" coords="323,80,388,107"/>
+<area shape="rect" id="node15" href="$flight_8h.html" title="flight.h" alt="" coords="417,80,476,107"/>
+<area shape="rect" id="node9" href="$debug_8h.html" title="debug.h" alt="" coords="294,304,361,331"/>
+<area shape="rect" id="node16" href="$imu_8h.html" title="imu.h" alt="" coords="425,155,479,181"/>
+<area shape="rect" id="node17" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="503,155,589,181"/>
 </map>

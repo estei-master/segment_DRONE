@@ -1,5 +1,5 @@
 <map id="prvSafeGetZigbeeData" name="prvSafeGetZigbeeData">
-<area shape="rect" id="node3" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="225,5,348,35"/>
-<area shape="rect" id="node7" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="209,59,364,88"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="413,32,464,61"/>
+<area shape="rect" id="node2" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="221,5,339,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="205,56,355,83"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="403,31,453,57"/>
 </map>

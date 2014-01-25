@@ -125,13 +125,13 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>eGPSIsDataValid()
-: <a class="el" href="gps_8c.html#adc5f7af9a7366aee60e4d949043bda6c">gps.c</a>
-, <a class="el" href="gps_8h.html#adc5f7af9a7366aee60e4d949043bda6c">gps.h</a>
+<li>eGPSDataValid()
+: <a class="el" href="gps_8c.html#a754b07e9cd7d2e40757c477a8c4477c1">gps.c</a>
+, <a class="el" href="gps_8h.html#a754b07e9cd7d2e40757c477a8c4477c1">gps.h</a>
 </li>
-<li>eIMUIsDataValid()
-: <a class="el" href="imu_8c.html#a11e78f1736ae8585497eff9eafe5ea07">imu.c</a>
-, <a class="el" href="imu_8h.html#a11e78f1736ae8585497eff9eafe5ea07">imu.h</a>
+<li>eIMUDataValid()
+: <a class="el" href="imu_8c.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8">imu.c</a>
+, <a class="el" href="imu_8h.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8">imu.h</a>
 </li>
 </ul>
 
@@ -151,6 +151,12 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>prvAltitudeValid()
+: <a class="el" href="imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab">imu.c</a>
+</li>
+<li>prvAngleValid()
+: <a class="el" href="imu_8c.html#a15d3894e6c2b0df70cc268e908342b44">imu.c</a>
+</li>
 <li>prvBatteryCritical()
 : <a class="el" href="drone_8c.html#a933cc0454396f7bcf7739819287e8403">drone.c</a>
 </li>
@@ -210,12 +216,6 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 </li>
 <li>prvInitTestPeriph()
 : <a class="el" href="drone_8c.html#aa93cacd884464cad591e6bb9bc161bcd">drone.c</a>
-</li>
-<li>prvIsAltitudeValid()
-: <a class="el" href="imu_8c.html#a89e3760bf039cf03c9f3b5714c78493e">imu.c</a>
-</li>
-<li>prvIsAngleValid()
-: <a class="el" href="imu_8c.html#ab623abee8f07c1894202579a01f08c76">imu.c</a>
 </li>
 <li>prvLandingDone()
 : <a class="el" href="drone_8c.html#af1ecc8f8fb6e88e193c25cff0bfc9250">drone.c</a>
@@ -278,7 +278,7 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="drone_8c.html#a487e133a34630d9ba54a1932e97d0383">drone.c</a>
 </li>
 <li>prvSendError()
-: <a class="el" href="drone_8c.html#ae263682a12eb5f65afe246a9931efb07">drone.c</a>
+: <a class="el" href="drone_8c.html#a4c36cb68c18ae4771d296bacf08055dd">drone.c</a>
 </li>
 <li>prvSendStatus()
 : <a class="el" href="drone_8c.html#a41ae700abc3d220b884bd34daca67ac7">drone.c</a>
@@ -292,8 +292,8 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>prvTakeoffDone()
 : <a class="el" href="drone_8c.html#a55ad73bd40e656d85654c7196d442055">drone.c</a>
 </li>
-<li>prvTelemeterIsDistValid()
-: <a class="el" href="telemeter_8c.html#aa55a5816824de2911572bf6a563247b4">telemeter.c</a>
+<li>prvTelemeterDistValid()
+: <a class="el" href="telemeter_8c.html#ab296df0488f8812504b6201a0e913328">telemeter.c</a>
 </li>
 <li>prvTelemeterTimedout()
 : <a class="el" href="drone_8c.html#a94711ce6896840fdb3ab94d61d976ff8">drone.c</a>
@@ -322,9 +322,9 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="flight_8c.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0">flight.c</a>
 , <a class="el" href="flight_8h.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0">flight.h</a>
 </li>
-<li>ucFlightIsStationary()
-: <a class="el" href="flight_8c.html#abcd9b1a3e9a40a1a500b041a880e45f0">flight.c</a>
-, <a class="el" href="flight_8h.html#abcd9b1a3e9a40a1a500b041a880e45f0">flight.h</a>
+<li>ucFlightStationary()
+: <a class="el" href="flight_8c.html#a0bbe0839f1ce8a871c43a2f5295b3b62">flight.c</a>
+, <a class="el" href="flight_8h.html#a0bbe0839f1ce8a871c43a2f5295b3b62">flight.h</a>
 </li>
 <li>ucGPSInitTest()
 : <a class="el" href="gps_8c.html#afaa59ead95954d284cef53931b8a9b39">gps.c</a>
@@ -350,17 +350,17 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="pwm_8c.html#aaafc0a807168fee29da81aba8b12b2b4">pwm.c</a>
 , <a class="el" href="pwm_8h.html#aaafc0a807168fee29da81aba8b12b2b4">pwm.h</a>
 </li>
+<li>ucTelemeterDataValid()
+: <a class="el" href="telemeter_8c.html#a53d13696e8abaca90e11486947b236d0">telemeter.c</a>
+, <a class="el" href="telemeter_8h.html#a53d13696e8abaca90e11486947b236d0">telemeter.h</a>
+</li>
+<li>ucTelemeterIdValid()
+: <a class="el" href="telemeter_8c.html#a80c272944cbc38095f2363049a5d133e">telemeter.c</a>
+, <a class="el" href="telemeter_8h.html#a80c272944cbc38095f2363049a5d133e">telemeter.h</a>
+</li>
 <li>ucTelemeterInitTest()
 : <a class="el" href="telemeter_8c.html#a0a690aa29f9fb858829e2f23df838068">telemeter.c</a>
 , <a class="el" href="telemeter_8h.html#a0a690aa29f9fb858829e2f23df838068">telemeter.h</a>
-</li>
-<li>ucTelemeterIsDataValid()
-: <a class="el" href="telemeter_8c.html#a4dffe6c395c7511da8b58f4108f07b9f">telemeter.c</a>
-, <a class="el" href="telemeter_8h.html#a4dffe6c395c7511da8b58f4108f07b9f">telemeter.h</a>
-</li>
-<li>ucTelemeterIsIdValid()
-: <a class="el" href="telemeter_8c.html#a490b9b5c6cb406201cdfb51f2dab4978">telemeter.c</a>
-, <a class="el" href="telemeter_8h.html#a490b9b5c6cb406201cdfb51f2dab4978">telemeter.h</a>
 </li>
 <li>ucTelemeterTest()
 : <a class="el" href="telemeter_8c.html#a58fa0fc79822fa1115ad5ff60a9a9ea3">telemeter.c</a>
@@ -468,7 +468,7 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Jan 23 2014 19:41:24 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sat Jan 25 2014 19:46:39 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

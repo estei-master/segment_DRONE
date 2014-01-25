@@ -11,7 +11,7 @@ struct GPSData
 	uint32_t ulSignalLvl;
 };
 
-/** GPS Errors */
+/** GPS Errors, unused yet. */
 enum GPSErrorMask
 {
 	GPS_ERR_NONE		= 0x00,
@@ -27,6 +27,6 @@ inline uint8_t ucGPSTest( void );
 /** GPS reception routine */
 inline void vGPSGetData( struct GPSData *pxGPSData );
 /** GPS frame testing routine */
-inline enum GPSErrorMask eGPSIsDataValid( const struct GPSData * const pxNewGPSData );
+inline enum GPSErrorMask eGPSDataValid( const struct GPSData * const pxNewGPSData );
 
 #endif /* GPS_H */

@@ -1,5 +1,5 @@
 <map id="prvIMUTimedout" name="prvIMUTimedout">
-<area shape="rect" id="node3" href="$drone_8c.html#ae749156ddeaadb095f1dab13cd3d4b0d" title="prvHandleTimouts" alt="" coords="173,5,301,35"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="349,5,472,35"/>
-<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="520,5,571,35"/>
+<area shape="rect" id="node2" href="$drone_8c.html#ae749156ddeaadb095f1dab13cd3d4b0d" title="prvHandleTimouts" alt="" coords="169,5,293,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="342,5,461,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="509,5,560,32"/>
 </map>

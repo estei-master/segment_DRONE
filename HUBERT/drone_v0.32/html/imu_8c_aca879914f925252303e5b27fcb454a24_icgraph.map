@@ -1,5 +1,5 @@
 <map id="imu_main" name="imu_main">
-<area shape="rect" id="node3" href="$imu_8h.html#ac4ad027278ff7ebbcd4b4f1686aaa404" title="vIMUGetData" alt="" coords="135,5,236,38"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="287,5,407,38"/>
-<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="456,5,507,38"/>
+<area shape="rect" id="node2" href="$imu_8h.html#ac4ad027278ff7ebbcd4b4f1686aaa404" title="vIMUGetData" alt="" coords="133,5,232,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="281,5,399,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="448,5,499,32"/>
 </map>

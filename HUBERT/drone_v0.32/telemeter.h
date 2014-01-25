@@ -57,9 +57,9 @@ inline uint8_t ucTelemeterTest( void );
 /** Telemeter measurement routine. */
 inline uint16_t usTelemeterGetDist( const enum telemeterId eTelemeterId );
 /** Telemeter identifier validity testing routine */
-inline uint8_t ucTelemeterIsIdValid( const enum telemeterId eTelemeterId );
+inline uint8_t ucTelemeterIdValid( const enum telemeterId eTelemeterId );
 /** Telemeter data validity testing routine */
-inline uint8_t ucTelemeterIsDataValid( const struct telemeterData * const pxTelemeterData );
+inline uint8_t ucTelemeterDataValid( const struct telemeterData * const pxTelemeterData );
 /** Telemeter measurement routine. Gets measures for all 7 telemeter. */
 inline void vTelemeterGetData( struct telemeterData * const pxNewTlmData );
 

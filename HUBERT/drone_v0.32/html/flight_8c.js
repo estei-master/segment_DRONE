@@ -1,8 +1,9 @@
 var flight_8c =
 [
+    [ "MODULE", "flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486", null ],
     [ "ucFlightAutotuneMvt", "flight_8c.html#a012b2b748783aff0385d79f1990a8eed", null ],
     [ "ucFlightCmdValid", "flight_8c.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0", null ],
-    [ "ucFlightIsStationary", "flight_8c.html#abcd9b1a3e9a40a1a500b041a880e45f0", null ],
+    [ "ucFlightStationary", "flight_8c.html#a0bbe0839f1ce8a871c43a2f5295b3b62", null ],
     [ "vFlightAvoidMvt", "flight_8c.html#a87c6c0c38b45928578dbd7fcf471de9c", null ],
     [ "vFlightCommandMvt", "flight_8c.html#abd8c22b30dd926141a233934ee8c56ed", null ],
     [ "vFlightExecuteMvt", "flight_8c.html#acac293933dc8e8dc33e9ad9cd6f36fdf", null ],

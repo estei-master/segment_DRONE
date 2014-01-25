@@ -1,8 +1,8 @@
 <map id="prvSafeGetDroneConfig" name="prvSafeGetDroneConfig">
-<area shape="rect" id="node3" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="221,5,381,35"/>
-<area shape="rect" id="node7" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="240,59,363,88"/>
-<area shape="rect" id="node10" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="224,112,379,141"/>
-<area shape="rect" id="node13" href="$drone_8c.html#abbdcc9b7762286ffa0216c945cb83a42" title="prvBatteryMonitoringTask" alt="" coords="216,165,387,195"/>
-<area shape="rect" id="node16" href="$drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="229,219,373,248"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="435,112,485,141"/>
+<area shape="rect" id="node2" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="214,5,370,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="233,56,351,83"/>
+<area shape="rect" id="node5" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="217,107,367,133"/>
+<area shape="rect" id="node6" href="$drone_8c.html#abbdcc9b7762286ffa0216c945cb83a42" title="prvBatteryMonitoringTask" alt="" coords="208,157,376,184"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="223,208,361,235"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="424,107,475,133"/>
 </map>

@@ -1,12 +1,12 @@
 <map id="drone.c" name="drone.c">
-<area shape="rect" id="node13" href="$drone_8h.html" title="drone.h" alt="" coords="91,160,155,189"/>
-<area shape="rect" id="node41" href="$zigbee_8h.html" title="zigbee.h" alt="" coords="163,83,232,112"/>
-<area shape="rect" id="node45" href="$flight_8h.html" title="flight.h" alt="" coords="231,160,292,189"/>
-<area shape="rect" id="node48" href="$imu_8h.html" title="imu.h" alt="" coords="261,237,315,267"/>
-<area shape="rect" id="node51" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="339,237,424,267"/>
-<area shape="rect" id="node55" href="$gps_8h.html" title="gps.h" alt="" coords="417,160,471,189"/>
-<area shape="rect" id="node59" href="$pwm_8h.html" title="pwm.h" alt="" coords="499,237,560,267"/>
-<area shape="rect" id="node62" href="$pid_8h.html" title="pid.h" alt="" coords="557,160,608,189"/>
-<area shape="rect" id="node15" href="$common_8h.html" title="common.h" alt="" coords="313,315,396,344"/>
-<area shape="rect" id="node29" href="$debug_8h.html" title="debug.h" alt="" coords="176,392,243,421"/>
+<area shape="rect" id="node7" href="$drone_8h.html" title="drone.h" alt="" coords="90,155,155,181"/>
+<area shape="rect" id="node19" href="$zigbee_8h.html" title="zigbee.h" alt="" coords="163,80,233,107"/>
+<area shape="rect" id="node20" href="$flight_8h.html" title="flight.h" alt="" coords="234,155,293,181"/>
+<area shape="rect" id="node21" href="$imu_8h.html" title="imu.h" alt="" coords="262,229,316,256"/>
+<area shape="rect" id="node22" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="341,229,427,256"/>
+<area shape="rect" id="node23" href="$gps_8h.html" title="gps.h" alt="" coords="421,155,475,181"/>
+<area shape="rect" id="node24" href="$pwm_8h.html" title="pwm.h" alt="" coords="503,229,563,256"/>
+<area shape="rect" id="node25" href="$pid_8h.html" title="pid.h" alt="" coords="563,155,613,181"/>
+<area shape="rect" id="node8" href="$common_8h.html" title="common.h" alt="" coords="315,304,397,331"/>
+<area shape="rect" id="node15" href="$debug_8h.html" title="debug.h" alt="" coords="175,379,243,405"/>
 </map>

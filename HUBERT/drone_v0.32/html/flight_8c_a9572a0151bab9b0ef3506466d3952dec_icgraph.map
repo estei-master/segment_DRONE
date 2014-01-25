@@ -1,4 +1,4 @@
 <map id="vFlightLandMvt" name="vFlightLandMvt">
-<area shape="rect" id="node3" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="165,5,288,35"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="336,5,387,35"/>
+<area shape="rect" id="node2" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="161,5,279,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="328,5,379,32"/>
 </map>

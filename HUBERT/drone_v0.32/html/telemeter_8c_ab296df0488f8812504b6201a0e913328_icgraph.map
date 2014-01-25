@@ -1,0 +1,5 @@
+<map id="prvTelemeterDistValid" name="prvTelemeterDistValid">
+<area shape="rect" id="node2" href="$telemeter_8h.html#a53d13696e8abaca90e11486947b236d0" title="ucTelemeterDataValid" alt="" coords="200,5,349,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="398,5,554,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="603,5,653,32"/>
+</map>

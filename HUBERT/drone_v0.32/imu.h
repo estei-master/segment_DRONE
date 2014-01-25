@@ -52,6 +52,7 @@ enum IMUAxis
 	IMU_AXIS_Z = 2,
 };
 
+/** Attitude measurement from the IMU module. */
 struct IMUData
 {
 	/** Drone altitude, calculated from air pressure. */
@@ -67,7 +68,7 @@ struct IMUData
 inline void vIMUInit( void );
 inline uint8_t ucIMUInitTest( void );
 inline uint8_t ucIMUTest( void );
-inline enum IMUErrorMask eIMUIsDataValid( const struct IMUData * const pxIMUData );
+inline enum IMUErrorMask eIMUDataValid( const struct IMUData * const pxIMUData );
 inline void vIMUGetData( struct IMUData * const pxIMUData );
 
 #endif /* IMU_H */

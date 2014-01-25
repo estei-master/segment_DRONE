@@ -14,7 +14,7 @@ var indexSectionsWithContent =
   4: "celpux",
   5: "dgiptz",
   6: "cdgipst",
-  7: "cdit"
+  7: "cdimt"
 };
 
 var indexSectionNames =

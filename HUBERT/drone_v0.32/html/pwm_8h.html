@@ -115,14 +115,14 @@ Include dependency graph for pwm.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h__incl.png" border="0" usemap="#pwm_8h" alt=""/></div>
 <map name="pwm_8h" id="pwm_8h">
-<area shape="rect" id="node3" href="common_8h.html" title="common.h" alt="" coords="344,83,427,112"/><area shape="rect" id="node17" href="debug_8h.html" title="debug.h" alt="" coords="293,160,360,189"/></map>
+<area shape="rect" id="node2" href="common_8h.html" title="common.h" alt="" coords="345,80,428,107"/><area shape="rect" id="node9" href="debug_8h.html" title="debug.h" alt="" coords="294,155,361,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h__dep__incl.png" border="0" usemap="#pwm_8hdep" alt=""/></div>
 <map name="pwm_8hdep" id="pwm_8hdep">
-<area shape="rect" id="node3" href="drone_8c.html" title="drone.c" alt="" coords="5,83,69,112"/><area shape="rect" id="node5" href="pid_8c.html" title="pid.c" alt="" coords="93,83,144,112"/><area shape="rect" id="node7" href="pwm_8c.html" title="pwm.c" alt="" coords="168,83,229,112"/></map>
+<area shape="rect" id="node2" href="drone_8c.html" title="drone.c" alt="" coords="5,80,69,107"/><area shape="rect" id="node3" href="pid_8c.html" title="pid.c" alt="" coords="95,80,145,107"/><area shape="rect" id="node4" href="pwm_8c.html" title="pwm.c" alt="" coords="170,80,229,107"/></map>
 </div>
 </div>
 <p><a href="pwm_8h_source.html">Go to the source code of this file.</a></p>
@@ -229,13 +229,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>PWM initial testing routine </p>
 
-<p>Definition at line <a class="el" href="pwm_8c_source.html#l00010">10</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, <span class="stringliteral">&quot;pwm&quot;</span>,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="stringliteral">&quot;ucPWMInitTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<p>Definition at line <a class="el" href="pwm_8c_source.html#l00013">13</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucPWMInitTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="pwm_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="pwm_8c_source.html#l00005">pwm.c:5</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -243,7 +244,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h_acd4e79cd4e6753117b5a761bf97cbcc8_cgraph.png" border="0" usemap="#pwm_8h_acd4e79cd4e6753117b5a761bf97cbcc8_cgraph" alt=""/></div>
 <map name="pwm_8h_acd4e79cd4e6753117b5a761bf97cbcc8_cgraph" id="pwm_8h_acd4e79cd4e6753117b5a761bf97cbcc8_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="169,5,263,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="166,5,261,32"/></map>
 </div>
 </p>
 
@@ -272,13 +273,15 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>PWM testing routine </p>
 
-<p>Definition at line <a class="el" href="pwm_8c_source.html#l00018">18</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;pwm&quot;</span>, <span class="stringliteral">&quot;ucPWMTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<p>Definition at line <a class="el" href="pwm_8c_source.html#l00021">21</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucPWMTest&quot;</span>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="pwm_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="pwm_8c_source.html#l00005">pwm.c:5</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -286,7 +289,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h_aaafc0a807168fee29da81aba8b12b2b4_cgraph.png" border="0" usemap="#pwm_8h_aaafc0a807168fee29da81aba8b12b2b4_cgraph" alt=""/></div>
 <map name="pwm_8h_aaafc0a807168fee29da81aba8b12b2b4_cgraph" id="pwm_8h_aaafc0a807168fee29da81aba8b12b2b4_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="151,5,244,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="150,5,245,32"/></map>
 </div>
 </p>
 
@@ -315,11 +318,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>PWM initialization routine </p>
 
-<p>Definition at line <a class="el" href="pwm_8c_source.html#l00004">4</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, <span class="stringliteral">&quot;pwm&quot;</span>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="stringliteral">&quot;vPWMInit&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<p>Definition at line <a class="el" href="pwm_8c_source.html#l00007">7</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <a class="code" href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vPWMInit&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
+<div class="ttc" id="pwm_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="pwm_8c_source.html#l00005">pwm.c:5</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -327,7 +331,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h_af7d9a91d4e6551bcc8c31db785324c31_cgraph.png" border="0" usemap="#pwm_8h_af7d9a91d4e6551bcc8c31db785324c31_cgraph" alt=""/></div>
 <map name="pwm_8h_af7d9a91d4e6551bcc8c31db785324c31_cgraph" id="pwm_8h_af7d9a91d4e6551bcc8c31db785324c31_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="135,5,228,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="131,5,226,32"/></map>
 </div>
 </p>
 
@@ -356,11 +360,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>PWM affectation routine </p>
 
-<p>Definition at line <a class="el" href="pwm_8c_source.html#l00026">26</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;pwm&quot;</span>, <span class="stringliteral">&quot;vPWMSet&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<p>Definition at line <a class="el" href="pwm_8c_source.html#l00030">30</a> of file <a class="el" href="pwm_8c_source.html">pwm.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vPWMSet&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="pwm_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="pwm_8c_source.html#l00005">pwm.c:5</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -368,7 +373,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pwm_8h_aa4f354c1ec8e49409aba7a4394bce5ba_cgraph.png" border="0" usemap="#pwm_8h_aa4f354c1ec8e49409aba7a4394bce5ba_cgraph" alt=""/></div>
 <map name="pwm_8h_aa4f354c1ec8e49409aba7a4394bce5ba_cgraph" id="pwm_8h_aa4f354c1ec8e49409aba7a4394bce5ba_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="137,5,231,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="134,5,229,32"/></map>
 </div>
 </p>
 
@@ -380,7 +385,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="pwm_8h.html">pwm.h</a></li>
-    <li class="footer">Generated on Thu Jan 23 2014 19:41:24 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sat Jan 25 2014 19:46:38 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

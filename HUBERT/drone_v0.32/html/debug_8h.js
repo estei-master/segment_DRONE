@@ -1,6 +1,7 @@
 var debug_8h =
 [
     [ "configASSERT", "debug_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f", null ],
+    [ "debugMODULE", "debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c", null ],
     [ "debugPUTCHAR", "debug_8h.html#a333cdcc5182066ca03ea7aa39a12936a", null ],
     [ "debugUART_INIT", "debug_8h.html#a12a14788b9256e00d6548471bf257f2b", null ],
     [ "debugUSE_DEBUG_SEMIHOSTING", "debug_8h.html#addef633ef9e49c8c813805d7317695b9", null ],

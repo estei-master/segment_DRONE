@@ -1,8 +1,8 @@
 <map id="flight.c" name="flight.c">
-<area shape="rect" id="node3" href="$flight_8h.html" title="flight.h" alt="" coords="337,83,399,112"/>
-<area shape="rect" id="node38" href="$pid_8h.html" title="pid.h" alt="" coords="499,160,549,189"/>
-<area shape="rect" id="node5" href="$common_8h.html" title="common.h" alt="" coords="344,237,427,267"/>
-<area shape="rect" id="node32" href="$imu_8h.html" title="imu.h" alt="" coords="312,160,365,189"/>
-<area shape="rect" id="node35" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="389,160,475,189"/>
-<area shape="rect" id="node19" href="$debug_8h.html" title="debug.h" alt="" coords="293,315,360,344"/>
+<area shape="rect" id="node2" href="$flight_8h.html" title="flight.h" alt="" coords="339,80,399,107"/>
+<area shape="rect" id="node17" href="$pid_8h.html" title="pid.h" alt="" coords="503,155,553,181"/>
+<area shape="rect" id="node3" href="$common_8h.html" title="common.h" alt="" coords="345,229,428,256"/>
+<area shape="rect" id="node15" href="$imu_8h.html" title="imu.h" alt="" coords="313,155,367,181"/>
+<area shape="rect" id="node16" href="$telemeter_8h.html" title="telemeter.h" alt="" coords="391,155,477,181"/>
+<area shape="rect" id="node10" href="$debug_8h.html" title="debug.h" alt="" coords="294,304,361,331"/>
 </map>

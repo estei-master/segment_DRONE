@@ -2,6 +2,9 @@
 #include "pid.h"
 #include "task.h"
 
+/** Used to fill the pcModule argument of the ulDebugMsg() call. */
+#define MODULE		"flight      "
+
 /* TODO : fix it (angles ? speeds ? reference ?) */
 /** Default movement : stationary flight */
 const struct flightMovement xStationaryFlightMvt = {
@@ -21,10 +24,10 @@ const struct flightCommand xStationaryFlightCmd = {
 		.cRotZ		= 0,
 };
 
-/* FIXME : check validity of this test */
-/** Tests whether the argument is the stationary movement. Returns 1 if it is,
-0 otherwise */
-inline uint8_t ucFlightIsStationary( const struct flightMovement * const pxFlightMvt )
+/* TODO : Check whether it is called at all */
+/** Tests whether the argument is the stationary movement.
+@return 1 if the argument is the stationary movement, 0 otherwise */
+inline uint8_t ucFlightStationary( const struct flightMovement * const pxFlightMvt )
 {
 	if ( pxFlightMvt->lRotX == xStationaryFlightMvt.lRotX
 			&& pxFlightMvt->lRotY == xStationaryFlightMvt.lRotY
@@ -41,6 +44,8 @@ inline uint8_t ucFlightIsStationary( const struct flightMovement * const pxFligh
 	}
 }
 
+/** Tests whether its argument is a valid flightCommand
+@return 1 if pxFlightCmd is a valid flightCommand, 0 otherwise. */
 inline uint8_t ucFlightCmdValid( const struct flightCommand * const pxFlightCmd )
 {
 	if( ( pxFlightCmd->cTransX >= -2 && pxFlightCmd->cTransX <= +2 )
@@ -48,10 +53,16 @@ inline uint8_t ucFlightCmdValid( const struct flightCommand * const pxFlightCmd 
 			&&( pxFlightCmd->cTransZ >= -2 && pxFlightCmd->cTransZ <= +2 )
 			&&( pxFlightCmd->cRotZ >= -2 && pxFlightCmd->cRotZ <= +2 ) )
 	{
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
+				uxTaskPriorityGet( NULL ), MODULE, "ucFlightCmdValid()",
+				"Parameter flightCommand is valid" );
 		return 1;
 	}
 	else
 	{
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", pcTaskGetTaskName( NULL ),
+				uxTaskPriorityGet( NULL ), MODULE, "ucFlightCmdValid()",
+				"Parameter flightCommand is not valid !" );
 		return 0;
 	}
 }
@@ -63,8 +74,8 @@ inline void vFlightTakeoffMvt( struct flightMovement *pxMovement,
 		const struct telemeterData * const pxTelemeterData,
 		uint32_t ulTakeoffAltitude )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightTakeoffMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightTakeoffMvt()",
 			"Does nothing ATM" );
 }
 
@@ -78,8 +89,8 @@ inline void vFlightLandMvt( struct flightMovement * const pxMovement,
 	/* Use reference altitude as set point for the PID, or measured altitude
 	from the bottom telemeter (ie. landing Altitude = current Altitude - bottom
 	telemeter obstacle distance, as an absolute altitude). */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightLandMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightLandMvt()",
 			"Does nothing ATM" );
 }
 
@@ -90,8 +101,8 @@ inline uint8_t ucFlightAutotuneMvt( struct flightMovement * const pxMovement,
 		const struct IMUData * const pxIMUData,
 		const struct telemeterData * const pxTelemeterData )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightAutotuneMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightAutotuneMvt()",
 			"Does nothing ATM" );
 
 	return 0;
@@ -106,8 +117,8 @@ inline void vFlightCommandMvt( struct flightMovement * const pxMovement,
 {
 	/* TODO : Should check xZigbeeData last update (and take into account timer
 	overflow). */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightCommandMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightCommandMvt()",
 			"Does nothing ATM" );
 }
 
@@ -120,8 +131,8 @@ inline void vFlightAvoidMvt( struct flightMovement *pxMovement,
 {
 	/* TODO : Should check xZigbeeData last update (and take into account timer
 	overflow). */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightAvoidMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightAvoidMvt()",
 			"Does nothing ATM" );
 }
 
@@ -129,7 +140,7 @@ inline void vFlightAvoidMvt( struct flightMovement *pxMovement,
 degree of freedom (each with its own PID coefficients) */
 inline void vFlightExecuteMvt( const struct flightMovement *pxMovement )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "flight", "vFlightExecuteMvt()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vFlightExecuteMvt()",
 			"Does nothing ATM" );
 }

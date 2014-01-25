@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('gps_8c.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">gps.c File Reference</div>  </div>
@@ -115,15 +116,20 @@ Include dependency graph for gps.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c__incl.png" border="0" usemap="#gps_8c" alt=""/></div>
 <map name="gps_8c" id="gps_8c">
-<area shape="rect" id="node3" href="gps_8h.html" title="gps.h" alt="" coords="359,83,412,112"/><area shape="rect" id="node5" href="common_8h.html" title="common.h" alt="" coords="344,160,427,189"/><area shape="rect" id="node19" href="debug_8h.html" title="debug.h" alt="" coords="293,237,360,267"/></map>
+<area shape="rect" id="node2" href="gps_8h.html" title="gps.h" alt="" coords="359,80,413,107"/><area shape="rect" id="node3" href="common_8h.html" title="common.h" alt="" coords="345,155,428,181"/><area shape="rect" id="node10" href="debug_8h.html" title="debug.h" alt="" coords="294,229,361,256"/></map>
 </div>
 </div>
 <p><a href="gps_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>&#160;&#160;&#160;&quot;gps         &quot;</td></tr>
+<tr class="separator:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adc5f7af9a7366aee60e4d949043bda6c"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6">GPSErrorMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#adc5f7af9a7366aee60e4d949043bda6c">eGPSIsDataValid</a> (const struct <a class="el" href="structGPSData.html">GPSData</a> *const pxNewGPSData)</td></tr>
-<tr class="separator:adc5f7af9a7366aee60e4d949043bda6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a754b07e9cd7d2e40757c477a8c4477c1"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6">GPSErrorMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#a754b07e9cd7d2e40757c477a8c4477c1">eGPSDataValid</a> (const struct <a class="el" href="structGPSData.html">GPSData</a> *const pxNewGPSData)</td></tr>
+<tr class="separator:a754b07e9cd7d2e40757c477a8c4477c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa59ead95954d284cef53931b8a9b39"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#afaa59ead95954d284cef53931b8a9b39">ucGPSInitTest</a> (void)</td></tr>
 <tr class="separator:afaa59ead95954d284cef53931b8a9b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368fe935b70117df7d45b2857ea85570"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#a368fe935b70117df7d45b2857ea85570">ucGPSTest</a> (void)</td></tr>
@@ -133,8 +139,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a864834e128d8d0ce2a9dc12f203987c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gps_8c.html#a864834e128d8d0ce2a9dc12f203987c5">vGPSInit</a> (void)</td></tr>
 <tr class="separator:a864834e128d8d0ce2a9dc12f203987c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a2c63ae95fe7c6106ae1ec9c283afa486"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODULE&#160;&#160;&#160;&quot;gps         &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to fill the pcModule argument of the <a class="el" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg()</a> call. </p>
+
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00009">9</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="adc5f7af9a7366aee60e4d949043bda6c"></a>
+<a class="anchor" id="a754b07e9cd7d2e40757c477a8c4477c1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -142,7 +164,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6">GPSErrorMask</a> eGPSIsDataValid </td>
+          <td class="memname">enum <a class="el" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6">GPSErrorMask</a> eGPSDataValid </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="structGPSData.html">GPSData</a> *const&#160;</td>
           <td class="paramname"><em>pxNewGPSData</em></td><td>)</td>
@@ -155,21 +177,21 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>GPS frame testing routine </p>
+<p>Tests whether its parameter is valid GPS data </p>
 
-<p>Definition at line <a class="el" href="gps_8c_source.html#l00034">34</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/* TODO : Implement it */</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6a65b0050ef0d05c049fcf4afe0ffa1d50">GPS_ERR_NONE</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00049">49</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/* TODO : Implement it */</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6a65b0050ef0d05c049fcf4afe0ffa1d50">GPS_ERR_NONE</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="ttc" id="gps_8h_html_ae6ed3e6c48537195cb91b01c303259e6a65b0050ef0d05c049fcf4afe0ffa1d50"><div class="ttname"><a href="gps_8h.html#ae6ed3e6c48537195cb91b01c303259e6a65b0050ef0d05c049fcf4afe0ffa1d50">GPS_ERR_NONE</a></div><div class="ttdef"><b>Definition:</b> <a href="gps_8h_source.html#l00017">gps.h:17</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="gps_8c_adc5f7af9a7366aee60e4d949043bda6c_icgraph.png" border="0" usemap="#gps_8c_adc5f7af9a7366aee60e4d949043bda6c_icgraph" alt=""/></div>
-<map name="gps_8c_adc5f7af9a7366aee60e4d949043bda6c_icgraph" id="gps_8c_adc5f7af9a7366aee60e4d949043bda6c_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="180,5,324,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="373,5,424,35"/></map>
+<div class="center"><img src="gps_8c_a754b07e9cd7d2e40757c477a8c4477c1_icgraph.png" border="0" usemap="#gps_8c_a754b07e9cd7d2e40757c477a8c4477c1_icgraph" alt=""/></div>
+<map name="gps_8c_a754b07e9cd7d2e40757c477a8c4477c1_icgraph" id="gps_8c_a754b07e9cd7d2e40757c477a8c4477c1_icgraph">
+<area shape="rect" id="node2" href="drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="168,5,307,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="355,5,405,32"/></map>
 </div>
 </p>
 
@@ -199,13 +221,14 @@ Here is the caller graph for this function:</div>
 <p>Tests the correct initialization of the GPS </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if test successful, 1 otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="gps_8c_source.html#l00012">12</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, <span class="stringliteral">&quot;gps&quot;</span>,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="stringliteral">&quot;ucGPSInitTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00023">23</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucGPSInitTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="gps_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="gps_8c_source.html#l00009">gps.c:9</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -213,7 +236,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_afaa59ead95954d284cef53931b8a9b39_cgraph.png" border="0" usemap="#gps_8c_afaa59ead95954d284cef53931b8a9b39_cgraph" alt=""/></div>
 <map name="gps_8c_afaa59ead95954d284cef53931b8a9b39_cgraph" id="gps_8c_afaa59ead95954d284cef53931b8a9b39_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="164,5,257,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="161,5,255,32"/></map>
 </div>
 </p>
 
@@ -222,7 +245,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_afaa59ead95954d284cef53931b8a9b39_icgraph.png" border="0" usemap="#gps_8c_afaa59ead95954d284cef53931b8a9b39_icgraph" alt=""/></div>
 <map name="gps_8c_afaa59ead95954d284cef53931b8a9b39_icgraph" id="gps_8c_afaa59ead95954d284cef53931b8a9b39_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#aa93cacd884464cad591e6bb9bc161bcd" title="prvInitTestPeriph" alt="" coords="164,5,284,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="333,5,384,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#aa93cacd884464cad591e6bb9bc161bcd" title="prvInitTestPeriph" alt="" coords="160,5,277,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="325,5,376,32"/></map>
 </div>
 </p>
 
@@ -251,13 +274,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>GPS testing routine </p>
 
-<p>Definition at line <a class="el" href="gps_8c_source.html#l00020">20</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;gps&quot;</span>, <span class="stringliteral">&quot;ucGPSTest&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00031">31</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucGPSTest&quot;</span>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="ttc" id="gps_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="gps_8c_source.html#l00009">gps.c:9</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -265,7 +290,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_a368fe935b70117df7d45b2857ea85570_cgraph.png" border="0" usemap="#gps_8c_a368fe935b70117df7d45b2857ea85570_cgraph" alt=""/></div>
 <map name="gps_8c_a368fe935b70117df7d45b2857ea85570_cgraph" id="gps_8c_a368fe935b70117df7d45b2857ea85570_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="145,5,239,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="145,5,239,32"/></map>
 </div>
 </p>
 
@@ -292,13 +317,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>GPS reception routine </p>
+<p>Receives a GPS frame and updates its parameter. </p>
 
-<p>Definition at line <a class="el" href="gps_8c_source.html#l00028">28</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;gps&quot;</span>, <span class="stringliteral">&quot;vGPSGetData&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00041">41</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vGPSGetData&quot;</span>,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="ttc" id="gps_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="gps_8c_source.html#l00009">gps.c:9</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -306,7 +333,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_cgraph.png" border="0" usemap="#gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_cgraph" alt=""/></div>
 <map name="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_cgraph" id="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="161,5,255,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="158,5,253,32"/></map>
 </div>
 </p>
 
@@ -315,7 +342,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_icgraph.png" border="0" usemap="#gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_icgraph" alt=""/></div>
 <map name="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_icgraph" id="gps_8c_aaa3d2c0fda8bcf02ddafd59a372da8ac_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="161,5,305,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="355,5,405,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a1653124f3df3818ea0ae53f80f871399" title="prvGPSReceiveTask" alt="" coords="157,5,296,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="344,5,395,32"/></map>
 </div>
 </p>
 
@@ -344,11 +371,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>GPS initialization routine </p>
 
-<p>Definition at line <a class="el" href="gps_8c_source.html#l00004">4</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, <span class="stringliteral">&quot;gps&quot;</span>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;            <span class="stringliteral">&quot;vGPSInit&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<p>Definition at line <a class="el" href="gps_8c_source.html#l00015">15</a> of file <a class="el" href="gps_8c_source.html">gps.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vGPSInit&quot;</span>, <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="gps_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="gps_8c_source.html#l00009">gps.c:9</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -356,7 +384,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_cgraph.png" border="0" usemap="#gps_8c_a864834e128d8d0ce2a9dc12f203987c5_cgraph" alt=""/></div>
 <map name="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_cgraph" id="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="129,5,223,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="126,5,221,32"/></map>
 </div>
 </p>
 
@@ -365,7 +393,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_icgraph.png" border="0" usemap="#gps_8c_a864834e128d8d0ce2a9dc12f203987c5_icgraph" alt=""/></div>
 <map name="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_icgraph" id="gps_8c_a864834e128d8d0ce2a9dc12f203987c5_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#ad206e1ad4b3ef2b7b810c1c7bc9bb881" title="prvInitPeriph" alt="" coords="129,5,223,38"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="272,5,323,38"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#ad206e1ad4b3ef2b7b810c1c7bc9bb881" title="prvInitPeriph" alt="" coords="126,5,218,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="267,5,317,32"/></map>
 </div>
 </p>
 
@@ -377,7 +405,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="gps_8c.html">gps.c</a></li>
-    <li class="footer">Generated on Thu Jan 23 2014 19:41:24 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sat Jan 25 2014 19:46:38 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

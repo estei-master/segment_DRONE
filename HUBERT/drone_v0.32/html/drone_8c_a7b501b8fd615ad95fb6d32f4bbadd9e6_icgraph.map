@@ -1,6 +1,6 @@
 <map id="prvSafeSetDroneConfig" name="prvSafeSetDroneConfig">
-<area shape="rect" id="node3" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="412,22,567,52"/>
-<area shape="rect" id="node7" href="$drone_8c.html#a31c6c01d7b7a525778a42d5d9d5ad22c" title="prvResetDroneConfig" alt="" coords="215,22,361,52"/>
-<area shape="rect" id="node10" href="$drone_8c.html#a55b04c7311a05ab6768750b627eaa78a" title="prvInitAltitude" alt="" coords="237,76,339,105"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="616,22,667,52"/>
+<area shape="rect" id="node2" href="$drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="400,22,549,49"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a31c6c01d7b7a525778a42d5d9d5ad22c" title="prvResetDroneConfig" alt="" coords="209,22,351,49"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a55b04c7311a05ab6768750b627eaa78a" title="prvInitAltitude" alt="" coords="231,73,329,100"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="597,22,648,49"/>
 </map>

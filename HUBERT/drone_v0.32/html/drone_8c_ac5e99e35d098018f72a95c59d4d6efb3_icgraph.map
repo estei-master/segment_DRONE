@@ -1,5 +1,5 @@
 <map id="prvGPSTimedout" name="prvGPSTimedout">
-<area shape="rect" id="node3" href="$drone_8c.html#ae749156ddeaadb095f1dab13cd3d4b0d" title="prvHandleTimouts" alt="" coords="176,5,304,35"/>
-<area shape="rect" id="node5" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="352,5,475,35"/>
-<area shape="rect" id="node7" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="523,5,573,35"/>
+<area shape="rect" id="node2" href="$drone_8c.html#ae749156ddeaadb095f1dab13cd3d4b0d" title="prvHandleTimouts" alt="" coords="174,5,298,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="347,5,466,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="515,5,565,32"/>
 </map>

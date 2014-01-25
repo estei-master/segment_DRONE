@@ -1,0 +1,5 @@
+<map id="eIMUDataValid" name="eIMUDataValid">
+<area shape="rect" id="node2" href="$imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab" title="prvAltitudeValid" alt="" coords="163,5,274,32"/>
+<area shape="rect" id="node3" href="$imu_8c.html#a15d3894e6c2b0df70cc268e908342b44" title="prvAngleValid" alt="" coords="169,56,269,83"/>
+<area shape="rect" id="node4" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="171,107,266,133"/>
+</map>

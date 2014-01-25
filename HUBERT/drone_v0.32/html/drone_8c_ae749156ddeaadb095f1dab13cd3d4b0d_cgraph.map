@@ -1,12 +1,12 @@
 <map id="prvHandleTimouts" name="prvHandleTimouts">
-<area shape="rect" id="node3" href="$drone_8c.html#a94711ce6896840fdb3ab94d61d976ff8" title="prvTelemeterTimedout" alt="" coords="183,5,335,35"/>
-<area shape="rect" id="node5" href="$drone_8c.html#af8aba28838d473eae5660936d6f2f71c" title="prvSelectErrorState" alt="" coords="191,59,327,88"/>
-<area shape="rect" id="node7" href="$drone_8c.html#ab0b8e7c4d4d11484a45ec2552b5f996a" title="prvBatteryTimedout" alt="" coords="191,112,327,141"/>
-<area shape="rect" id="node9" href="$drone_8c.html#a3ce3420491fa2834d600ad074cdfbc81" title="prvIMUTimedout" alt="" coords="200,165,317,195"/>
-<area shape="rect" id="node11" href="$drone_8c.html#ac5e99e35d098018f72a95c59d4d6efb3" title="prvGPSTimedout" alt="" coords="197,219,320,248"/>
-<area shape="rect" id="node13" href="$drone_8c.html#a657ad9692e768102eeb45847d8048925" title="prvZigbeeTimedout" alt="" coords="192,272,325,301"/>
-<area shape="rect" id="node15" href="$drone_8c.html#a40e1041de28ba7002b53a2ee4922519f" title="prvFltCmdTimedout" alt="" coords="191,325,327,355"/>
-<area shape="rect" id="node17" href="$drone_8c.html#a1cc2e07bf4ac9357c253fe77a21c47c4" title="prvSafeSetZigbeeData" alt="" coords="181,379,336,408"/>
-<area shape="rect" id="node21" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="183,432,335,461"/>
-<area shape="rect" id="node19" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="385,405,479,435"/>
+<area shape="rect" id="node2" href="$drone_8c.html#a94711ce6896840fdb3ab94d61d976ff8" title="prvTelemeterTimedout" alt="" coords="179,5,327,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#af8aba28838d473eae5660936d6f2f71c" title="prvSelectErrorState" alt="" coords="186,56,321,83"/>
+<area shape="rect" id="node4" href="$drone_8c.html#ab0b8e7c4d4d11484a45ec2552b5f996a" title="prvBatteryTimedout" alt="" coords="187,107,320,133"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a3ce3420491fa2834d600ad074cdfbc81" title="prvIMUTimedout" alt="" coords="196,157,311,184"/>
+<area shape="rect" id="node6" href="$drone_8c.html#ac5e99e35d098018f72a95c59d4d6efb3" title="prvGPSTimedout" alt="" coords="194,208,313,235"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a657ad9692e768102eeb45847d8048925" title="prvZigbeeTimedout" alt="" coords="189,259,318,285"/>
+<area shape="rect" id="node8" href="$drone_8c.html#a40e1041de28ba7002b53a2ee4922519f" title="prvFltCmdTimedout" alt="" coords="187,309,320,336"/>
+<area shape="rect" id="node9" href="$drone_8c.html#a1cc2e07bf4ac9357c253fe77a21c47c4" title="prvSafeSetZigbeeData" alt="" coords="179,360,328,387"/>
+<area shape="rect" id="node11" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="179,411,328,437"/>
+<area shape="rect" id="node10" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="377,385,471,412"/>
 </map>

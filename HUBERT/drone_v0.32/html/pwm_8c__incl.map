@@ -1,5 +1,5 @@
 <map id="pwm.c" name="pwm.c">
-<area shape="rect" id="node3" href="$pwm_8h.html" title="pwm.h" alt="" coords="355,83,416,112"/>
-<area shape="rect" id="node5" href="$common_8h.html" title="common.h" alt="" coords="344,160,427,189"/>
-<area shape="rect" id="node19" href="$debug_8h.html" title="debug.h" alt="" coords="293,237,360,267"/>
+<area shape="rect" id="node2" href="$pwm_8h.html" title="pwm.h" alt="" coords="357,80,416,107"/>
+<area shape="rect" id="node3" href="$common_8h.html" title="common.h" alt="" coords="345,155,428,181"/>
+<area shape="rect" id="node10" href="$debug_8h.html" title="debug.h" alt="" coords="294,229,361,256"/>
 </map>

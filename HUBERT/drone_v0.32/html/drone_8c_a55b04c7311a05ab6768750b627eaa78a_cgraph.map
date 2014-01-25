@@ -1,4 +1,4 @@
 <map id="prvInitAltitude" name="prvInitAltitude">
-<area shape="rect" id="node3" href="$drone_8c.html#a7b501b8fd615ad95fb6d32f4bbadd9e6" title="prvSafeSetDroneConfig" alt="" coords="157,5,317,35"/>
-<area shape="rect" id="node5" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="367,5,460,35"/>
+<area shape="rect" id="node2" href="$drone_8c.html#a7b501b8fd615ad95fb6d32f4bbadd9e6" title="prvSafeSetDroneConfig" alt="" coords="152,5,307,32"/>
+<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="355,5,450,32"/>
 </map>

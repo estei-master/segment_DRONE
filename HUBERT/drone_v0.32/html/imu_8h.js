@@ -17,7 +17,7 @@ var imu_8h =
       [ "IMU_ERR_YANGLE", "imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a4d7b2a39bc1010c675afb65d2d0fa719", null ],
       [ "IMU_ERR_ZANGLE", "imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a0ba10d583b452af57c6d931b744b4083", null ]
     ] ],
-    [ "eIMUIsDataValid", "imu_8h.html#a11e78f1736ae8585497eff9eafe5ea07", null ],
+    [ "eIMUDataValid", "imu_8h.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8", null ],
     [ "ucIMUInitTest", "imu_8h.html#a585f070e778f42d47703fb0b2b3402a4", null ],
     [ "ucIMUTest", "imu_8h.html#ad43e88b3f6d91611cfa20a582b4dd03a", null ],
     [ "vIMUGetData", "imu_8h.html#ac4ad027278ff7ebbcd4b4f1686aaa404", null ],

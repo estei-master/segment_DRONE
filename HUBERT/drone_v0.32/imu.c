@@ -2,13 +2,20 @@
 #include "task.h"
 
 /******************************************************************************
+ **	 	 DEBUGGING MACROS
+ *****************************************************************************/
+
+/** Used to fill the pcModule argument of the ulDebugMsg() call. */
+#define MODULE		"imu         "
+
+/******************************************************************************
  **	 	 STATIC FUNCTIONS DECLARATION
  *****************************************************************************/
 
-static inline enum IMUErrorMask prvIsAltitudeValid( const struct IMUData * const pxIMUData );
-static inline enum IMUErrorMask prvIsAngleValid( const struct IMUData * const pxIMUData );
-//static inline enum IMUErrorMask prvIsSpeedValid( const struct IMUData * const pxIMUData );
-//static inline enum IMUErrorMask prvIsAccelValid( const struct IMUData * const pxIMUData );
+static inline enum IMUErrorMask prvAltitudeValid( const struct IMUData * const pxIMUData );
+static inline enum IMUErrorMask prvAngleValid( const struct IMUData * const pxIMUData );
+//static inline enum IMUErrorMask prvSpeedValid( const struct IMUData * const pxIMUData );
+//static inline enum IMUErrorMask prvAccelValid( const struct IMUData * const pxIMUData );
 static inline void usart_init( void );
 static inline void imu_main( struct IMUData * const pxIMUData );
 
@@ -19,7 +26,7 @@ static inline void imu_main( struct IMUData * const pxIMUData );
 /** Initializes the IMU */
 inline void vIMUInit( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, "imu", "vIMUInit()",
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE, "vIMUInit()",
 			"Initializing IMU UART communication" );
 
 	usart_init();
@@ -29,7 +36,7 @@ inline void vIMUInit( void )
 @return 0 if test successful, 1 otherwise. */
 inline uint8_t ucIMUInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0, "imu", "ucIMUInitTest()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0, MODULE, "ucIMUInitTest()",
 			"Does nothing ATM" );
 
 	/* TODO : implement during integration */
@@ -40,7 +47,7 @@ inline uint8_t ucIMUInitTest( void )
 inline uint8_t ucIMUTest( void )
 {
 	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "imu", "ucIMUTest()", "Does nothing ATM" );
+			uxTaskPriorityGet( NULL ), MODULE, "ucIMUTest()", "Does nothing ATM" );
 
 	return 0;
 }
@@ -48,8 +55,8 @@ inline uint8_t ucIMUTest( void )
 /** Gets IMU attitude measurements */
 inline void vIMUGetData( struct IMUData * const pxIMUData )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), "imu", "vIMUGetData()", "Receiving IMU measurements" );
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
+			uxTaskPriorityGet( NULL ), MODULE, "vIMUGetData()", "Receiving IMU measurements" );
 
 	/* TODO : replace critical section by attempt counter in imu_main : if no
 	critical section, the task gets preempted (sleeping/waking up constantly),
@@ -68,43 +75,44 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 //	taskENABLE_INTERRUPTS();
 	taskEXIT_CRITICAL();
 
-	printf( "\r\n\t\tIMU measurements :"
-				"\r\n\t\t\tPitch = %d\r\n\t\t\tRoll = %d\r\n\t\t\tYaw = %d",
-				pxIMUData->plAngle[ IMU_AXIS_Y ],
-				pxIMUData->plAngle[ IMU_AXIS_X ],
-				pxIMUData->plAngle[ IMU_AXIS_Z ] );
+//	printf( "\r\n\t\tIMU measurements :"
+//			"\r\n\t\t\tPitch = %d\r\n\t\t\tRoll = %d\r\n\t\t\tYaw = %d",
+//			pxIMUData->plAngle[ IMU_AXIS_Y ],
+//			pxIMUData->plAngle[ IMU_AXIS_X ],
+//			pxIMUData->plAngle[ IMU_AXIS_Z ] );
 }
 
 /** Tests validity of pointed data */
-inline enum IMUErrorMask eIMUIsDataValid( const struct IMUData * const pxIMUData )
+inline enum IMUErrorMask eIMUDataValid( const struct IMUData * const pxIMUData )
 {
 enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 
-	eErrorMask |= prvIsAltitudeValid( pxIMUData )
-			| prvIsAngleValid( pxIMUData )
-			/*| prvIsSpeedValid( pxIMUData )
-			| prvIsAccelValid( pxIMUData )*/;
+	eErrorMask |= prvAltitudeValid( pxIMUData )
+			| prvAngleValid( pxIMUData );
+			/*
+			| prvSpeedValid( pxIMUData )
+			| prvAccelValid( pxIMUData );
+			*/
 
 	if( eErrorMask == IMU_ERR_NONE )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
-				uxTaskPriorityGet( NULL ), "imu", "eIMUIsDataValid()", "IMU measure is in valid range" );
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
+				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()", "IMU measure is in valid range" );
 	}
 	else
 	{
 		ulDebugMsg( xTaskGetTickCount(), "ERROR", pcTaskGetTaskName( NULL ),
-				uxTaskPriorityGet( NULL ), "imu", "eIMUIsDataValid()", "IMU measure is not in valid range !" );
+				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()", "IMU measure is not in valid range !" );
 	}
 
 	return eErrorMask;
-
 }
 
 /******************************************************************************
  **	 	 STATIC FUNCTIONS DEFINITION
  *****************************************************************************/
 
-static inline enum IMUErrorMask prvIsAltitudeValid( const struct IMUData * const pxIMUData )
+static inline enum IMUErrorMask prvAltitudeValid( const struct IMUData * const pxIMUData )
 {
 enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 
@@ -117,7 +125,7 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 	return eErrorMask;
 }
 
-static inline enum IMUErrorMask prvIsAngleValid( const struct IMUData * const pxIMUData )
+static inline enum IMUErrorMask prvAngleValid( const struct IMUData * const pxIMUData )
 {
 enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 
@@ -142,7 +150,7 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 	return eErrorMask;
 }
 
-//static inline enum IMUErrorMask prvIsSpeedValid( const struct IMUData * const pxIMUData )
+//static inline enum IMUErrorMask prvSpeedValid( const struct IMUData * const pxIMUData )
 //{
 //enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 //
@@ -167,7 +175,7 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 //	return eErrorMask;
 //}
 
-//static inline enum IMUErrorMask prvIsAccelValid( const struct IMUData * const pxIMUData )
+//static inline enum IMUErrorMask prvAccelValid( const struct IMUData * const pxIMUData )
 //{
 //enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 //

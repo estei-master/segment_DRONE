@@ -11,9 +11,9 @@ var telemeter_8h =
       [ "TLM_BCK", "telemeter_8h.html#a13b536fea421757f620d1086d9313d98a4e3ee6491fe6896724f5df6880ac6dc0", null ],
       [ "TLM_BOT", "telemeter_8h.html#a13b536fea421757f620d1086d9313d98a0c0c6a1219ebf777c03ee10d6bae6c59", null ]
     ] ],
+    [ "ucTelemeterDataValid", "telemeter_8h.html#a53d13696e8abaca90e11486947b236d0", null ],
+    [ "ucTelemeterIdValid", "telemeter_8h.html#a80c272944cbc38095f2363049a5d133e", null ],
     [ "ucTelemeterInitTest", "telemeter_8h.html#a0a690aa29f9fb858829e2f23df838068", null ],
-    [ "ucTelemeterIsDataValid", "telemeter_8h.html#a4dffe6c395c7511da8b58f4108f07b9f", null ],
-    [ "ucTelemeterIsIdValid", "telemeter_8h.html#a490b9b5c6cb406201cdfb51f2dab4978", null ],
     [ "ucTelemeterTest", "telemeter_8h.html#a58fa0fc79822fa1115ad5ff60a9a9ea3", null ],
     [ "usTelemeterGetDist", "telemeter_8h.html#afa90e065b5e3087b7e0e87497330e0b6", null ],
     [ "vTelemeterGetData", "telemeter_8h.html#ab4fff6ea13609ac80d79fdfeab2b472b", null ],

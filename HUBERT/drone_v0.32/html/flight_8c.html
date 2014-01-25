@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('flight_8c.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -117,19 +118,24 @@ Include dependency graph for flight.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c__incl.png" border="0" usemap="#flight_8c" alt=""/></div>
 <map name="flight_8c" id="flight_8c">
-<area shape="rect" id="node3" href="flight_8h.html" title="flight.h" alt="" coords="337,83,399,112"/><area shape="rect" id="node38" href="pid_8h.html" title="pid.h" alt="" coords="499,160,549,189"/><area shape="rect" id="node5" href="common_8h.html" title="common.h" alt="" coords="344,237,427,267"/><area shape="rect" id="node32" href="imu_8h.html" title="imu.h" alt="" coords="312,160,365,189"/><area shape="rect" id="node35" href="telemeter_8h.html" title="telemeter.h" alt="" coords="389,160,475,189"/><area shape="rect" id="node19" href="debug_8h.html" title="debug.h" alt="" coords="293,315,360,344"/></map>
+<area shape="rect" id="node2" href="flight_8h.html" title="flight.h" alt="" coords="339,80,399,107"/><area shape="rect" id="node17" href="pid_8h.html" title="pid.h" alt="" coords="503,155,553,181"/><area shape="rect" id="node3" href="common_8h.html" title="common.h" alt="" coords="345,229,428,256"/><area shape="rect" id="node15" href="imu_8h.html" title="imu.h" alt="" coords="313,155,367,181"/><area shape="rect" id="node16" href="telemeter_8h.html" title="telemeter.h" alt="" coords="391,155,477,181"/><area shape="rect" id="node10" href="debug_8h.html" title="debug.h" alt="" coords="294,304,361,331"/></map>
 </div>
 </div>
 <p><a href="flight_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>&#160;&#160;&#160;&quot;flight      &quot;</td></tr>
+<tr class="separator:a2c63ae95fe7c6106ae1ec9c283afa486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a012b2b748783aff0385d79f1990a8eed"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#a012b2b748783aff0385d79f1990a8eed">ucFlightAutotuneMvt</a> (struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxMovement, const struct <a class="el" href="structIMUData.html">IMUData</a> *const pxIMUData, const struct <a class="el" href="structtelemeterData.html">telemeterData</a> *const pxTelemeterData)</td></tr>
 <tr class="separator:a012b2b748783aff0385d79f1990a8eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e83905ebd5ae1ca2d6c4f627cc76ab0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0">ucFlightCmdValid</a> (const struct <a class="el" href="structflightCommand.html">flightCommand</a> *const pxFlightCmd)</td></tr>
 <tr class="separator:a1e83905ebd5ae1ca2d6c4f627cc76ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd9b1a3e9a40a1a500b041a880e45f0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#abcd9b1a3e9a40a1a500b041a880e45f0">ucFlightIsStationary</a> (const struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxFlightMvt)</td></tr>
-<tr class="separator:abcd9b1a3e9a40a1a500b041a880e45f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbe0839f1ce8a871c43a2f5295b3b62"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#a0bbe0839f1ce8a871c43a2f5295b3b62">ucFlightStationary</a> (const struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxFlightMvt)</td></tr>
+<tr class="separator:a0bbe0839f1ce8a871c43a2f5295b3b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87c6c0c38b45928578dbd7fcf471de9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#a87c6c0c38b45928578dbd7fcf471de9c">vFlightAvoidMvt</a> (struct <a class="el" href="structflightMovement.html">flightMovement</a> *pxMovement, const struct <a class="el" href="structIMUData.html">IMUData</a> *pxIMUData, const struct <a class="el" href="structtelemeterData.html">telemeterData</a> *pxtelemeterData)</td></tr>
 <tr class="separator:a87c6c0c38b45928578dbd7fcf471de9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8c22b30dd926141a233934ee8c56ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#abd8c22b30dd926141a233934ee8c56ed">vFlightCommandMvt</a> (struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxMovement, const struct <a class="el" href="structIMUData.html">IMUData</a> *const pxIMUData, const struct <a class="el" href="structtelemeterData.html">telemeterData</a> *const pxTelemeterData, const struct <a class="el" href="structflightCommand.html">flightCommand</a> *const pxFlightCmd)</td></tr>
@@ -148,6 +154,22 @@ Variables</h2></td></tr>
 <tr class="memitem:ae33cee69ac52f41333ff2de50e6e0720"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structflightMovement.html">flightMovement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a></td></tr>
 <tr class="separator:ae33cee69ac52f41333ff2de50e6e0720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a2c63ae95fe7c6106ae1ec9c283afa486"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODULE&#160;&#160;&#160;&quot;flight      &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to fill the pcModule argument of the <a class="el" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg()</a> call. </p>
+
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00006">6</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a012b2b748783aff0385d79f1990a8eed"></a>
 <div class="memitem">
@@ -188,22 +210,23 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns 1 if autotuning is done; PID parameters are considered static in either <a class="el" href="flight_8c.html">flight.c</a> or <a class="el" href="pid_8c.html">pid.c</a>. </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00089">89</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightAutotuneMvt()&quot;</span>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00100">100</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightAutotuneMvt()&quot;</span>,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a012b2b748783aff0385d79f1990a8eed_cgraph.png" border="0" usemap="#flight_8c_a012b2b748783aff0385d79f1990a8eed_cgraph" alt=""/></div>
 <map name="flight_8c_a012b2b748783aff0385d79f1990a8eed_cgraph" id="flight_8c_a012b2b748783aff0385d79f1990a8eed_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="199,5,292,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="195,5,290,32"/></map>
 </div>
 </p>
 
@@ -212,7 +235,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a012b2b748783aff0385d79f1990a8eed_icgraph.png" border="0" usemap="#flight_8c_a012b2b748783aff0385d79f1990a8eed_icgraph" alt=""/></div>
 <map name="flight_8c_a012b2b748783aff0385d79f1990a8eed_icgraph" id="flight_8c_a012b2b748783aff0385d79f1990a8eed_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="197,5,320,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="368,5,419,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="195,5,314,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="363,5,413,32"/></map>
 </div>
 </p>
 
@@ -239,38 +262,57 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Tests whether its argument is a valid <a class="el" href="structflightCommand.html">flightCommand</a> </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if pxFlightCmd is a valid <a class="el" href="structflightCommand.html">flightCommand</a>, 0 otherwise. </dd></dl>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00044">44</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span>( ( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a58809b259ff0803e832e38466e033e04">cTransX</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a58809b259ff0803e832e38466e033e04">cTransX</a> &lt;= +2 )</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            &amp;&amp; ( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a76a313c91568eac343dc73aaa1d6ad20">cTransY</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a76a313c91568eac343dc73aaa1d6ad20">cTransY</a> &lt;= +2 )</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            &amp;&amp;( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a6db14dba607c95e017c3c70710896315">cTransZ</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a6db14dba607c95e017c3c70710896315">cTransZ</a> &lt;= +2 )</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            &amp;&amp;( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a9092f8f01fe110472fcaa65770226889">cRotZ</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a9092f8f01fe110472fcaa65770226889">cRotZ</a> &lt;= +2 ) )</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00049">49</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span>( ( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a58809b259ff0803e832e38466e033e04">cTransX</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a58809b259ff0803e832e38466e033e04">cTransX</a> &lt;= +2 )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            &amp;&amp; ( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a76a313c91568eac343dc73aaa1d6ad20">cTransY</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a76a313c91568eac343dc73aaa1d6ad20">cTransY</a> &lt;= +2 )</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            &amp;&amp;( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a6db14dba607c95e017c3c70710896315">cTransZ</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a6db14dba607c95e017c3c70710896315">cTransZ</a> &lt;= +2 )</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            &amp;&amp;( pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a9092f8f01fe110472fcaa65770226889">cRotZ</a> &gt;= -2 &amp;&amp; pxFlightCmd-&gt;<a class="code" href="structflightCommand.html#a9092f8f01fe110472fcaa65770226889">cRotZ</a> &lt;= +2 ) )</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucFlightCmdValid()&quot;</span>,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="stringliteral">&quot;Parameter flightCommand is valid&quot;</span> );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;ucFlightCmdValid()&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="stringliteral">&quot;Parameter flightCommand is not valid !&quot;</span> );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="ttc" id="structflightCommand_html_a76a313c91568eac343dc73aaa1d6ad20"><div class="ttname"><a href="structflightCommand.html#a76a313c91568eac343dc73aaa1d6ad20">flightCommand::cTransY</a></div><div class="ttdeci">int8_t cTransY</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00027">flight.h:27</a></div></div>
 <div class="ttc" id="structflightCommand_html_a9092f8f01fe110472fcaa65770226889"><div class="ttname"><a href="structflightCommand.html#a9092f8f01fe110472fcaa65770226889">flightCommand::cRotZ</a></div><div class="ttdeci">int8_t cRotZ</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00030">flight.h:30</a></div></div>
+<div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
 <div class="ttc" id="structflightCommand_html_a6db14dba607c95e017c3c70710896315"><div class="ttname"><a href="structflightCommand.html#a6db14dba607c95e017c3c70710896315">flightCommand::cTransZ</a></div><div class="ttdeci">int8_t cTransZ</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00028">flight.h:28</a></div></div>
 <div class="ttc" id="structflightCommand_html_a58809b259ff0803e832e38466e033e04"><div class="ttname"><a href="structflightCommand.html#a58809b259ff0803e832e38466e033e04">flightCommand::cTransX</a></div><div class="ttdeci">int8_t cTransX</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00026">flight.h:26</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_cgraph.png" border="0" usemap="#flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_cgraph" alt=""/></div>
+<map name="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_cgraph" id="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_cgraph">
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="179,5,274,32"/></map>
+</div>
+</p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_icgraph.png" border="0" usemap="#flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_icgraph" alt=""/></div>
 <map name="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_icgraph" id="flight_8c_a1e83905ebd5ae1ca2d6c4f627cc76ab0_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="180,5,335,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="384,5,435,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#adc20e4087bfd6cf789c7552627ad89a8" title="prvZigbeeReceiveTask" alt="" coords="179,5,328,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="376,5,427,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="abcd9b1a3e9a40a1a500b041a880e45f0"></a>
+<a class="anchor" id="a0bbe0839f1ce8a871c43a2f5295b3b62"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -278,7 +320,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t ucFlightIsStationary </td>
+          <td class="memname">uint8_t ucFlightStationary </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="structflightMovement.html">flightMovement</a> *const&#160;</td>
           <td class="paramname"><em>pxFlightMvt</em></td><td>)</td>
@@ -291,30 +333,31 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Tests whether the argument is the stationary movement. Returns 1 if it is, 0 otherwise </p>
+<p>Tests whether the argument is the stationary movement. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if the argument is the stationary movement, 0 otherwise </dd></dl>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00027">27</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> ( pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">lRotX</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">lRotX</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a8e73b910be08c253a0bb3bc5ff6c0f1e">lRotY</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a8e73b910be08c253a0bb3bc5ff6c0f1e">lRotY</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a996134daf2da01b38254a96b2cc22ed5">lRotZ</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a996134daf2da01b38254a96b2cc22ed5">lRotZ</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#ae8d582199bdf277aaa34804afc2ac949">lTransX</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#ae8d582199bdf277aaa34804afc2ac949">lTransX</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a0b3b73e357f44d46371d33656a37f16f">lTransY</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a0b3b73e357f44d46371d33656a37f16f">lTransY</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a9642254751d2678c66fcb44b470aa7bc">lTransZ</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a9642254751d2678c66fcb44b470aa7bc">lTransZ</a> )</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00030">30</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> ( pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">lRotX</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">lRotX</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a8e73b910be08c253a0bb3bc5ff6c0f1e">lRotY</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a8e73b910be08c253a0bb3bc5ff6c0f1e">lRotY</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a996134daf2da01b38254a96b2cc22ed5">lRotZ</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a996134daf2da01b38254a96b2cc22ed5">lRotZ</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#ae8d582199bdf277aaa34804afc2ac949">lTransX</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#ae8d582199bdf277aaa34804afc2ac949">lTransX</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a0b3b73e357f44d46371d33656a37f16f">lTransY</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a0b3b73e357f44d46371d33656a37f16f">lTransY</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            &amp;&amp; pxFlightMvt-&gt;<a class="code" href="structflightMovement.html#a9642254751d2678c66fcb44b470aa7bc">lTransZ</a> == <a class="code" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>.<a class="code" href="structflightMovement.html#a9642254751d2678c66fcb44b470aa7bc">lTransZ</a> )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="ttc" id="structflightMovement_html_a0b3b73e357f44d46371d33656a37f16f"><div class="ttname"><a href="structflightMovement.html#a0b3b73e357f44d46371d33656a37f16f">flightMovement::lTransY</a></div><div class="ttdeci">int32_t lTransY</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00018">flight.h:18</a></div></div>
 <div class="ttc" id="structflightMovement_html_a91e742bebaf06b11c4e327d1da15feec"><div class="ttname"><a href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">flightMovement::lRotX</a></div><div class="ttdeci">int32_t lRotX</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00013">flight.h:13</a></div></div>
 <div class="ttc" id="structflightMovement_html_a9642254751d2678c66fcb44b470aa7bc"><div class="ttname"><a href="structflightMovement.html#a9642254751d2678c66fcb44b470aa7bc">flightMovement::lTransZ</a></div><div class="ttdeci">int32_t lTransZ</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00019">flight.h:19</a></div></div>
 <div class="ttc" id="structflightMovement_html_a996134daf2da01b38254a96b2cc22ed5"><div class="ttname"><a href="structflightMovement.html#a996134daf2da01b38254a96b2cc22ed5">flightMovement::lRotZ</a></div><div class="ttdeci">int32_t lRotZ</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00015">flight.h:15</a></div></div>
 <div class="ttc" id="structflightMovement_html_ae8d582199bdf277aaa34804afc2ac949"><div class="ttname"><a href="structflightMovement.html#ae8d582199bdf277aaa34804afc2ac949">flightMovement::lTransX</a></div><div class="ttdeci">int32_t lTransX</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00017">flight.h:17</a></div></div>
-<div class="ttc" id="flight_8c_html_ae33cee69ac52f41333ff2de50e6e0720"><div class="ttname"><a href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a></div><div class="ttdeci">const struct flightMovement xStationaryFlightMvt</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00007">flight.c:7</a></div></div>
+<div class="ttc" id="flight_8c_html_ae33cee69ac52f41333ff2de50e6e0720"><div class="ttname"><a href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a></div><div class="ttdeci">const struct flightMovement xStationaryFlightMvt</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00010">flight.c:10</a></div></div>
 <div class="ttc" id="structflightMovement_html_a8e73b910be08c253a0bb3bc5ff6c0f1e"><div class="ttname"><a href="structflightMovement.html#a8e73b910be08c253a0bb3bc5ff6c0f1e">flightMovement::lRotY</a></div><div class="ttdeci">int32_t lRotY</div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00014">flight.h:14</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -358,22 +401,23 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Computes xMovement according to both pxIMUData and the base command from pxZigbeeData, ensures the drone doesn't come any closer to the obstacle and stores xMovement in pxMovement </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00117">117</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">/* TODO : Should check xZigbeeData last update (and take into account timer</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    overflow). */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightAvoidMvt()&quot;</span>,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00128">128</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">/* TODO : Should check xZigbeeData last update (and take into account timer</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">    overflow). */</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightAvoidMvt()&quot;</span>,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a87c6c0c38b45928578dbd7fcf471de9c_cgraph.png" border="0" usemap="#flight_8c_a87c6c0c38b45928578dbd7fcf471de9c_cgraph" alt=""/></div>
 <map name="flight_8c_a87c6c0c38b45928578dbd7fcf471de9c_cgraph" id="flight_8c_a87c6c0c38b45928578dbd7fcf471de9c_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="172,5,265,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="166,5,261,32"/></map>
 </div>
 </p>
 
@@ -424,22 +468,23 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Computes xMovement according to both pxIMUData and the base command from pxZigbeeData, and stores it in pxMovement </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00102">102</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">/* TODO : Should check xZigbeeData last update (and take into account timer</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    overflow). */</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightCommandMvt()&quot;</span>,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00113">113</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">/* TODO : Should check xZigbeeData last update (and take into account timer</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    overflow). */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightCommandMvt()&quot;</span>,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_abd8c22b30dd926141a233934ee8c56ed_cgraph.png" border="0" usemap="#flight_8c_abd8c22b30dd926141a233934ee8c56ed_cgraph" alt=""/></div>
 <map name="flight_8c_abd8c22b30dd926141a233934ee8c56ed_cgraph" id="flight_8c_abd8c22b30dd926141a233934ee8c56ed_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="199,5,292,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="193,5,287,32"/></map>
 </div>
 </p>
 
@@ -448,7 +493,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_abd8c22b30dd926141a233934ee8c56ed_icgraph.png" border="0" usemap="#flight_8c_abd8c22b30dd926141a233934ee8c56ed_icgraph" alt=""/></div>
 <map name="flight_8c_abd8c22b30dd926141a233934ee8c56ed_icgraph" id="flight_8c_abd8c22b30dd926141a233934ee8c56ed_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="197,5,320,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="368,5,419,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="193,5,311,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="360,5,411,32"/></map>
 </div>
 </p>
 
@@ -477,20 +522,21 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Executes computed xMovement using the PID algorithm for each degree of freedom (each with its own PID coefficients) </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00130">130</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightExecuteMvt()&quot;</span>,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00141">141</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightExecuteMvt()&quot;</span>,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_cgraph.png" border="0" usemap="#flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_cgraph" alt=""/></div>
 <map name="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_cgraph" id="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="185,5,279,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="182,5,277,32"/></map>
 </div>
 </p>
 
@@ -499,7 +545,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_icgraph.png" border="0" usemap="#flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_icgraph" alt=""/></div>
 <map name="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_icgraph" id="flight_8c_acac293933dc8e8dc33e9ad9cd6f36fdf_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="184,5,307,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="355,5,405,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="182,5,301,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="349,5,400,32"/></map>
 </div>
 </p>
 
@@ -544,23 +590,24 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Slowly descend until ground is detected, then proceed even more slowly. May be useful to take into account the altitude measured by the IMU before takeoff. </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00074">74</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">/* Use reference altitude as set point for the PID, or measured altitude</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">    from the bottom telemeter (ie. landing Altitude = current Altitude - bottom</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">    telemeter obstacle distance, as an absolute altitude). */</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightLandMvt()&quot;</span>,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00085">85</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">/* Use reference altitude as set point for the PID, or measured altitude</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    from the bottom telemeter (ie. landing Altitude = current Altitude - bottom</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    telemeter obstacle distance, as an absolute altitude). */</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightLandMvt()&quot;</span>,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a9572a0151bab9b0ef3506466d3952dec_cgraph.png" border="0" usemap="#flight_8c_a9572a0151bab9b0ef3506466d3952dec_cgraph" alt=""/></div>
 <map name="flight_8c_a9572a0151bab9b0ef3506466d3952dec_cgraph" id="flight_8c_a9572a0151bab9b0ef3506466d3952dec_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="167,5,260,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="161,5,255,32"/></map>
 </div>
 </p>
 
@@ -569,7 +616,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_a9572a0151bab9b0ef3506466d3952dec_icgraph.png" border="0" usemap="#flight_8c_a9572a0151bab9b0ef3506466d3952dec_icgraph" alt=""/></div>
 <map name="flight_8c_a9572a0151bab9b0ef3506466d3952dec_icgraph" id="flight_8c_a9572a0151bab9b0ef3506466d3952dec_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="165,5,288,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="336,5,387,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="161,5,279,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="328,5,379,32"/></map>
 </div>
 </p>
 
@@ -620,20 +667,21 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Updates pxMovement as xStationaryFlightMvt with target altitude of ulTakeoffAltitude </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00061">61</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            uxTaskPriorityGet( NULL ), <span class="stringliteral">&quot;flight&quot;</span>, <span class="stringliteral">&quot;vFlightTakeoffMvt()&quot;</span>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00072">72</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;TODO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vFlightTakeoffMvt()&quot;</span>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="stringliteral">&quot;Does nothing ATM&quot;</span> );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00054">debug.c:54</a></div></div>
+<div class="ttc" id="flight_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="flight_8c_source.html#l00006">flight.c:6</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_cgraph.png" border="0" usemap="#flight_8c_ad89bf60943a4c09254b7bc38d35651aa_cgraph" alt=""/></div>
 <map name="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_cgraph" id="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_cgraph">
-<area shape="rect" id="node3" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="183,5,276,35"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="174,5,269,32"/></map>
 </div>
 </p>
 
@@ -642,7 +690,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_icgraph.png" border="0" usemap="#flight_8c_ad89bf60943a4c09254b7bc38d35651aa_icgraph" alt=""/></div>
 <map name="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_icgraph" id="flight_8c_ad89bf60943a4c09254b7bc38d35651aa_icgraph">
-<area shape="rect" id="node3" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="181,5,304,35"/><area shape="rect" id="node5" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="352,5,403,35"/></map>
+<area shape="rect" id="node2" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff" title="prvFlightCtrlTask" alt="" coords="174,5,293,32"/><area shape="rect" id="node3" href="drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="341,5,392,32"/></map>
 </div>
 </p>
 
@@ -666,7 +714,7 @@ Here is the caller graph for this function:</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Default command : stationary flight </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00017">17</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00020">20</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
 
 </div>
 </div>
@@ -689,7 +737,7 @@ Here is the caller graph for this function:</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Default movement : stationary flight </p>
 
-<p>Definition at line <a class="el" href="flight_8c_source.html#l00007">7</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
+<p>Definition at line <a class="el" href="flight_8c_source.html#l00010">10</a> of file <a class="el" href="flight_8c_source.html">flight.c</a>.</p>
 
 </div>
 </div>
@@ -699,7 +747,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="flight_8c.html">flight.c</a></li>
-    <li class="footer">Generated on Thu Jan 23 2014 19:41:24 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sat Jan 25 2014 19:46:38 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

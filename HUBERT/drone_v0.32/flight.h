@@ -30,7 +30,7 @@ struct flightCommand
 	int8_t cRotZ;	/** Yaw (counter-clockwise when +) */
 };
 
-inline uint8_t ucFlightIsStationary( const struct flightMovement * const pxFlightMvt );
+inline uint8_t ucFlightStationary( const struct flightMovement * const pxFlightMvt );
 inline uint8_t ucFlightCmdValid( const struct flightCommand * const pxFlightCmd );
 
 inline void vFlightTakeoffMvt( struct flightMovement * const pxMovement,

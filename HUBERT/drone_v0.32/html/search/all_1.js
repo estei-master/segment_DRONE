@@ -2,6 +2,7 @@ var searchData=
 [
   ['debug_2ec',['debug.c',['../debug_8c.html',1,'']]],
   ['debug_2eh',['debug.h',['../debug_8h.html',1,'']]],
+  ['debugmodule',['debugMODULE',['../debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c',1,'debug.h']]],
   ['debugputchar',['debugPUTCHAR',['../debug_8h.html#a333cdcc5182066ca03ea7aa39a12936a',1,'debug.h']]],
   ['debuguart_5finit',['debugUART_INIT',['../debug_8h.html#a12a14788b9256e00d6548471bf257f2b',1,'debug.h']]],
   ['debuguse_5fdebug_5fsemihosting',['debugUSE_DEBUG_SEMIHOSTING',['../debug_8h.html#addef633ef9e49c8c813805d7317695b9',1,'debug.h']]],
