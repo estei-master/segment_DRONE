@@ -1,3 +1,5 @@
+/** @file zigbee.c */
+
 #include "zigbee.h"
 #include "task.h"
 

@@ -1,3 +1,5 @@
+/** @file gps.h */
+
 #ifndef GPS_H
 #define GPS_H
 
@@ -6,7 +8,7 @@
 /** GPS frame data structure */
 struct GPSData
 {
-	/* TODO : add relevant fields */
+	/** @todo add relevant fields */
 	/** Power level of the GPS signal */
 	uint32_t ulSignalLvl;
 };
@@ -15,7 +17,7 @@ struct GPSData
 enum GPSErrorMask
 {
 	GPS_ERR_NONE		= 0x00,
-	/* TODO : Add flags for each field of a GPSData struct */
+	/** @todo Add flags for each field of a GPSData struct */
 };
 
 /** GPS initialization routine */

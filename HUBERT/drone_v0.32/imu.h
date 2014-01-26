@@ -1,3 +1,5 @@
+/** @file imu.h */
+
 #ifndef IMU_H
 #define IMU_H
 
@@ -12,9 +14,9 @@
 //#define imuMIN_VALID_ACCEL			-100		/* TODO : sensible value */
 //#define imuMAX_VALID_ACCEL			100			/* TODO : sensible value */
 /** Minimum altitude received from the IMU to be considered valid */
-#define imuMIN_VALID_ALTITUDE		0			/* TODO : sensible value */
+#define imuMIN_VALID_ALTITUDE		0			/** @todo sensible value */
 /** Maximum altitude received from the IMU to be considered valid */
-#define imuMAX_VALID_ALTITUDE		0xFFFFFFFF	/* TODO : sensible value */
+#define imuMAX_VALID_ALTITUDE		0xFFFFFFFF	/** @todo sensible value */
 
 /** Used as a mask to describe the fields of an IMUData that are out of
 consistent measurement range. */

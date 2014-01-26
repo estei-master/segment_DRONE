@@ -1,3 +1,5 @@
+/** @file zigbee.h */
+
 #ifndef ZIGBEE_H
 #define ZIGBEE_H
 
@@ -7,7 +9,7 @@
 
 struct droneBatteryWrapper;
 
-/* TODO : Expand as necessary */
+/** @todo Expand enum zigbeeCommandId as necessary */
 /** Identifier for commands received from the base. Treated internally to the
 zigbee task. */
 enum zigbeeCommandId

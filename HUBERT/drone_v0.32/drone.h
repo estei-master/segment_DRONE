@@ -1,11 +1,13 @@
 #ifndef DRONE_H
 #define DRONE_H
 
+/** @file drone.h */
+
 #include "common.h"
 
 /*****  Base-configurable parameters struct  *********************************/
 
-/* TODO : add macros to define maximum and minimum possible configuration */
+/** @todo Add macros to define maximum and minimum possible configuration */
 /** General drone configuration structure, holds limits, tasks periods and
 parameter timouts */
 struct droneConfig

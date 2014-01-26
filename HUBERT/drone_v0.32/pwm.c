@@ -1,3 +1,5 @@
+/** @file pwm.c */
+
 #include "pwm.h"
 #include "task.h"
 

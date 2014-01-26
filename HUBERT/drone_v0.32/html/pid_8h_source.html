@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('pid_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,31 +107,32 @@ $(document).ready(function(){initNavTree('pid_8h_source.html','');});
 <div class="title">pid.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="pid_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PID_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PID_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structPIDParam.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPIDParam.html">PIDParam</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">    9</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">ulKprop</a>;   </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">   10</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">ulKint</a>;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">   11</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">ulKder</a>;    </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PID_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="structPIDParam_html_a0493edc709374489d3ffcfdccd8a9685"><div class="ttname"><a href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">PIDParam::ulKder</a></div><div class="ttdeci">uint32_t ulKder</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00011">pid.h:11</a></div></div>
-<div class="ttc" id="structPIDParam_html"><div class="ttname"><a href="structPIDParam.html">PIDParam</a></div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00007">pid.h:7</a></div></div>
-<div class="ttc" id="structPIDParam_html_a6e3d22fcddce80e2980598fae0196c1a"><div class="ttname"><a href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">PIDParam::ulKprop</a></div><div class="ttdeci">uint32_t ulKprop</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00009">pid.h:9</a></div></div>
+<a href="pid_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef PID_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define PID_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structPIDParam.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPIDParam.html">PIDParam</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">   11</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">ulKprop</a>;   </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">   12</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">ulKint</a>;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">   13</a></span>&#160;    uint32_t <a class="code" href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">ulKder</a>;    </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PID_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structPIDParam_html_a0493edc709374489d3ffcfdccd8a9685"><div class="ttname"><a href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">PIDParam::ulKder</a></div><div class="ttdeci">uint32_t ulKder</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00013">pid.h:13</a></div></div>
+<div class="ttc" id="structPIDParam_html"><div class="ttname"><a href="structPIDParam.html">PIDParam</a></div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00009">pid.h:9</a></div></div>
+<div class="ttc" id="structPIDParam_html_a6e3d22fcddce80e2980598fae0196c1a"><div class="ttname"><a href="structPIDParam.html#a6e3d22fcddce80e2980598fae0196c1a">PIDParam::ulKprop</a></div><div class="ttdeci">uint32_t ulKprop</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00011">pid.h:11</a></div></div>
 <div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
-<div class="ttc" id="structPIDParam_html_a3bd8c16c5347c7603afdc75bdf547c6f"><div class="ttname"><a href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">PIDParam::ulKint</a></div><div class="ttdeci">uint32_t ulKint</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00010">pid.h:10</a></div></div>
+<div class="ttc" id="structPIDParam_html_a3bd8c16c5347c7603afdc75bdf547c6f"><div class="ttname"><a href="structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f">PIDParam::ulKint</a></div><div class="ttdeci">uint32_t ulKint</div><div class="ttdef"><b>Definition:</b> <a href="pid_8h_source.html#l00012">pid.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="pid_8h.html">pid.h</a></li>
-    <li class="footer">Generated on Sat Jan 25 2014 19:46:37 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sun Jan 26 2014 13:13:56 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

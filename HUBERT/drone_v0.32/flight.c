@@ -2,10 +2,12 @@
 #include "pid.h"
 #include "task.h"
 
+/** @file flight.c */
+
 /** Used to fill the pcModule argument of the ulDebugMsg() call. */
 #define MODULE		"flight      "
 
-/* TODO : fix it (angles ? speeds ? reference ?) */
+/** @todo fix xStationaryFlightMvt (angles ? speeds ? reference ?) */
 /** Default movement : stationary flight */
 const struct flightMovement xStationaryFlightMvt = {
 		.lRotX		= 0,
@@ -24,7 +26,7 @@ const struct flightCommand xStationaryFlightCmd = {
 		.cRotZ		= 0,
 };
 
-/* TODO : Check whether it is called at all */
+/** @todo Check whether it is called at all */
 /** Tests whether the argument is the stationary movement.
 @return 1 if the argument is the stationary movement, 0 otherwise */
 inline uint8_t ucFlightStationary( const struct flightMovement * const pxFlightMvt )
@@ -94,7 +96,7 @@ inline void vFlightLandMvt( struct flightMovement * const pxMovement,
 			"Does nothing ATM" );
 }
 
-/* TODO : implementation */
+/** @todo Implement ucFlightAutotuneMvt() */
 /** Returns 1 if autotuning is done; PID parameters are considered static in
 either flight.c or pid.c. */
 inline uint8_t ucFlightAutotuneMvt( struct flightMovement * const pxMovement,
@@ -115,26 +117,26 @@ inline void vFlightCommandMvt( struct flightMovement * const pxMovement,
 		const struct telemeterData * const pxTelemeterData,
 		const struct flightCommand * const pxFlightCmd )
 {
-	/* TODO : Should check xZigbeeData last update (and take into account timer
+	/** @todo Should check xZigbeeData last update (and take into account timer
 	overflow). */
 	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "vFlightCommandMvt()",
 			"Does nothing ATM" );
 }
 
-/** Computes xMovement according to both pxIMUData and the base command from
+/* Computes xMovement according to both pxIMUData and the base command from
 pxZigbeeData, ensures the drone doesn't come any closer to the obstacle and
 stores xMovement in pxMovement */
-inline void vFlightAvoidMvt( struct flightMovement *pxMovement,
-		const struct IMUData *pxIMUData,
-		const struct telemeterData *pxtelemeterData )
-{
-	/* TODO : Should check xZigbeeData last update (and take into account timer
-	overflow). */
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), MODULE, "vFlightAvoidMvt()",
-			"Does nothing ATM" );
-}
+//inline void vFlightAvoidMvt( struct flightMovement *pxMovement,
+//		const struct IMUData *pxIMUData,
+//		const struct telemeterData *pxtelemeterData )
+//{
+//	/* TODO : Should check xZigbeeData last update (and take into account timer
+//	overflow). */
+//	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
+//			uxTaskPriorityGet( NULL ), MODULE, "vFlightAvoidMvt()",
+//			"Does nothing ATM" );
+//}
 
 /** Executes computed xMovement using the PID algorithm for each
 degree of freedom (each with its own PID coefficients) */

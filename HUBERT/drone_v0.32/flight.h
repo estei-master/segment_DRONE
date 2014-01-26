@@ -1,11 +1,13 @@
 #ifndef FLIGHT_H
 #define FLIGHT_H
 
+/** @file flight.h */
+
 #include "common.h"
 #include "imu.h"
 #include "telemeter.h"
 
-/* TODO : absolute or relative ? Angle or angular rate ? */
+/** @todo absolute or relative ? Angle or angular rate ? */
 /** Desired drone attitude */
 struct flightMovement
 {

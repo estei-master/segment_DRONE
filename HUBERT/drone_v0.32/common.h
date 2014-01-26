@@ -1,7 +1,6 @@
-/******************************************************************************
- **		COMMON INCLUSIONS
- **
- **		Includes headers used throughout the project.
+/**************************************************************************//**
+ **		@file common.h
+ **		Common inclusions, includes headers used throughout the project.
  **
  **		1 tabulation = 4 spaces
  *****************************************************************************/

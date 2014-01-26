@@ -1,3 +1,5 @@
+/** @file telemeter.h */
+
 #ifndef TELEMETER_H
 #define TELEMETER_H
 

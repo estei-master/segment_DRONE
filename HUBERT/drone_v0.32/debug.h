@@ -1,6 +1,8 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+/** @file debug.h */
+
 #include "stm32f4xx.h"
 #include "stm32f4xx_usart.h"
 #include "stm32f4xx_rcc.h"

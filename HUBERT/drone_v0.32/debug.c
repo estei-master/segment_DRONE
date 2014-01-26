@@ -1,5 +1,7 @@
 #include "debug.h"
 
+/** @file debug.c */
+
 /** We use the USART6 as it corresponds the RS232 port on the Discovery board */
 void vDebugUARTInit( void )
 {
@@ -63,7 +65,7 @@ uint32_t ulDebugMsg( unsigned long ulTickCnt, char * pcTag,
 /** Retarget printf() to USART6 function */
 void vDebugUARTPutchar( uint8_t ucChar )
 {
-	/* TODO : Use an interrupt instead */
+	/** @todo : Consider using an interrupt instead */
 	/* Wait for previous character transmission */
 	while( USART_GetFlagStatus( USART6, USART_FLAG_TC ) == RESET )
 	{

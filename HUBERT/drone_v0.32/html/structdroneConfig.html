@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('structdroneConfig.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,8 +116,6 @@ $(document).ready(function(){initNavTree('structdroneConfig.html','');});
 Collaboration diagram for droneConfig:</div>
 <div class="dyncontent">
 <div class="center"><img src="structdroneConfig__coll__graph.png" border="0" usemap="#droneConfig_coll__map" alt="Collaboration graph"/></div>
-<map name="droneConfig_coll__map" id="droneConfig_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -159,9 +158,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a73c2331fe8a9f7db0f4061f8271a0245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>General drone configuration structure, holds limits, tasks periods and parameter timouts </p>
+<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Add macros to define maximum and minimum possible configuration </dd></dl>
+<p>General drone configuration structure, holds limits, tasks periods and parameter timouts </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00011">11</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00013">13</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="afd5a187fc480cfde2116b26023bb57a9"></a>
 <div class="memitem">
@@ -174,7 +174,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Battery level to activate automatic landing </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00023">23</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00025">25</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -189,7 +189,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Critical drone-base link level - yet unused </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00027">27</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00029">29</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +204,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Maximum pitch/roll angle (horizontal reference) - akin to maximum horizontal speed. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00015">15</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00017">17</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Reference altitude, set at takeoff </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00021">21</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00023">23</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -234,7 +234,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Preset altitude for automatic takeoff </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00017">17</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00019">19</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +249,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Distance to activate obstacle avoidance </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00025">25</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00027">27</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Minimal flight height (based on telemeters) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00019">19</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00021">21</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -279,7 +279,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Period of the battery monitoring task (ms) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00030">30</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00032">32</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the battery power level validity, defined as a multiplier to xBatteryMonitoringPeriod. After this delay, a DRN_ERR_BATT_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00058">58</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00060">60</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -309,7 +309,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Period of the obstacle detection task (ms) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00032">32</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00034">34</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Period of the flight control task (ms) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00034">34</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00036">36</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Period of the GPS reception task (ms) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00036">36</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00038">38</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -354,7 +354,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the GPS data validity, defined as a multiplier to xGPSReceivePeriod. After this delay, a DRN_ERR_GPS_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00062">62</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00064">64</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +369,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the IMU data validity, defined as a multiplier to xFlightCtrlPeriod. After this delay, a DRN_ERR_IMU_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00042">42</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00044">44</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +384,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the telemeter data validity, defined as a multiplier to xDetectObstaclePeriod. After this delay, a DRN_ERR_TLM_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00054">54</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00056">56</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +399,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the flight command validity, defined as a multiplier to xZigbeeReceivePeriod. After this delay, a DRN_ERR_CMD_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00046">46</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00048">48</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -414,7 +414,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Period of the ZigBee base-drone communication task (ms) </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00038">38</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00040">40</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Timeout for the ZigBee communication, defined as a multiplier to xZigbeeReceivePeriod. After this delay, a DRN_ERR_RX_TOUT error is triggered. </p>
 
-<p>Definition at line <a class="el" href="drone_8h_source.html#l00050">50</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
+<p>Definition at line <a class="el" href="drone_8h_source.html#l00052">52</a> of file <a class="el" href="drone_8h_source.html">drone.h</a>.</p>
 
 </div>
 </div>
@@ -442,7 +442,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structdroneConfig.html">droneConfig</a></li>
-    <li class="footer">Generated on Sat Jan 25 2014 19:46:38 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sun Jan 26 2014 13:13:58 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

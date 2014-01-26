@@ -1,7 +1,13 @@
-/******************************************************************************
- ** 	DRONE CONTROL PROGRAM - USING FREERTOS REAL-TIME KERNEL
+/**************************************************************************//**
+ ** 	@file drone.c
+ ** 	Drone control program, using FreeRTOS real-time kernel.
  **
- **		TODO : Detailed description here
+ **		@todo drone.c description
+ **		@todo Watchdog on prvFlightCtrlTask() in non-ground mode
+ **		@todo Test FreeRTOS API function return value
+ **		@todo Measure maximum critical section time
+ **		@todo Get rid of drone*Wrapper to allow better header definitions
+ **		@todo Adapt variables type to their size
  **
  **		1 tabulation = 4 spaces
  **
@@ -9,12 +15,6 @@
  **		ocular injury resulting from reading this code is the sole
  **		responsibility of the reader. You've been warned.
  *****************************************************************************/
-
-/* TODO : watchdog on prvFlightCtrlTask() in non-ground mode
-TODO : test FreeRTOS API function return value
-TODO : measure maximum critical section time
-TODO : get rid of drone*Wrapper to allow better header definitions
-TODO : Adapt variables type to their size */
 
 /******************************************************************************
  **	 	 INCLUDES
@@ -196,12 +196,12 @@ struct flightCommand xStationaryFlightCmd;
 /** Default drone configuration, used at initialization and on reset */
 const struct droneConfig xDfltDroneConfig = {
 	/* flight limits */
-	.ulMaxAngle					= 25,	/* TODO : sensible value */
-	.ulTakeoffAltitude			= 1000,	/* TODO : sensible value */
-	.usMinAltitude				= 2000,	/* TODO : sensible value */
-	.ulCritBatteryLvl			= 15,	/* TODO : sensible value */
-	.usCritObstacleDist			= 750,	/* TODO : sensible value */
-	.ulCritZigbeeSignalLvl		= 5,	/* TODO : sensible value */
+	.ulMaxAngle					= 25,	/** @todo sensible value */
+	.ulTakeoffAltitude			= 1000,	/** @todo sensible value */
+	.usMinAltitude				= 2000,	/** @todo sensible value */
+	.ulCritBatteryLvl			= 15,	/** @todo sensible value */
+	.usCritObstacleDist			= 750,	/** @todo sensible value */
+	.ulCritZigbeeSignalLvl		= 5,	/** @todo sensible value */
 	.ulRefAltitude				= 0,
 	/* task periods (ms) */
 	.xBatteryMonitoringPeriod	= 30000 / portTICK_RATE_MS,
@@ -245,7 +245,7 @@ xTaskHandle xGPSReceiveHandle;
 
 /*****  Monitored drone parameters  ******************************************/
 
-/* TODO : think of an initialization value (Magic number ?) */
+/** @todo think of an initialization value (Magic number ?) */
 /** Global variable : GPS data and time of last update */
 static struct droneGPSWrapper xGPSWrapper;
 /** Global variable : Flight command received from the base, time of last
@@ -486,13 +486,12 @@ struct zigbeeData xLocZigbeeData;
 	/* At this point, the drone is hopefully correctly initialized and waiting
 	for orders */
 	xDroneState.eFltState = STATE_GROUND_RDY;
-	/* TODO : buzzer ready signal */
+	/** @todo buzzer ready signal */
 
 	xTaskCreate( prvGPSReceiveTask, ( signed char * ) "GPS",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneGPS_RECEIVE_PRIO, &xGPSReceiveHandle );
 
-	/* TODO : check validity */
 	/* Test whether tasks where correctly created */
 	if( ( xDetectObstacleHandle == NULL )
 			|| ( xFlightCtrlHandle == NULL )
@@ -503,11 +502,11 @@ struct zigbeeData xLocZigbeeData;
 		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, MODULE,
 				"main()", "Tasks creation failed !" );
 
-		/* TODO : Refactor into a routine */
-		/* Anonymous initialization error */
+		/* Unspecified initialization error */
 		xDroneState.eFltState = STATE_GROUND_ERR;
 		xDroneState.eErrorMask |= DRN_ERR_INIT;
 
+		/** @todo Refactor into a routine */
 		do
 		{
 			prvSendError( &xDroneState );
@@ -607,11 +606,6 @@ struct droneState xCurrDroneState;
 		prvSafeGetDroneConfig( &xCurrConfig );
 		/* Update local copy of xDroneState */
 		prvSafeGetDroneState( &xCurrDroneState );
-
-		/* TODO :	- Check them all with a telemeter specific function,
-					  returning a mask for invalid measures.
-					- Update xDroneState.eErrorMask (set DRN_ERR_TLM_INVAL or
-					  reset it) */
 
 		/* Update each telemeter measurement */
 		vTelemeterGetData( &xNewTlmData );
@@ -786,7 +780,7 @@ enum IMUErrorMask eIMUError;
 		/* Is data within valid range ? */
 		eIMUError = eIMUDataValid( &( xNewIMUWrapper.xIMUData ) );
 
-		/* TODO : Attitude measurement, retry if measurement is invalid */
+//		/* Attitude measurement, retry if measurement is invalid */
 //		do
 //		{
 //			ucIMUMeasurementCnt++;
@@ -852,7 +846,7 @@ enum IMUErrorMask eIMUError;
 			/* Nothing to do, the drone is idle on the ground. */
 			if( prvObstacleDetected( &xCurrTlmWrapper ) )
 			{
-				/* TODO : some led blinking */
+				/** @todo some led blinking */
 			}
 			break;
 		case STATE_TAKEOFF:
@@ -882,7 +876,7 @@ enum IMUErrorMask eIMUError;
 					&( xNewIMUWrapper.xIMUData ),
 					&( xCurrTlmWrapper.xTelemeterData ) ) )
 			{
-				/* TODO : Consider updating the PID parameters as part of
+				/** @todo Consider updating the PID parameters as part of
 				xDroneConfig */
 				/* xNextFltMvt is updated in the condition */
 			}
@@ -1110,7 +1104,7 @@ struct droneTelemeterWrapper xCurrTlmWrapper;
 			}
 			break;
 		case CMD_RESET_AUTOTUNING:
-			/* TODO : Implement autotuning reset */
+			/** @todo Implement autotuning reset */
 			/* Register command validity */
 			xCurrDroneState.eErrorMask &= ~DRN_ERR_CMD;
 			prvSafeSetDroneState( &xCurrDroneState );
@@ -1182,7 +1176,8 @@ struct droneTelemeterWrapper xCurrTlmWrapper;
 			"Got out of infinite loop !" );
 }
 
-/* TODO : Add comment here */
+/** Periodic battery monitoring task, updates xBatteryWrapper global variable.
+doesn't check critical battery level, the flight control task does it.  */
 static void prvBatteryMonitoringTask( void *pvParam )
 {
 portTickType xNextWakeTime = xTaskGetTickCount();
@@ -1239,14 +1234,15 @@ struct droneBatteryWrapper xNewBatteryWrapper;
 				xCurrConfig.xBatteryMonitoringPeriod );
 	}
 
-	/* TODO : send error to base if gets out of infinite loop */
+	/** @todo send error to base if gets out of infinite loop */
 	ulDebugMsg( xTaskGetTickCount(), "ERROR", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,
 			"prvBatteryMonitoringTask()",
 			"Got out of infinite loop !" );
 }
 
-/* TODO : Add comment here */
+/** Periodic GPS reception task. Updates the xGPSWrapper global variable. This
+is both a low priority and low frequency task. */
 static void prvGPSReceiveTask( void *pvParam )
 {
 /* Updated by each call to vTaskDelayUntil() */
@@ -1345,7 +1341,7 @@ static inline void prvSetupHardware( void )
 /** Initializes the ADC for battery level measurement */
 static inline void prvBatteryInit( void )
 {
-	/* TODO */
+	/** @todo Implement at integration */
 	ulDebugMsg( 0, "TODO ", ( signed char * ) "---", 0, MODULE, "prvBatteryInit()",
 				"Does nothing ATM" );
 }
@@ -1360,6 +1356,8 @@ static inline void prvInitPeriph( void )
 	prvBatteryInit();
 }
 
+/** @todo Implement ucGPSInitTest(), ucIMUInitTest(), ucZigbeeInitTest(),
+ucTelemeterInitTest(), ucBatteryInitTest(). */
 /** Executes the PBITs (power-on built-in tests) and returns a code to identify
 the failed tests, or 0 if no test failed. */
 static inline enum droneError prvInitTestPeriph( void )
@@ -1406,14 +1404,14 @@ code to identify the failed tests, or 0 if no test failed. */
 /** Checks xDroneConfig, returns 1 if valid, 0 otherwise */
 static inline uint8_t prvDroneConfigValid( struct droneConfig *pxNewDroneConfig )
 {
-	/* TODO : implement it */
+	/** @todo Implement prvDroneConfigValid() */
 
 	return 1;
 }
 
 static inline uint8_t prvBatteryValid( const uint32_t * const pulNewBattLvl )
 {
-	/* TODO : Implement it */
+	/** @todo Implement prvBatteryValid() */
 //	if(  )
 //	{
 		return 1;
@@ -1439,7 +1437,7 @@ static inline void prvSendStatus( const struct droneState *const pxCurrState,
 		const struct droneTelemeterWrapper *const pxCurrTlmWrapper,
 		const struct droneBatteryWrapper *const pxCurrBattWrapper )
 {
-	/* TODO : Implement */
+	/** @todo Implement prvSendStatus() */
 
 	/* Start of debugging display */
 	switch( pxCurrState->eFltState )
@@ -1565,7 +1563,8 @@ static inline void prvSendStatus( const struct droneState *const pxCurrState,
 	printf( "\r\n\tZigbee signal lvl : %d", pxCurrZigbeeWrapper->ulSignalLvl );
 
 	/* GPS */
-	/* TODO : GPS (struct currently unknown) */
+	/** @todo Add debug for GPS in prvSendConfig() (struct currently
+	unknown) */
 	printf( "\r\n" );
 	printf( "\r\n\tGPS update : %d", pxCurrGPSWrapper->xUpdateTime );
 
@@ -1631,7 +1630,7 @@ static inline void prvSendStatus( const struct droneState *const pxCurrState,
 
 static inline void prvSendError( const struct droneState * const pxCurrState )
 {
-	/* TODO : Implement */
+	/** @todo Implement prvSendError() */
 
 	/* Start of debugging display */
 	switch( pxCurrState->eFltState )
@@ -1931,7 +1930,7 @@ static inline void prvSafeGetDroneState( struct droneState * const pxNewState )
 
 static inline void prvEnableVideo( void )
 {
-	/* TODO */
+	/** @todo Implement prvEnableVideo() */
 	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvEnableVideo()",
 			"Does nothing ATM" );
@@ -1940,7 +1939,7 @@ static inline void prvEnableVideo( void )
 
 static inline void prvDisableVideo( void )
 {
-	/* TODO */
+	/** @todo Implement prvDisableVideo() */
 	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvDisableVideo()",
 			"Does nothing ATM" );
@@ -1971,7 +1970,7 @@ static inline uint8_t prvTakeoffDone( const struct IMUData * const pxCurrIMUData
 static inline uint8_t prvLandingDone( const struct IMUData * const pxCurrIMUData,
 		const struct droneConfig * const pxCurrDroneConfig )
 {
-	/* TODO */
+	/** @todo Implement prvLandingDone() */
 	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvLandingDone()",
 			"Does nothing ATM" );
@@ -1991,7 +1990,7 @@ static inline uint8_t prvTelemeterTimedout( const struct droneTelemeterWrapper *
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrTelemeterWrapper->xUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xTelemeterTimeout * pxCurrDroneConfig->xDetectObstaclePeriod );
@@ -2015,7 +2014,7 @@ static inline uint8_t prvBatteryTimedout( const struct droneBatteryWrapper * con
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrBatteryWrapper->xUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xBatteryTimeout * pxCurrDroneConfig->xBatteryMonitoringPeriod );
@@ -2027,7 +2026,7 @@ static inline uint8_t prvIMUTimedout( const struct droneIMUWrapper * const pxCur
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrIMUWrapper->xUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xIMUDataTimeout * pxCurrDroneConfig->xFlightCtrlPeriod );
@@ -2039,7 +2038,7 @@ static inline uint8_t prvGPSTimedout( const struct droneGPSWrapper * const pxCur
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrGPSWrapper->xUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xGPSTimeout * pxCurrDroneConfig->xGPSReceivePeriod );
@@ -2051,7 +2050,7 @@ static inline uint8_t prvZigbeeTimedout( const struct droneZigbeeWrapper * const
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrZigbeeWrapper->xZigbeeUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xZigbeeReceiveTimeout * pxCurrDroneConfig->xZigbeeReceivePeriod );
@@ -2063,7 +2062,7 @@ static inline uint8_t prvFltCmdTimedout( const struct droneZigbeeWrapper * const
 /* Since last update */
 portTickType ulTimeElapsed;
 
-	/* TODO : take into account systick overflow (probably not an issue for low
+	/** @todo take into account systick overflow (probably not an issue for low
 	SysTick frequency and short periods). */
 	ulTimeElapsed = xTaskGetTickCount() - pxCurrZigbeeWrapper->xCmdUpdateTime;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xZigbeeCmdTimeout * pxCurrDroneConfig->xZigbeeReceivePeriod );
@@ -2186,7 +2185,7 @@ static inline void prvGetBatteryLvl( uint32_t *pulBatteryLvl )
 	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvGetBatteryData()",
 			"Does nothing ATM" );
-	/* TODO : Implement it */
+	/** @todo Implement prvGetBatteryLvl() */
 }
 
 /** Reboot the MCU. DO NOT DO THIS WHILE FLYING ! */
@@ -2205,6 +2204,6 @@ static inline void prvShutdown( void )
 			uxTaskPriorityGet( NULL ), MODULE,  "prvShutdown()",
 			"Does nothing ATM" );
 
-	/* TODO : Implement */
+	/** @todo Implement prvShutdown() */
 	__WFI();
 }

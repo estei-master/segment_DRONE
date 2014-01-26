@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('structIMUData.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,8 +116,6 @@ $(document).ready(function(){initNavTree('structIMUData.html','');});
 Collaboration diagram for IMUData:</div>
 <div class="dyncontent">
 <div class="center"><img src="structIMUData__coll__graph.png" border="0" usemap="#IMUData_coll__map" alt="Collaboration graph"/></div>
-<map name="IMUData_coll__map" id="IMUData_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -129,7 +128,7 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Attitude measurement from the IMU module. </p>
 
-<p>Definition at line <a class="el" href="imu_8h_source.html#l00056">56</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
+<p>Definition at line <a class="el" href="imu_8h_source.html#l00058">58</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a3dbdb2be3068f998ad0b0ff721ceb258"></a>
 <div class="memitem">
@@ -142,7 +141,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Drone altitude, calculated from air pressure. </p>
 
-<p>Definition at line <a class="el" href="imu_8h_source.html#l00059">59</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
+<p>Definition at line <a class="el" href="imu_8h_source.html#l00061">61</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
 
 </div>
 </div>
@@ -157,7 +156,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>Values between -180 and +180, indexes specified in enum IMUAxis </p>
 
-<p>Definition at line <a class="el" href="imu_8h_source.html#l00061">61</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
+<p>Definition at line <a class="el" href="imu_8h_source.html#l00063">63</a> of file <a class="el" href="imu_8h_source.html">imu.h</a>.</p>
 
 </div>
 </div>
@@ -170,7 +169,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structIMUData.html">IMUData</a></li>
-    <li class="footer">Generated on Sat Jan 25 2014 19:46:38 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sun Jan 26 2014 13:13:58 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

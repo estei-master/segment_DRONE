@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -119,7 +120,7 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -143,12 +144,9 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
 : <a class="el" href="debug_8c.html#a852a17e70fc313d1bbf8130b4df1fb7e">debug.c</a>
 , <a class="el" href="debug_8h.html#a852a17e70fc313d1bbf8130b4df1fb7e">debug.h</a>
 </li>
-<li>vFlightAvoidMvt()
-: <a class="el" href="flight_8c.html#a87c6c0c38b45928578dbd7fcf471de9c">flight.c</a>
-</li>
 <li>vFlightCommandMvt()
-: <a class="el" href="flight_8h.html#abd8c22b30dd926141a233934ee8c56ed">flight.h</a>
-, <a class="el" href="flight_8c.html#abd8c22b30dd926141a233934ee8c56ed">flight.c</a>
+: <a class="el" href="flight_8c.html#abd8c22b30dd926141a233934ee8c56ed">flight.c</a>
+, <a class="el" href="flight_8h.html#abd8c22b30dd926141a233934ee8c56ed">flight.h</a>
 </li>
 <li>vFlightExecuteMvt()
 : <a class="el" href="flight_8c.html#acac293933dc8e8dc33e9ad9cd6f36fdf">flight.c</a>
@@ -163,8 +161,8 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
 , <a class="el" href="flight_8h.html#a287ad46b81ff6be2ad4a501cfcfd235d">flight.h</a>
 </li>
 <li>vGPSGetData()
-: <a class="el" href="gps_8h.html#aaa3d2c0fda8bcf02ddafd59a372da8ac">gps.h</a>
-, <a class="el" href="gps_8c.html#aaa3d2c0fda8bcf02ddafd59a372da8ac">gps.c</a>
+: <a class="el" href="gps_8c.html#aaa3d2c0fda8bcf02ddafd59a372da8ac">gps.c</a>
+, <a class="el" href="gps_8h.html#aaa3d2c0fda8bcf02ddafd59a372da8ac">gps.h</a>
 </li>
 <li>vGPSInit()
 : <a class="el" href="gps_8c.html#a864834e128d8d0ce2a9dc12f203987c5">gps.c</a>
@@ -179,8 +177,8 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
 , <a class="el" href="imu_8h.html#aa04aa36cb66d8820b22c7138373c114a">imu.h</a>
 </li>
 <li>vPWMInit()
-: <a class="el" href="pwm_8h.html#af7d9a91d4e6551bcc8c31db785324c31">pwm.h</a>
-, <a class="el" href="pwm_8c.html#af7d9a91d4e6551bcc8c31db785324c31">pwm.c</a>
+: <a class="el" href="pwm_8c.html#af7d9a91d4e6551bcc8c31db785324c31">pwm.c</a>
+, <a class="el" href="pwm_8h.html#af7d9a91d4e6551bcc8c31db785324c31">pwm.h</a>
 </li>
 <li>vPWMSet()
 : <a class="el" href="pwm_8h.html#aa4f354c1ec8e49409aba7a4394bce5ba">pwm.h</a>
@@ -195,12 +193,12 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
 , <a class="el" href="telemeter_8h.html#ad678b2e6df6594950ddb7529f93ad777">telemeter.h</a>
 </li>
 <li>vZigbeeInit()
-: <a class="el" href="zigbee_8h.html#a3f7e0caf4297d7b7c8a8dfc675465406">zigbee.h</a>
-, <a class="el" href="zigbee_8c.html#a3f7e0caf4297d7b7c8a8dfc675465406">zigbee.c</a>
+: <a class="el" href="zigbee_8c.html#a3f7e0caf4297d7b7c8a8dfc675465406">zigbee.c</a>
+, <a class="el" href="zigbee_8h.html#a3f7e0caf4297d7b7c8a8dfc675465406">zigbee.h</a>
 </li>
 <li>vZigbeeReceiveData()
-: <a class="el" href="zigbee_8h.html#a086880a41e9dcff0444893eaa3aa5eac">zigbee.h</a>
-, <a class="el" href="zigbee_8c.html#a086880a41e9dcff0444893eaa3aa5eac">zigbee.c</a>
+: <a class="el" href="zigbee_8c.html#a086880a41e9dcff0444893eaa3aa5eac">zigbee.c</a>
+, <a class="el" href="zigbee_8h.html#a086880a41e9dcff0444893eaa3aa5eac">zigbee.h</a>
 </li>
 <li>vZigbeeSendData()
 : <a class="el" href="zigbee_8c.html#ad322acaa079b8547917162543edd279e">zigbee.c</a>
@@ -211,7 +209,7 @@ $(document).ready(function(){initNavTree('globals_v.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Jan 25 2014 19:46:39 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Sun Jan 26 2014 13:13:58 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

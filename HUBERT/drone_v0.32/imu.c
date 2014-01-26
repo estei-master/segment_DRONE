@@ -1,3 +1,5 @@
+/** @file imu.c */
+
 #include "imu.h"
 #include "task.h"
 
@@ -39,7 +41,7 @@ inline uint8_t ucIMUInitTest( void )
 	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0, MODULE, "ucIMUInitTest()",
 			"Does nothing ATM" );
 
-	/* TODO : implement during integration */
+	/** @todo Implement ucIMUInitTest() during integration */
 	return 0;
 }
 
@@ -58,7 +60,7 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "vIMUGetData()", "Receiving IMU measurements" );
 
-	/* TODO : replace critical section by attempt counter in imu_main : if no
+	/** @todo replace critical section by attempt counter in imu_main : if no
 	critical section, the task gets preempted (sleeping/waking up constantly),
 	otherwise it blocks the whole system if communication is lost.
 	Sample of no critical section output :
@@ -205,7 +207,7 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
  *****************************************************************************/
 
 /* Set to static to avoid collisions */
-/* TODO : reuse the same GPIO_InitTypeDef and USART_InitTypeDef to initialize
+/** @todo reuse the same GPIO_InitTypeDef and USART_InitTypeDef to initialize
 every USART (memory saving) */
 /** Sets up the USART3 for IMU communication */
 static inline void usart_init( void )
@@ -265,9 +267,8 @@ static inline void imu_main( struct IMUData * const pxIMUData )
 uint16_t pusBuff[ 20 ];
 uint8_t ucIndex = 0;
 
-	/*
-	 * TODO : Empécher de dépasser indice 20 du tableau
-	 */
+	/** @todo Check we don't go past index 19 of pusBuff */
+	/** @todo Add altitude */
 
 	while( pusBuff[ ucIndex ] != 'S' )
 	{
