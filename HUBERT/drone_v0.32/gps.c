@@ -50,6 +50,6 @@ inline void vGPSGetData( struct GPSData *pxGPSData )
 /** Tests whether its parameter is valid GPS data */
 inline enum GPSErrorMask eGPSDataValid( const struct GPSData * const pxNewGPSData )
 {
-	/* TODO : Implement eGPSDataValid() */
+	/** @todo Implement eGPSDataValid() */
 	return GPS_ERR_NONE;
 }

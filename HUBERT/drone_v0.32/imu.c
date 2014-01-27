@@ -270,6 +270,8 @@ uint8_t ucIndex = 0;
 
 	/** @todo Check we don't go past index 19 of pusBuff */
 	/** @todo Add altitude */
+	/** @todo Switch to reception on interrupt and only parsing in the task
+	itself */
 
 	while( pusBuff[ ucIndex ] != 'S' )
 	{

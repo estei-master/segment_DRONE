@@ -116,10 +116,10 @@ $(document).ready(function(){initNavTree('imu_8h_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="imu_8h.html#ab00f83379eb6a57bcd37dc8c46baf944">    9</a></span>&#160;<span class="preprocessor">#define imuMIN_VALID_ANGLE          -180</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="imu_8h.html#a4f195b75b7e9d9faa6d4ef3b25db5e1b">   11</a></span>&#160;<span class="preprocessor">#define imuMAX_VALID_ANGLE          180</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="comment">//#define imuMIN_VALID_SPEED            -100        /* TODO : sensible value */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//#define imuMAX_VALID_SPEED            100         /* TODO : sensible value */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//#define imuMIN_VALID_ACCEL            -100        /* TODO : sensible value */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//#define imuMAX_VALID_ACCEL            100         /* TODO : sensible value */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"></span><span class="comment">//#define imuMIN_VALID_SPEED            -100        /* @todo sensible value */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//#define imuMAX_VALID_SPEED            100         /* @todo sensible value */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//#define imuMIN_VALID_ACCEL            -100        /* @todo sensible value */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//#define imuMAX_VALID_ACCEL            100         /* @todo sensible value */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="imu_8h.html#a5788a1c8199c4b7921561aa425100f17">   17</a></span>&#160;<span class="comment"></span><span class="preprocessor">#define imuMIN_VALID_ALTITUDE       0           </span></div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="imu_8h.html#a49b579ee3e6556a28ec062c046085f6e">   19</a></span>&#160;<span class="preprocessor">#define imuMAX_VALID_ALTITUDE       0xFFFFFFFF  </span></div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892">   23</a></span>&#160;<span class="preprocessor">enum IMUErrorMask</span></div>
@@ -150,9 +150,9 @@ $(document).ready(function(){initNavTree('imu_8h_source.html','');});
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structIMUData.html#a3dbdb2be3068f998ad0b0ff721ceb258">   61</a></span>&#160;    int32_t <a class="code" href="structIMUData.html#a3dbdb2be3068f998ad0b0ff721ceb258">lAltitude</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structIMUData.html#ab3f21a65ab2daa8561b17ae6ba302436">   63</a></span>&#160;    int16_t <a class="code" href="structIMUData.html#ab3f21a65ab2daa8561b17ae6ba302436">plAngle</a>[3];</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/* TODO : valid range ? */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/* @todo valid range ? */</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">//int32_t plSpeed[3];</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/* TODO : valid range ? */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/* @todo valid range ? */</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//int32_t plAccel[3];</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('imu_8h_source.html','');});
 <div class="ttc" id="imu_8h_html_ac4ad027278ff7ebbcd4b4f1686aaa404"><div class="ttname"><a href="imu_8h.html#ac4ad027278ff7ebbcd4b4f1686aaa404">vIMUGetData</a></div><div class="ttdeci">void vIMUGetData(struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00058">imu.c:58</a></div></div>
 <div class="ttc" id="imu_8h_html_ada1aea468fe69220534f0a825416ff2ea580d92d3eeb019bcf0bda05af1bb9206"><div class="ttname"><a href="imu_8h.html#ada1aea468fe69220534f0a825416ff2ea580d92d3eeb019bcf0bda05af1bb9206">IMU_AXIS_Z</a></div><div class="ttdef"><b>Definition:</b> <a href="imu_8h_source.html#l00054">imu.h:54</a></div></div>
 <div class="ttc" id="imu_8h_html_aa1fd10828f669d98e5e9f39f53f30892"><div class="ttname"><a href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892">IMUErrorMask</a></div><div class="ttdeci">IMUErrorMask</div><div class="ttdef"><b>Definition:</b> <a href="imu_8h_source.html#l00023">imu.h:23</a></div></div>
-<div class="ttc" id="imu_8h_html_a7b7fe9abd036c5cfb45d7cb3d0e3e8c8"><div class="ttname"><a href="imu_8h.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8">eIMUDataValid</a></div><div class="ttdeci">enum IMUErrorMask eIMUDataValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00088">imu.c:88</a></div></div>
+<div class="ttc" id="imu_8h_html_a7b7fe9abd036c5cfb45d7cb3d0e3e8c8"><div class="ttname"><a href="imu_8h.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8">eIMUDataValid</a></div><div class="ttdeci">enum IMUErrorMask eIMUDataValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00089">imu.c:89</a></div></div>
 <div class="ttc" id="common_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
 <div class="ttc" id="imu_8h_html_aa1fd10828f669d98e5e9f39f53f30892ad878388cf00b5865708c448bc6e9133e"><div class="ttname"><a href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892ad878388cf00b5865708c448bc6e9133e">IMU_ERR_XANGLE</a></div><div class="ttdef"><b>Definition:</b> <a href="imu_8h_source.html#l00031">imu.h:31</a></div></div>
 <div class="ttc" id="imu_8h_html_a585f070e778f42d47703fb0b2b3402a4"><div class="ttname"><a href="imu_8h.html#a585f070e778f42d47703fb0b2b3402a4">ucIMUInitTest</a></div><div class="ttdeci">uint8_t ucIMUInitTest(void)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00039">imu.c:39</a></div></div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('imu_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="imu_8h.html">imu.h</a></li>
-    <li class="footer">Generated on Sun Jan 26 2014 13:13:56 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Mon Jan 27 2014 19:24:33 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

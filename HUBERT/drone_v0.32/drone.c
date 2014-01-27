@@ -1386,7 +1386,7 @@ code to identify the failed tests, or 0 if no test failed. */
 //{
 //uint8_t ucErrorMask = 0x00;
 //
-//	/* TODO : Video ? error code macros ? */
+//	/* @todo Video ? error code macros ? */
 //	if( !ucGPSTest() )
 //		ucErrorMask |= 0x01;
 //	if( !ucIMUTest() )

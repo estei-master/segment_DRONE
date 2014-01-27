@@ -9,10 +9,10 @@
 #define imuMIN_VALID_ANGLE			-180
 /** Maximum angle received from the IMU to be considered valid */
 #define imuMAX_VALID_ANGLE			180
-//#define imuMIN_VALID_SPEED			-100		/* TODO : sensible value */
-//#define imuMAX_VALID_SPEED			100			/* TODO : sensible value */
-//#define imuMIN_VALID_ACCEL			-100		/* TODO : sensible value */
-//#define imuMAX_VALID_ACCEL			100			/* TODO : sensible value */
+//#define imuMIN_VALID_SPEED			-100		/* @todo sensible value */
+//#define imuMAX_VALID_SPEED			100			/* @todo sensible value */
+//#define imuMIN_VALID_ACCEL			-100		/* @todo sensible value */
+//#define imuMAX_VALID_ACCEL			100			/* @todo sensible value */
 /** Minimum altitude received from the IMU to be considered valid */
 #define imuMIN_VALID_ALTITUDE		0			/** @todo sensible value */
 /** Maximum altitude received from the IMU to be considered valid */
@@ -61,9 +61,9 @@ struct IMUData
 	int32_t lAltitude;
 	/** Values between -180 and +180, indexes specified in enum IMUAxis */
 	int16_t plAngle[3];
-	/* TODO : valid range ? */
+	/* @todo valid range ? */
 	//int32_t plSpeed[3];
-	/* TODO : valid range ? */
+	/* @todo valid range ? */
 	//int32_t plAccel[3];
 };
 

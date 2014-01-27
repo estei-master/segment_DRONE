@@ -131,7 +131,7 @@ stores xMovement in pxMovement */
 //		const struct IMUData *pxIMUData,
 //		const struct telemeterData *pxtelemeterData )
 //{
-//	/* TODO : Should check xZigbeeData last update (and take into account timer
+//	/* @todo Should check xZigbeeData last update (and take into account timer
 //	overflow). */
 //	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 //			uxTaskPriorityGet( NULL ), MODULE, "vFlightAvoidMvt()",
