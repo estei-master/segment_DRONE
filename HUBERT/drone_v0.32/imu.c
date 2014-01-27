@@ -66,10 +66,10 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 	Sample of no critical section output :
 	...
 	1022  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_IN()  Task running
-    1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
-    1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_IN()  Task running
-    1024  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
-    ...
+	1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
+	1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_IN()  Task running
+	1024  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
+	...
 	*/
 	taskENTER_CRITICAL();
 //	taskDISABLE_INTERRUPTS();
@@ -77,6 +77,7 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 //	taskENABLE_INTERRUPTS();
 	taskEXIT_CRITICAL();
 
+	/* Displaced to prvSendStatus() */
 //	printf( "\r\n\t\tIMU measurements :"
 //			"\r\n\t\t\tPitch = %d\r\n\t\t\tRoll = %d\r\n\t\t\tYaw = %d",
 //			pxIMUData->plAngle[ IMU_AXIS_Y ],
