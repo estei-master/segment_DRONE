@@ -48,8 +48,8 @@ USART_InitTypeDef USART_InitStructure;
 	USART_Cmd( USART6, ENABLE );
 
 	printf( "\r\n\r\n------------------------------------------------------------------------------------------------\r\n" );
-	printf( "\r\nSysTick     Tag    Task   Prio  Module        Function                        Message" );
-	printf( "\r\n         0  INFO   ---    0     debug         vDebugUARTInit()                UART6 initialized" );
+	printf( "\r\nSysTick     Tag    Task   Prio  Module      Function                        Message" );
+	printf( "\r\n         0  INFO   ---    0     debug       vDebugUARTInit()                UART6 initialized" );
 }
 
 /** Preformatted debug printf function */

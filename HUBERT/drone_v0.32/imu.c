@@ -72,8 +72,10 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 	1024  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
 	...
 	*/
+
+	/** @todo reactivate IMU */
 //	taskENTER_CRITICAL();
-	imu_main( pxIMUData );
+//	imu_main( pxIMUData );
 //	taskEXIT_CRITICAL();
 
 	/* Displaced to prvSendStatus() */

@@ -356,36 +356,36 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Tests validity of pointed data </p>
 
-<p>Definition at line <a class="el" href="imu_8c_source.html#l00088">88</a> of file <a class="el" href="imu_8c_source.html">imu.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">enum</span> <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892">IMUErrorMask</a> eErrorMask = <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60">IMU_ERR_NONE</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    eErrorMask |= <a class="code" href="imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab">prvAltitudeValid</a>( pxIMUData )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            | <a class="code" href="imu_8c.html#a15d3894e6c2b0df70cc268e908342b44">prvAngleValid</a>( pxIMUData );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">/*</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">            | prvSpeedValid( pxIMUData )</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">            | prvAccelValid( pxIMUData );</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">            */</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span>( eErrorMask == <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60">IMU_ERR_NONE</a> )</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;eIMUDataValid()&quot;</span>, <span class="stringliteral">&quot;IMU measure is in valid range&quot;</span> );</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, pcTaskGetTaskName( NULL ),</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;eIMUDataValid()&quot;</span>, <span class="stringliteral">&quot;IMU measure is not in valid range !&quot;</span> );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> eErrorMask;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<p>Definition at line <a class="el" href="imu_8c_source.html#l00090">90</a> of file <a class="el" href="imu_8c_source.html">imu.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">enum</span> <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892">IMUErrorMask</a> eErrorMask = <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60">IMU_ERR_NONE</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    eErrorMask |= <a class="code" href="imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab">prvAltitudeValid</a>( pxIMUData )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            | <a class="code" href="imu_8c.html#a15d3894e6c2b0df70cc268e908342b44">prvAngleValid</a>( pxIMUData );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">/*</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">            | prvSpeedValid( pxIMUData )</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">            | prvAccelValid( pxIMUData );</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span>( eErrorMask == <a class="code" href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60">IMU_ERR_NONE</a> )</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;eIMUDataValid()&quot;</span>, <span class="stringliteral">&quot;IMU measure is in valid range&quot;</span> );</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, pcTaskGetTaskName( NULL ),</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                uxTaskPriorityGet( NULL ), <a class="code" href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;eIMUDataValid()&quot;</span>, <span class="stringliteral">&quot;IMU measure is not in valid range !&quot;</span> );</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> eErrorMask;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 <div class="ttc" id="imu_8h_html_aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60"><div class="ttname"><a href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892a37b79e8fc1c62bdd4f3b68277433cd60">IMU_ERR_NONE</a></div><div class="ttdef"><b>Definition:</b> <a href="imu_8h_source.html#l00027">imu.h:27</a></div></div>
-<div class="ttc" id="imu_8c_html_a15d3894e6c2b0df70cc268e908342b44"><div class="ttname"><a href="imu_8c.html#a15d3894e6c2b0df70cc268e908342b44">prvAngleValid</a></div><div class="ttdeci">static enum IMUErrorMask prvAngleValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00130">imu.c:130</a></div></div>
+<div class="ttc" id="imu_8c_html_a15d3894e6c2b0df70cc268e908342b44"><div class="ttname"><a href="imu_8c.html#a15d3894e6c2b0df70cc268e908342b44">prvAngleValid</a></div><div class="ttdeci">static enum IMUErrorMask prvAngleValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00132">imu.c:132</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
 <div class="ttc" id="imu_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00011">imu.c:11</a></div></div>
 <div class="ttc" id="imu_8h_html_aa1fd10828f669d98e5e9f39f53f30892"><div class="ttname"><a href="imu_8h.html#aa1fd10828f669d98e5e9f39f53f30892">IMUErrorMask</a></div><div class="ttdeci">IMUErrorMask</div><div class="ttdef"><b>Definition:</b> <a href="imu_8h_source.html#l00023">imu.h:23</a></div></div>
-<div class="ttc" id="imu_8c_html_a7793a797fc3b96eaf1f2f08c9ac8adab"><div class="ttname"><a href="imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab">prvAltitudeValid</a></div><div class="ttdeci">static enum IMUErrorMask prvAltitudeValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00117">imu.c:117</a></div></div>
+<div class="ttc" id="imu_8c_html_a7793a797fc3b96eaf1f2f08c9ac8adab"><div class="ttname"><a href="imu_8c.html#a7793a797fc3b96eaf1f2f08c9ac8adab">prvAltitudeValid</a></div><div class="ttdeci">static enum IMUErrorMask prvAltitudeValid(const struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00119">imu.c:119</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -533,19 +533,18 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, pcTaskGetTaskName( NULL ),</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            uxTaskPriorityGet( NULL ), <a class="code" href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a>, <span class="stringliteral">&quot;vIMUGetData()&quot;</span>, <span class="stringliteral">&quot;Receiving IMU measurements&quot;</span> );</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//  taskENTER_CRITICAL();</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="imu_8c.html#aca879914f925252303e5b27fcb454a24">imu_main</a>( pxIMUData );</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//  taskEXIT_CRITICAL();</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">/* Displaced to prvSendStatus() */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">//  printf( &quot;\r\n\t\tIMU measurements :&quot;</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">//          &quot;\r\n\t\t\tPitch = %d\r\n\t\t\tRoll = %d\r\n\t\t\tYaw = %d&quot;,</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_Y ],</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_X ],</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_Z ] );</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//  taskENTER_CRITICAL();</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//  imu_main( pxIMUData );</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//  taskEXIT_CRITICAL();</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">/* Displaced to prvSendStatus() */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//  printf( &quot;\r\n\t\tIMU measurements :&quot;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//          &quot;\r\n\t\t\tPitch = %d\r\n\t\t\tRoll = %d\r\n\t\t\tYaw = %d&quot;,</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_Y ],</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_X ],</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//          pxIMUData-&gt;plAngle[ IMU_AXIS_Z ] );</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
-<div class="ttc" id="imu_8c_html_aca879914f925252303e5b27fcb454a24"><div class="ttname"><a href="imu_8c.html#aca879914f925252303e5b27fcb454a24">imu_main</a></div><div class="ttdeci">static void imu_main(struct IMUData *const pxIMUData)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00264">imu.c:264</a></div></div>
 <div class="ttc" id="imu_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00011">imu.c:11</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -553,7 +552,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="imu_8h_ac4ad027278ff7ebbcd4b4f1686aaa404_cgraph.png" border="0" usemap="#imu_8h_ac4ad027278ff7ebbcd4b4f1686aaa404_cgraph" alt=""/></div>
 <map name="imu_8h_ac4ad027278ff7ebbcd4b4f1686aaa404_cgraph" id="imu_8h_ac4ad027278ff7ebbcd4b4f1686aaa404_cgraph">
-<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="153,5,247,32"/><area shape="rect" id="node3" href="imu_8c.html#aca879914f925252303e5b27fcb454a24" title="imu_main" alt="" coords="161,56,239,83"/></map>
+<area shape="rect" id="node2" href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="153,5,247,32"/></map>
 </div>
 </p>
 
@@ -598,7 +597,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771">usart_init</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="ttc" id="imu_8c_html_a3ed9261e8c5488b400e1466fcb2b0771"><div class="ttname"><a href="imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771">usart_init</a></div><div class="ttdeci">static void usart_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00213">imu.c:213</a></div></div>
+<div class="ttc" id="imu_8c_html_a3ed9261e8c5488b400e1466fcb2b0771"><div class="ttname"><a href="imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771">usart_init</a></div><div class="ttdeci">static void usart_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00215">imu.c:215</a></div></div>
 <div class="ttc" id="debug_8c_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
 <div class="ttc" id="imu_8c_html_a2c63ae95fe7c6106ae1ec9c283afa486"><div class="ttname"><a href="imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486">MODULE</a></div><div class="ttdeci">#define MODULE</div><div class="ttdef"><b>Definition:</b> <a href="imu_8c_source.html#l00011">imu.c:11</a></div></div>
 </div><!-- fragment -->
@@ -628,7 +627,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="imu_8h.html">imu.h</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 11:23:35 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 12:09:08 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
