@@ -1,7 +1,7 @@
 var structdroneConfig =
 [
     [ "ulCritBatteryLvl", "structdroneConfig.html#afd5a187fc480cfde2116b26023bb57a9", null ],
-    [ "ulCritZigbeeSignalLvl", "structdroneConfig.html#a36783b99ccbbea59c14fcc0e002c47c9", null ],
+    [ "ulCritZigbeeSignalLvl", "structdroneConfig.html#ad758e3f12df475b40e24bd9f784263ce", null ],
     [ "ulMaxAngle", "structdroneConfig.html#a456807f651f92ced21a4a42b1a62373a", null ],
     [ "ulRefAltitude", "structdroneConfig.html#a25f562330617f82cc04744cf17c797da", null ],
     [ "ulTakeoffAltitude", "structdroneConfig.html#a484448908637319ab5d43e20f68264ee", null ],

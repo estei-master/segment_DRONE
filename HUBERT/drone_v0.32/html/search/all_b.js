@@ -17,7 +17,7 @@ var searchData=
   ['uczigbeeinittest',['ucZigbeeInitTest',['../zigbee_8c.html#a3b7d284c2e4806df0c9b676ded44670b',1,'ucZigbeeInitTest(void):&#160;zigbee.c'],['../zigbee_8h.html#a3b7d284c2e4806df0c9b676ded44670b',1,'ucZigbeeInitTest(void):&#160;zigbee.c']]],
   ['uczigbeetest',['ucZigbeeTest',['../zigbee_8c.html#a694d782ef175e6113f7d12fb3422c69a',1,'ucZigbeeTest(void):&#160;zigbee.c'],['../zigbee_8h.html#a694d782ef175e6113f7d12fb3422c69a',1,'ucZigbeeTest(void):&#160;zigbee.c']]],
   ['ulcritbatterylvl',['ulCritBatteryLvl',['../structdroneConfig.html#afd5a187fc480cfde2116b26023bb57a9',1,'droneConfig']]],
-  ['ulcritzigbeesignallvl',['ulCritZigbeeSignalLvl',['../structdroneConfig.html#a36783b99ccbbea59c14fcc0e002c47c9',1,'droneConfig']]],
+  ['ulcritzigbeesignallvl',['ulCritZigbeeSignalLvl',['../structdroneConfig.html#ad758e3f12df475b40e24bd9f784263ce',1,'droneConfig']]],
   ['uldebugmsg',['ulDebugMsg',['../debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02',1,'ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage):&#160;debug.c'],['../debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02',1,'ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage):&#160;debug.c']]],
   ['ulkder',['ulKder',['../structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685',1,'PIDParam']]],
   ['ulkint',['ulKint',['../structPIDParam.html#a3bd8c16c5347c7603afdc75bdf547c6f',1,'PIDParam']]],
@@ -25,7 +25,7 @@ var searchData=
   ['ulmaxangle',['ulMaxAngle',['../structdroneConfig.html#a456807f651f92ced21a4a42b1a62373a',1,'droneConfig']]],
   ['ulpowerlvl',['ulPowerLvl',['../structdroneBatteryWrapper.html#ace99ab7d1b237062343841952bc4b011',1,'droneBatteryWrapper']]],
   ['ulrefaltitude',['ulRefAltitude',['../structdroneConfig.html#a25f562330617f82cc04744cf17c797da',1,'droneConfig']]],
-  ['ulsignallvl',['ulSignalLvl',['../structdroneZigbeeWrapper.html#a6394e2d17c23e769e4d261172b17a547',1,'droneZigbeeWrapper::ulSignalLvl()'],['../structGPSData.html#a6394e2d17c23e769e4d261172b17a547',1,'GPSData::ulSignalLvl()'],['../structzigbeeData.html#a6394e2d17c23e769e4d261172b17a547',1,'zigbeeData::ulSignalLvl()']]],
+  ['ulsignallvl',['ulSignalLvl',['../structdroneZigbeeWrapper.html#abbb7b33907eee72fd44effb98293294f',1,'droneZigbeeWrapper::ulSignalLvl()'],['../structGPSData.html#a6394e2d17c23e769e4d261172b17a547',1,'GPSData::ulSignalLvl()'],['../structzigbeeData.html#abbb7b33907eee72fd44effb98293294f',1,'zigbeeData::ulSignalLvl()']]],
   ['ultakeoffaltitude',['ulTakeoffAltitude',['../structdroneConfig.html#a484448908637319ab5d43e20f68264ee',1,'droneConfig']]],
   ['usart_5finit',['usart_init',['../imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771',1,'imu.c']]],
   ['usbackdist',['usBackDist',['../structtelemeterData.html#a52d94dab8341a121a3f4bac34073d8f2',1,'telemeterData']]],
@@ -37,5 +37,6 @@ var searchData=
   ['usminaltitude',['usMinAltitude',['../structdroneConfig.html#a6ca19043676d33dece8adb06031d1d46',1,'droneConfig']]],
   ['usrightbackdist',['usRightBackDist',['../structtelemeterData.html#a2d1c1c5603cbbd7420373c775ffc3679',1,'telemeterData']]],
   ['usrightfrontdist',['usRightFrontDist',['../structtelemeterData.html#ae159e771c6a85545a86364b8cde7004d',1,'telemeterData']]],
-  ['ustelemetergetdist',['usTelemeterGetDist',['../telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c'],['../telemeter_8h.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c']]]
+  ['ustelemetergetdist',['usTelemeterGetDist',['../telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c'],['../telemeter_8h.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c']]],
+  ['utctime',['UTCTime',['../structGPSData.html#a7af10b524778bafbbe6c5f1b3382bd6f',1,'GPSData']]]
 ];

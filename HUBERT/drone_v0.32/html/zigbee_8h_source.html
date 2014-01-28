@@ -145,12 +145,13 @@ $(document).ready(function(){initNavTree('zigbee_8h_source.html','');});
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structzigbeeData.html#a1bede0a1e3db11bf90358e7dd3a17048">   64</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a> <a class="code" href="structzigbeeData.html#a1bede0a1e3db11bf90358e7dd3a17048">eCmdId</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structzigbeeData.html#aec526eacaf59b0f6af41b4ebfa7dde30">   66</a></span>&#160;    <span class="keyword">union </span><a class="code" href="unionzigbeeCommandParam.html">zigbeeCommandParam</a> <a class="code" href="structzigbeeData.html#aec526eacaf59b0f6af41b4ebfa7dde30">xCmdParam</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structzigbeeData.html#a6394e2d17c23e769e4d261172b17a547">   68</a></span>&#160;    uint32_t <a class="code" href="structzigbeeData.html#a6394e2d17c23e769e4d261172b17a547">ulSignalLvl</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structzigbeeData.html#abbb7b33907eee72fd44effb98293294f">   68</a></span>&#160;    uint8_t <a class="code" href="structzigbeeData.html#abbb7b33907eee72fd44effb98293294f">ulSignalLvl</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="zigbee_8h.html#a3f7e0caf4297d7b7c8a8dfc675465406">vZigbeeInit</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">inline</span> uint8_t <a class="code" href="zigbee_8h.html#a3b7d284c2e4806df0c9b676ded44670b">ucZigbeeInitTest</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">inline</span> uint8_t <a class="code" href="zigbee_8h.html#a694d782ef175e6113f7d12fb3422c69a">ucZigbeeTest</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/* Zigbee data emission routine */</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//inline void vZigbeeSendData( const uint8_t * const pucData );</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="zigbee_8h.html#a086880a41e9dcff0444893eaa3aa5eac">vZigbeeReceiveData</a>( <span class="keyword">struct</span> <a class="code" href="structzigbeeData.html">zigbeeData</a> * <span class="keyword">const</span> pxZigbeeData );</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
@@ -168,7 +169,6 @@ $(document).ready(function(){initNavTree('zigbee_8h_source.html','');});
 <div class="ttc" id="structzigbeeData_html_a1bede0a1e3db11bf90358e7dd3a17048"><div class="ttname"><a href="structzigbeeData.html#a1bede0a1e3db11bf90358e7dd3a17048">zigbeeData::eCmdId</a></div><div class="ttdeci">enum zigbeeCommandId eCmdId</div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00064">zigbee.h:64</a></div></div>
 <div class="ttc" id="structzigbeeData_html"><div class="ttname"><a href="structzigbeeData.html">zigbeeData</a></div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00061">zigbee.h:61</a></div></div>
 <div class="ttc" id="flight_8h_html"><div class="ttname"><a href="flight_8h.html">flight.h</a></div></div>
-<div class="ttc" id="structzigbeeData_html_a6394e2d17c23e769e4d261172b17a547"><div class="ttname"><a href="structzigbeeData.html#a6394e2d17c23e769e4d261172b17a547">zigbeeData::ulSignalLvl</a></div><div class="ttdeci">uint32_t ulSignalLvl</div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00068">zigbee.h:68</a></div></div>
 <div class="ttc" id="structflightCommand_html"><div class="ttname"><a href="structflightCommand.html">flightCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="flight_8h_source.html#l00025">flight.h:25</a></div></div>
 <div class="ttc" id="zigbee_8h_html_a3f7e0caf4297d7b7c8a8dfc675465406"><div class="ttname"><a href="zigbee_8h.html#a3f7e0caf4297d7b7c8a8dfc675465406">vZigbeeInit</a></div><div class="ttdeci">void vZigbeeInit(void)</div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8c_source.html#l00009">zigbee.c:9</a></div></div>
 <div class="ttc" id="zigbee_8h_html_aa8a212aca1d1f49ff85fe2ac4b74cbb6"><div class="ttname"><a href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a></div><div class="ttdeci">zigbeeCommandId</div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00015">zigbee.h:15</a></div></div>
@@ -187,13 +187,14 @@ $(document).ready(function(){initNavTree('zigbee_8h_source.html','');});
 <div class="ttc" id="drone_8h_html"><div class="ttname"><a href="drone_8h.html">drone.h</a></div></div>
 <div class="ttc" id="zigbee_8h_html_aa8a212aca1d1f49ff85fe2ac4b74cbb6aefb30be8a8f1fedd95be57cd09c85398"><div class="ttname"><a href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6aefb30be8a8f1fedd95be57cd09c85398">CMD_FLT_MANEUVER</a></div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00042">zigbee.h:42</a></div></div>
 <div class="ttc" id="structdroneConfig_html"><div class="ttname"><a href="structdroneConfig.html">droneConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="drone_8h_source.html#l00013">drone.h:13</a></div></div>
+<div class="ttc" id="structzigbeeData_html_abbb7b33907eee72fd44effb98293294f"><div class="ttname"><a href="structzigbeeData.html#abbb7b33907eee72fd44effb98293294f">zigbeeData::ulSignalLvl</a></div><div class="ttdeci">uint8_t ulSignalLvl</div><div class="ttdef"><b>Definition:</b> <a href="zigbee_8h_source.html#l00068">zigbee.h:68</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="zigbee_8h.html">zigbee.h</a></li>
-    <li class="footer">Generated on Mon Jan 27 2014 19:24:33 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 09:59:23 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

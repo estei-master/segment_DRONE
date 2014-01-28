@@ -1,3 +1,3 @@
 <map id="droneGPSWrapper" name="droneGPSWrapper">
-<area shape="rect" id="node2" href="$structGPSData.html" title="{GPSData\n|+ ulSignalLvl\l|}" alt="" coords="23,5,117,83"/>
+<area shape="rect" id="node2" href="$structGPSData.html" title="{GPSData\n|+ fixIndicator\l+ latIndicator\l+ lattitude\l+ longIndicator\l+ longitude\l+ messageId\l+ MSLAltitude\l+ satellitesUsed\l+ ulSignalLvl\l+ UTCTime\l|}" alt="" coords="13,6,128,215"/>
 </map>

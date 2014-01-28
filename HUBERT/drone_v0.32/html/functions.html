@@ -84,8 +84,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
       <li class="current"><a href="#index_x"><span>x</span></a></li>
     </ul>
@@ -154,9 +157,28 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>fixIndicator
+: <a class="el" href="structGPSData.html#a48a85abd1058fa6fe6d57a037e6cb061">GPSData</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>lAltitude
 : <a class="el" href="structIMUData.html#a3dbdb2be3068f998ad0b0ff721ceb258">IMUData</a>
+</li>
+<li>latIndicator
+: <a class="el" href="structGPSData.html#a93c4a587f2ddc0c2454ce4c429f66cad">GPSData</a>
+</li>
+<li>lattitude
+: <a class="el" href="structGPSData.html#a267b1d3a2e44a9797a8909a62134e9fe">GPSData</a>
+</li>
+<li>longIndicator
+: <a class="el" href="structGPSData.html#ad57d868f96f94bed7c3a2df85577dcb4">GPSData</a>
+</li>
+<li>longitude
+: <a class="el" href="structGPSData.html#a3a156ecc68d9f3f52f6e675f8c375d36">GPSData</a>
 </li>
 <li>lRotX
 : <a class="el" href="structflightMovement.html#a91e742bebaf06b11c4e327d1da15feec">flightMovement</a>
@@ -179,9 +201,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>messageId
+: <a class="el" href="structGPSData.html#a0795361b49160391403d63e62a2081a0">GPSData</a>
+</li>
+<li>MSLAltitude
+: <a class="el" href="structGPSData.html#ac14df1fdd0d3b8760f93e1196fe89bef">GPSData</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>plAngle
 : <a class="el" href="structIMUData.html#ab3f21a65ab2daa8561b17ae6ba302436">IMUData</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>satellitesUsed
+: <a class="el" href="structGPSData.html#abb317f279c90410b2b2048acb0dbed8f">GPSData</a>
 </li>
 </ul>
 
@@ -191,7 +230,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="structdroneConfig.html#afd5a187fc480cfde2116b26023bb57a9">droneConfig</a>
 </li>
 <li>ulCritZigbeeSignalLvl
-: <a class="el" href="structdroneConfig.html#a36783b99ccbbea59c14fcc0e002c47c9">droneConfig</a>
+: <a class="el" href="structdroneConfig.html#ad758e3f12df475b40e24bd9f784263ce">droneConfig</a>
 </li>
 <li>ulKder
 : <a class="el" href="structPIDParam.html#a0493edc709374489d3ffcfdccd8a9685">PIDParam</a>
@@ -212,9 +251,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="structdroneConfig.html#a25f562330617f82cc04744cf17c797da">droneConfig</a>
 </li>
 <li>ulSignalLvl
-: <a class="el" href="structdroneZigbeeWrapper.html#a6394e2d17c23e769e4d261172b17a547">droneZigbeeWrapper</a>
+: <a class="el" href="structdroneZigbeeWrapper.html#abbb7b33907eee72fd44effb98293294f">droneZigbeeWrapper</a>
 , <a class="el" href="structGPSData.html#a6394e2d17c23e769e4d261172b17a547">GPSData</a>
-, <a class="el" href="structzigbeeData.html#a6394e2d17c23e769e4d261172b17a547">zigbeeData</a>
+, <a class="el" href="structzigbeeData.html#abbb7b33907eee72fd44effb98293294f">zigbeeData</a>
 </li>
 <li>ulTakeoffAltitude
 : <a class="el" href="structdroneConfig.html#a484448908637319ab5d43e20f68264ee">droneConfig</a>
@@ -245,6 +284,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>usRightFrontDist
 : <a class="el" href="structtelemeterData.html#ae159e771c6a85545a86364b8cde7004d">telemeterData</a>
+</li>
+<li>UTCTime
+: <a class="el" href="structGPSData.html#a7af10b524778bafbbe6c5f1b3382bd6f">GPSData</a>
 </li>
 </ul>
 
@@ -320,7 +362,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jan 27 2014 19:24:36 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 09:59:24 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
