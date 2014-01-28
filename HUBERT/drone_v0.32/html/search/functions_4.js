@@ -16,6 +16,5 @@ var searchData=
   ['uczigbeeinittest',['ucZigbeeInitTest',['../zigbee_8c.html#a3b7d284c2e4806df0c9b676ded44670b',1,'ucZigbeeInitTest(void):&#160;zigbee.c'],['../zigbee_8h.html#a3b7d284c2e4806df0c9b676ded44670b',1,'ucZigbeeInitTest(void):&#160;zigbee.c']]],
   ['uczigbeetest',['ucZigbeeTest',['../zigbee_8c.html#a694d782ef175e6113f7d12fb3422c69a',1,'ucZigbeeTest(void):&#160;zigbee.c'],['../zigbee_8h.html#a694d782ef175e6113f7d12fb3422c69a',1,'ucZigbeeTest(void):&#160;zigbee.c']]],
   ['uldebugmsg',['ulDebugMsg',['../debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02',1,'ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage):&#160;debug.c'],['../debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02',1,'ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage):&#160;debug.c']]],
-  ['usart_5finit',['usart_init',['../imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771',1,'imu.c']]],
   ['ustelemetergetdist',['usTelemeterGetDist',['../telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c'],['../telemeter_8h.html#afa90e065b5e3087b7e0e87497330e0b6',1,'usTelemeterGetDist(const enum telemeterId eTelemeterId):&#160;telemeter.c']]]
 ];

@@ -15,9 +15,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="drone.c" partName="drone.c" path="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/drone.c" title="drone.c" tooltip="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/drone.c" workbook="org.eclipse.ui.internal.EditorStack@120565e">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/drone/drone.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="56533" selectionTopPixel="22800"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.c" partName="imu.c" path="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/imu.c" title="imu.c" tooltip="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/imu.c" workbook="org.eclipse.ui.internal.EditorStack@120565e">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/drone/imu.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8236" selectionTopPixel="3359"/>
 </editor>
 </editors>
 <views>
@@ -51,10 +51,10 @@
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
 </view>
-<view id="org.coocox.component.ui.Help" partName="Help">
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
@@ -214,70 +214,51 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@a7476f" ratio="0.71246004" ratioLeft="669" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@a7476f" ratio="0.71246004" ratioLeft="669" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@11c486a" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a7476f">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@11c486a" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a7476f">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d654da" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d654da" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13874538" ratioLeft="188" ratioRight="1167" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f2d035" ratio="0.62922" ratioLeft="1081" ratioRight="637" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f2d035" ratio="0.62922" ratioLeft="1081" ratioRight="637" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
-<hiddenWindow height="394" width="758" x="654" y="449">
-<view id="org.eclipse.ui.views.ProgressView"/>
+<hiddenWindow height="394" width="758" x="654" y="449">&#x0A;<view id="org.eclipse.ui.views.ProgressView"/>
 </hiddenWindow>
 </layout>
 </perspective>
@@ -289,49 +270,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/imu.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/drone.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_lib/source/stm32f4xx_usart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/zigbee.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_boot/startup/startup_stm32f4xx.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/debug.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/imu.c"/>
 </editors>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position/>
-</item>
-<item historyLabel="drone.c" index="2">
-<position info="not_deleted" x="21198" y="0"/>
-</item>
-<item historyLabel="zigbee.c" index="4">
-<position info="not_deleted" x="848" y="0"/>
-</item>
-<item historyLabel="drone.c" index="2">
-<position info="not_deleted" x="21198" y="0"/>
-</item>
-<item historyLabel="drone.c" index="2">
-<position info="not_deleted" x="21599" y="0"/>
-</item>
-<item historyLabel="drone.c" index="2">
-<position info="not_deleted" x="7279" y="0"/>
-</item>
-<item historyLabel="imu.c" index="1">
-<position info="not_deleted" x="2308" y="0"/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position/>
-</item>
-<item historyLabel="debug.c" index="0">
-<position/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="3">
-<position info="not_deleted" x="48971" y="0"/>
-</item>
 <item historyLabel="stm32f4xx_usart.c" index="3">
 <position info="not_deleted" x="49062" y="0"/>
 </item>
@@ -365,7 +307,7 @@
 <item historyLabel="drone.c" index="2">
 <position info="not_deleted" x="35504" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="5">
+<item historyLabel="startup_stm32f4xx.c" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="drone.c" index="2">
@@ -398,7 +340,7 @@
 <item historyLabel="drone.c" index="2">
 <position info="not_deleted" x="15398" y="0"/>
 </item>
-<item historyLabel="debug.c" index="6">
+<item historyLabel="debug.c" index="5">
 <position info="not_deleted" x="2517" y="0"/>
 </item>
 <item historyLabel="drone.c" index="2">
@@ -437,8 +379,50 @@
 <item historyLabel="drone.c" index="2">
 <position info="not_deleted" x="50848" y="0"/>
 </item>
-<item active="true" historyLabel="drone.c" index="2">
-<position info="not_deleted" x="56533" y="0"/>
+<item historyLabel="drone.c" index="2">
+<position info="not_deleted" x="51589" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="1281" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="10336" y="0"/>
+</item>
+<item historyLabel="drone.c" index="2">
+<position info="not_deleted" x="51589" y="0"/>
+</item>
+<item historyLabel="drone.c" index="2">
+<position info="not_deleted" x="10197" y="0"/>
+</item>
+<item historyLabel="drone.c" index="2">
+<position info="not_deleted" x="60071" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="10336" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="9034" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="9827" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="3132" y="57"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="3228" y="0"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="8968" y="71"/>
+</item>
+<item historyLabel="imu.c" index="6">
+<position info="not_deleted" x="1044" y="0"/>
+</item>
+<item active="true" historyLabel="imu.c" index="6">
+<position info="not_deleted" x="3189" y="39"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -447,6 +431,9 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.c" tooltip="drone/imu.c">
+<persistable path="/drone/imu.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="debug.c" tooltip="drone/debug.c">
 <persistable path="/drone/debug.c"/>
 </file>
@@ -455,9 +442,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_usart.c" tooltip="drone/cmsis_lib/source/stm32f4xx_usart.c">
 <persistable path="/drone/cmsis_lib/source/stm32f4xx_usart.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.c" tooltip="drone/imu.c">
-<persistable path="/drone/imu.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="zigbee.c" tooltip="drone/zigbee.c">
 <persistable path="/drone/zigbee.c"/>
@@ -485,6 +469,9 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.h" tooltip="drone/includes/imu.h">
 <persistable path="/drone/includes/imu.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="common.h" tooltip="drone/includes/common.h">
+<persistable path="/drone/includes/common.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="common.h" tooltip="drone/includes/common.h">
 <persistable path="/drone/includes/common.h"/>

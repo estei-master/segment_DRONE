@@ -1363,14 +1363,18 @@ static inline void prvInitPeriph( void )
 	prvBatteryInit();
 }
 
-/** @todo Implement ucGPSInitTest(), ucIMUInitTest(), ucZigbeeInitTest(),
-ucTelemeterInitTest(), prvBatteryInitTest(). */
+
 /** Executes the PBITs (power-on built-in tests) and returns a code to identify
 the failed tests, or 0 if no test failed. */
 static inline enum droneError prvInitTestPeriph( void )
 {
 enum droneError eErrorMask = DRN_ERR_NONE;
 
+	/** @todo Implement ucGPSInitTest() : get data and test its validity. */
+	/** @todo Implement ucIMUInitTest() : get data and test its validity. */
+	/** @todo Implement ucZigbeeInitTest() : get data and test its validity. */
+	/** @todo Implement ucTelemeterInitTest() : get data and test its validity. */
+	/** @todo Implement prvBatteryInitTest() : get data and test its validity. */
 	/* Taking the most serious error codes to ensure the drone doesn't ignore
 	them. */
 	if( ucGPSInitTest() )

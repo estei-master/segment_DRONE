@@ -26,7 +26,6 @@ var searchData=
   ['ulrefaltitude',['ulRefAltitude',['../structdroneConfig.html#a25f562330617f82cc04744cf17c797da',1,'droneConfig']]],
   ['ulsignallvl',['ulSignalLvl',['../structdroneZigbeeWrapper.html#abbb7b33907eee72fd44effb98293294f',1,'droneZigbeeWrapper::ulSignalLvl()'],['../structGPSData.html#a6394e2d17c23e769e4d261172b17a547',1,'GPSData::ulSignalLvl()'],['../structzigbeeData.html#abbb7b33907eee72fd44effb98293294f',1,'zigbeeData::ulSignalLvl()']]],
   ['ultakeoffaltitude',['ulTakeoffAltitude',['../structdroneConfig.html#a484448908637319ab5d43e20f68264ee',1,'droneConfig']]],
-  ['usart_5finit',['usart_init',['../imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771',1,'imu.c']]],
   ['usbackdist',['usBackDist',['../structtelemeterData.html#a52d94dab8341a121a3f4bac34073d8f2',1,'telemeterData']]],
   ['usbottomdist',['usBottomDist',['../structtelemeterData.html#a393901061dc0f52c1ef920906e0961d4',1,'telemeterData']]],
   ['uscritobstacledist',['usCritObstacleDist',['../structdroneConfig.html#afe8a05f989b9e340c96e5af269b93fdf',1,'droneConfig']]],

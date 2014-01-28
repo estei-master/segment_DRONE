@@ -19,8 +19,9 @@ static inline enum IMUErrorMask prvAltitudeValid( const struct IMUData * const p
 static inline enum IMUErrorMask prvAngleValid( const struct IMUData * const pxIMUData );
 //static inline enum IMUErrorMask prvSpeedValid( const struct IMUData * const pxIMUData );
 //static inline enum IMUErrorMask prvAccelValid( const struct IMUData * const pxIMUData );
-static inline void usart_init( void );
-static inline void imu_main( struct IMUData * const pxIMUData );
+static inline void imu_usart_init( void );
+static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ], struct IMUData * const pxIMUData );
+static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] );
 
 /******************************************************************************
  **	 	 PUBLIC FUNCTIONS DEFINITION
@@ -32,7 +33,7 @@ inline void vIMUInit( void )
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE, "vIMUInit()",
 			"Initializing IMU UART communication" );
 
-	usart_init();
+	imu_usart_init();
 }
 
 /** Tests correct Initialization of the IMU
@@ -58,6 +59,8 @@ inline uint8_t ucIMUTest( void )
 /** Gets IMU attitude measurements */
 inline void vIMUGetData( struct IMUData * const pxIMUData )
 {
+uint16_t pusBuff[ FRAME_LEN ];
+
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "vIMUGetData()", "Receiving IMU measurements" );
 
@@ -74,9 +77,11 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 	*/
 
 	/** @todo reactivate IMU */
-//	taskENTER_CRITICAL();
-//	imu_main( pxIMUData );
-//	taskEXIT_CRITICAL();
+	taskENTER_CRITICAL();
+	imu_receive_frame( pusBuff );
+	taskEXIT_CRITICAL();
+
+	imu_parse_frame( pusBuff, pxIMUData );
 
 	/* Displaced to prvSendStatus() */
 //	printf( "\r\n\t\tIMU measurements :"
@@ -209,19 +214,12 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
  *****************************************************************************/
 
 /* Set to static to avoid collisions */
+
+/** Sets up the USART3 for IMU communication */
+static inline void imu_usart_init( void )
+{
 /** @todo reuse the same GPIO_InitTypeDef and USART_InitTypeDef to initialize
 every USART (memory saving) */
-/** Sets up the USART3 for IMU communication */
-static inline void usart_init( void )
-{
-	/* USARTx configured as follow:
-        - BaudRate = 115200 baud
-        - Word Length = 8 Bits
-        - One Stop Bit
-        - No parity
-        - Hardware flow control disabled (RTS and CTS signals)
-        - Receive enabled
-	*/
 GPIO_InitTypeDef GPIO_InitStructure;
 USART_InitTypeDef USART_InitStructure;
 
@@ -248,6 +246,13 @@ USART_InitTypeDef USART_InitStructure;
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 
+	/* USARTx configured as follow :
+	        - BaudRate = 115200 baud
+	        - Word Length = 8 Bits
+	        - One Stop Bit
+	        - No parity
+	        - Hardware flow control disabled (RTS and CTS signals)
+	        - Receive enabled */
 	USART_InitStructure.USART_BaudRate = 115200;
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -262,24 +267,27 @@ USART_InitTypeDef USART_InitStructure;
 	USART_Cmd(USART3, ENABLE);
 }
 
-/** Receives the IMU frame via USART3 and converts it into int16_t numbers */
-static inline void imu_main( struct IMUData * const pxIMUData )
+/** Receives the IMU frame via USART3 and puts it into pusBuff */
+static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] )
 {
-uint16_t pusBuff[ FRAME_LEN ];
 uint8_t ucIndex = 0;
 
-	/** @todo Check we don't go past index 19 of pusBuff */
-	/** @todo Add altitude */
 	/** @todo Switch to reception on interrupt and only parsing in the task
 	itself */
 
+	/* Reception of the IMU string, while the last character of frame has not
+	been received (character of start of next frame) */
 	while( pusBuff[ ucIndex ] != 'S' )
 	{
+		/* Wait for a received byte */
 		while( USART_GetFlagStatus( USART3, USART_FLAG_RXNE ) == RESET )
 		{
 			/* Do nothing */
 		}
 
+		/* Return to the start of pusBuff if start of frame character is
+		received */
+		/** @todo Check we don't go past index FRAME_LEN-1 of pusBuff */
 		if( ucIndex > 0 && USART_ReceiveData( USART3 ) == 'R' )
 		{
 			ucIndex = 0;
@@ -289,6 +297,13 @@ uint8_t ucIndex = 0;
 		pusBuff[ ucIndex ] = USART_ReceiveData( USART3 );
 		ucIndex++;
 	}
+}
+
+/** Converts the received frame from pusBuff into int16_t numbers, and updates
+pxIMUData */
+static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ], struct IMUData * const pxIMUData )
+{
+uint8_t ucIndex = 0;
 
 	/* Roll */
 	pxIMUData->plAngle[ IMU_AXIS_X ] = 0;
@@ -298,11 +313,13 @@ uint8_t ucIndex = 0;
 	pxIMUData->plAngle[ IMU_AXIS_Z ] = 0;
 	/* Altitude */
 	pxIMUData->lAltitude = 0;
-	ucIndex = 0;
 
+	/* Parsing of the received string to extract numerical values */
+	ucIndex = 0;
 	if( pusBuff[ ucIndex ] == 'R' )
 	{
 		ucIndex++;
+		/* Roll string parsing and update */
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
@@ -323,6 +340,7 @@ uint8_t ucIndex = 0;
 		}
 		ucIndex++;
 
+		/* Pitch string parsing and update */
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
@@ -343,10 +361,11 @@ uint8_t ucIndex = 0;
 		}
 		ucIndex++;
 
+		/* Yaw string parsing and update */
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
-			while( pusBuff[ ucIndex ] != 'S' )
+			while( pusBuff[ ucIndex ] != 'A' )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Z ] = pxIMUData->plAngle[ IMU_AXIS_Z ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
@@ -355,9 +374,30 @@ uint8_t ucIndex = 0;
 		}
 		else
 		{
-			while( pusBuff[ ucIndex ] != 'S' )
+			while( pusBuff[ ucIndex ] != 'A' )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Z ] = pxIMUData->plAngle[ IMU_AXIS_Z ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				ucIndex++;
+			}
+		}
+		ucIndex++;
+
+		/* Altitude string parsing and update */
+		if( pusBuff[ ucIndex ] == '-' )
+		{
+			ucIndex++;
+			while( pusBuff[ ucIndex ] != 'S' )
+			{
+				pxIMUData->lAltitude = pxIMUData->lAltitude * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				ucIndex++;
+			}
+			pxIMUData->lAltitude = -pxIMUData->lAltitude;
+		}
+		else
+		{
+			while( pusBuff[ ucIndex ] != 'S' )
+			{
+				pxIMUData->lAltitude = pxIMUData->lAltitude * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 		}

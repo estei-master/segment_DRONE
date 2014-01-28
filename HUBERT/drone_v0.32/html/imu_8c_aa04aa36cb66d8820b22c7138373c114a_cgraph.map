@@ -1,4 +1,4 @@
 <map id="vIMUInit" name="vIMUInit">
-<area shape="rect" id="node2" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="121,5,215,32"/>
-<area shape="rect" id="node3" href="$imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771" title="usart_init" alt="" coords="131,56,205,83"/>
+<area shape="rect" id="node2" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="125,5,219,32"/>
+<area shape="rect" id="node3" href="$imu_8c.html#a74365b924fcdad12fda6dd74c0147149" title="imu_usart_init" alt="" coords="121,56,223,83"/>
 </map>

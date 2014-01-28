@@ -4,6 +4,6 @@
 <area shape="rect" id="node6" href="$zigbee_8c.html#a3f7e0caf4297d7b7c8a8dfc675465406" title="vZigbeeInit" alt="" coords="156,56,239,83"/>
 <area shape="rect" id="node7" href="$telemeter_8c.html#ad678b2e6df6594950ddb7529f93ad777" title="vTelemeterInit" alt="" coords="147,107,248,133"/>
 <area shape="rect" id="node8" href="$drone_8c.html#a8b31e9a2dce476e9add26d89bc6fb5b9" title="prvBatteryInit" alt="" coords="149,157,246,184"/>
-<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="297,107,391,133"/>
-<area shape="rect" id="node5" href="$imu_8c.html#a3ed9261e8c5488b400e1466fcb2b0771" title="usart_init" alt="" coords="307,208,381,235"/>
+<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="301,107,395,133"/>
+<area shape="rect" id="node5" href="$imu_8c.html#a74365b924fcdad12fda6dd74c0147149" title="imu_usart_init" alt="" coords="297,208,399,235"/>
 </map>
