@@ -4,11 +4,12 @@
 #include "task.h"
 
 /******************************************************************************
- **	 	 DEBUGGING MACROS
+ **	 	 MACROS
  *****************************************************************************/
 
 /** Used to fill the pcModule argument of the ulDebugMsg() call. */
 #define MODULE		"imu         "
+#define FRAME_LEN	30
 
 /******************************************************************************
  **	 	 STATIC FUNCTIONS DECLARATION
@@ -38,7 +39,7 @@ inline void vIMUInit( void )
 @return 0 if test successful, 1 otherwise. */
 inline uint8_t ucIMUInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0, MODULE, "ucIMUInitTest()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0, MODULE, "ucIMUInitTest()",
 			"Does nothing ATM" );
 
 	/** @todo Implement ucIMUInitTest() during integration */
@@ -48,7 +49,7 @@ inline uint8_t ucIMUInitTest( void )
 /** Tests correct behavior of the IMU */
 inline uint8_t ucIMUTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "ucIMUTest()", "Does nothing ATM" );
 
 	return 0;
@@ -71,11 +72,9 @@ inline void vIMUGetData( struct IMUData * const pxIMUData )
 	1024  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
 	...
 	*/
-	taskENTER_CRITICAL();
-//	taskDISABLE_INTERRUPTS();
+//	taskENTER_CRITICAL();
 	imu_main( pxIMUData );
-//	taskENABLE_INTERRUPTS();
-	taskEXIT_CRITICAL();
+//	taskEXIT_CRITICAL();
 
 	/* Displaced to prvSendStatus() */
 //	printf( "\r\n\t\tIMU measurements :"
@@ -259,13 +258,12 @@ USART_InitTypeDef USART_InitStructure;
 
 	/* Enable USART */
 	USART_Cmd(USART3, ENABLE);
-
 }
 
 /** Receives the IMU frame via USART3 and converts it into int16_t numbers */
 static inline void imu_main( struct IMUData * const pxIMUData )
 {
-uint16_t pusBuff[ 20 ];
+uint16_t pusBuff[ FRAME_LEN ];
 uint8_t ucIndex = 0;
 
 	/** @todo Check we don't go past index 19 of pusBuff */
@@ -296,6 +294,8 @@ uint8_t ucIndex = 0;
 	pxIMUData->plAngle[ IMU_AXIS_Y ] = 0;
 	/* Yaw */
 	pxIMUData->plAngle[ IMU_AXIS_Z ] = 0;
+	/* Altitude */
+	pxIMUData->lAltitude = 0;
 	ucIndex = 0;
 
 	if( pusBuff[ ucIndex ] == 'R' )

@@ -745,7 +745,7 @@ Linker script and memory map
 
                 0x20020000                _eram = 0x20020000
 
-.text           0x08000000     0x8dfc
+.text           0x08000000     0x8d88
  *(.isr_vector .isr_vector.*)
  .isr_vector    0x08000000      0x188 ..\obj\startup_stm32f4xx.o
                 0x08000000                g_pfnVectors
@@ -757,19 +757,19 @@ Linker script and memory map
                 0x080001d4       0x50 ..\obj\imu.o
                 0x080001d4                ucIMUInitTest
  .text.vIMUGetData
-                0x08000224       0x68 ..\obj\imu.o
+                0x08000224       0x60 ..\obj\imu.o
                 0x08000224                vIMUGetData
  .text.eIMUDataValid
-                0x0800028c       0xd4 ..\obj\imu.o
-                0x0800028c                eIMUDataValid
+                0x08000284       0xd4 ..\obj\imu.o
+                0x08000284                eIMUDataValid
  .text.prvAltitudeValid
-                0x08000360       0x2c ..\obj\imu.o
+                0x08000358       0x2c ..\obj\imu.o
  .text.prvAngleValid
-                0x0800038c       0x78 ..\obj\imu.o
+                0x08000384       0x78 ..\obj\imu.o
  .text.usart_init
-                0x08000404       0xe0 ..\obj\imu.o
+                0x080003fc       0xe0 ..\obj\imu.o
  .text.imu_main
-                0x080004e4      0x3dc ..\obj\imu.o
+                0x080004dc      0x3e4 ..\obj\imu.o
  .text.USART_Init
                 0x080008c0      0x1ac ..\obj\stm32f4xx_usart.o
                 0x080008c0                USART_Init
@@ -991,330 +991,330 @@ Linker script and memory map
  .text.prvInitDroneConfig
                 0x08003104       0x84 ..\obj\drone.o
  .text.prvSetupHardware
-                0x08003188       0x54 ..\obj\drone.o
+                0x08003188       0x18 ..\obj\drone.o
  .text.prvBatteryInit
-                0x080031dc       0x44 ..\obj\drone.o
+                0x080031a0       0x44 ..\obj\drone.o
  .text.prvInitPeriph
-                0x08003220       0x1c ..\obj\drone.o
+                0x080031e4       0x1c ..\obj\drone.o
  .text.prvInitTestPeriph
-                0x0800323c       0x74 ..\obj\drone.o
+                0x08003200       0x74 ..\obj\drone.o
  .text.prvDroneConfigValid
-                0x080032b0       0x18 ..\obj\drone.o
+                0x08003274       0x18 ..\obj\drone.o
  .text.prvBatteryValid
-                0x080032c8       0x18 ..\obj\drone.o
+                0x0800328c       0x18 ..\obj\drone.o
  .text.prvSendConfig
-                0x080032e0       0x4c ..\obj\drone.o
+                0x080032a4       0x4c ..\obj\drone.o
  .text.prvSendStatus
-                0x0800332c      0x3c8 ..\obj\drone.o
+                0x080032f0      0x3c8 ..\obj\drone.o
  .text.prvSendError
-                0x080036f4      0x170 ..\obj\drone.o
+                0x080036b8      0x170 ..\obj\drone.o
  .text.prvResetDroneConfig
-                0x08003864       0x14 ..\obj\drone.o
+                0x08003828       0x14 ..\obj\drone.o
  .text.prvSelectErrorState
-                0x08003878       0x40 ..\obj\drone.o
+                0x0800383c       0x40 ..\obj\drone.o
  .text.prvSafeSetIMUData
-                0x080038b8       0x8c ..\obj\drone.o
+                0x0800387c       0x8c ..\obj\drone.o
  .text.prvSafeSetGPSData
-                0x08003944       0x9c ..\obj\drone.o
+                0x08003908       0x9c ..\obj\drone.o
  .text.prvSafeSetZigbeeData
-                0x080039e0       0xa0 ..\obj\drone.o
+                0x080039a4       0xa0 ..\obj\drone.o
  .text.prvSafeSetBatteryData
-                0x08003a80       0x88 ..\obj\drone.o
+                0x08003a44       0x88 ..\obj\drone.o
  .text.prvSafeSetDroneConfig
-                0x08003b08       0x80 ..\obj\drone.o
+                0x08003acc       0x80 ..\obj\drone.o
  .text.prvSafeSetTelemeterData
-                0x08003b88       0x94 ..\obj\drone.o
+                0x08003b4c       0x94 ..\obj\drone.o
  .text.prvSafeSetDroneState
-                0x08003c1c       0x80 ..\obj\drone.o
+                0x08003be0       0x80 ..\obj\drone.o
  .text.prvSafeGetIMUData
-                0x08003c9c       0x2c ..\obj\drone.o
+                0x08003c60       0x2c ..\obj\drone.o
  .text.prvSafeGetGPSData
-                0x08003cc8       0x3c ..\obj\drone.o
+                0x08003c8c       0x3c ..\obj\drone.o
  .text.prvSafeGetZigbeeData
-                0x08003d04       0x2c ..\obj\drone.o
+                0x08003cc8       0x2c ..\obj\drone.o
  .text.prvSafeGetBatteryData
-                0x08003d30       0x2c ..\obj\drone.o
+                0x08003cf4       0x2c ..\obj\drone.o
  .text.prvSafeGetDroneConfig
-                0x08003d5c       0x38 ..\obj\drone.o
+                0x08003d20       0x38 ..\obj\drone.o
  .text.prvSafeGetTelemeterData
-                0x08003d94       0x30 ..\obj\drone.o
+                0x08003d58       0x30 ..\obj\drone.o
  .text.prvSafeGetDroneState
-                0x08003dc4       0x28 ..\obj\drone.o
+                0x08003d88       0x28 ..\obj\drone.o
  .text.prvEnableVideo
-                0x08003dec       0x58 ..\obj\drone.o
+                0x08003db0       0x58 ..\obj\drone.o
  .text.prvDisableVideo
-                0x08003e44       0x58 ..\obj\drone.o
+                0x08003e08       0x58 ..\obj\drone.o
  .text.prvTakeoffDone
-                0x08003e9c       0xcc ..\obj\drone.o
+                0x08003e60       0xcc ..\obj\drone.o
  .text.prvLandingDone
-                0x08003f68       0x64 ..\obj\drone.o
+                0x08003f2c       0x64 ..\obj\drone.o
  .text.prvObstacleDetected
-                0x08003fcc       0x24 ..\obj\drone.o
+                0x08003f90       0x24 ..\obj\drone.o
  .text.prvTelemeterTimedout
-                0x08003ff0       0x3c ..\obj\drone.o
+                0x08003fb4       0x3c ..\obj\drone.o
  .text.prvBatteryCritical
-                0x0800402c       0x28 ..\obj\drone.o
+                0x08003ff0       0x28 ..\obj\drone.o
  .text.prvBatteryTimedout
-                0x08004054       0x3c ..\obj\drone.o
+                0x08004018       0x3c ..\obj\drone.o
  .text.prvIMUTimedout
-                0x08004090       0x3c ..\obj\drone.o
+                0x08004054       0x3c ..\obj\drone.o
  .text.prvGPSTimedout
-                0x080040cc       0x3c ..\obj\drone.o
+                0x08004090       0x3c ..\obj\drone.o
  .text.prvZigbeeTimedout
-                0x08004108       0x3c ..\obj\drone.o
+                0x080040cc       0x3c ..\obj\drone.o
  .text.prvFltCmdTimedout
-                0x08004144       0x3c ..\obj\drone.o
- .text.ucBatteryInitTest
-                0x08004180       0x60 ..\obj\drone.o
+                0x08004108       0x3c ..\obj\drone.o
+ .text.prvBatteryInitTest
+                0x08004144       0x58 ..\obj\drone.o
  .text.prvHandleTimouts
-                0x080041e0      0x154 ..\obj\drone.o
+                0x0800419c      0x154 ..\obj\drone.o
  .text.prvInitAltitude
-                0x08004334       0x24 ..\obj\drone.o
+                0x080042f0       0x24 ..\obj\drone.o
  .text.prvGetBatteryLvl
-                0x08004358       0x5c ..\obj\drone.o
+                0x08004314       0x5c ..\obj\drone.o
  .text.prvReboot
-                0x080043b4       0x54 ..\obj\drone.o
+                0x08004370       0x54 ..\obj\drone.o
  .text.prvShutdown
-                0x08004408       0x54 ..\obj\drone.o
+                0x080043c4       0x54 ..\obj\drone.o
  .text.xTaskGenericCreate
-                0x0800445c      0x344 ..\obj\tasks.o
-                0x0800445c                xTaskGenericCreate
+                0x08004418      0x344 ..\obj\tasks.o
+                0x08004418                xTaskGenericCreate
  .text.vTaskDelayUntil
-                0x080047a0      0x190 ..\obj\tasks.o
-                0x080047a0                vTaskDelayUntil
+                0x0800475c      0x190 ..\obj\tasks.o
+                0x0800475c                vTaskDelayUntil
  .text.uxTaskPriorityGet
-                0x08004930       0x38 ..\obj\tasks.o
-                0x08004930                uxTaskPriorityGet
+                0x080048ec       0x38 ..\obj\tasks.o
+                0x080048ec                uxTaskPriorityGet
  .text.vTaskStartScheduler
-                0x08004968       0xbc ..\obj\tasks.o
-                0x08004968                vTaskStartScheduler
+                0x08004924       0xbc ..\obj\tasks.o
+                0x08004924                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x08004a24       0x24 ..\obj\tasks.o
-                0x08004a24                vTaskSuspendAll
+                0x080049e0       0x24 ..\obj\tasks.o
+                0x080049e0                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x08004a48      0x19c ..\obj\tasks.o
-                0x08004a48                xTaskResumeAll
+                0x08004a04      0x19c ..\obj\tasks.o
+                0x08004a04                xTaskResumeAll
  .text.xTaskGetTickCount
-                0x08004be4       0x28 ..\obj\tasks.o
-                0x08004be4                xTaskGetTickCount
+                0x08004ba0       0x28 ..\obj\tasks.o
+                0x08004ba0                xTaskGetTickCount
  .text.pcTaskGetTaskName
-                0x08004c0c       0x74 ..\obj\tasks.o
-                0x08004c0c                pcTaskGetTaskName
+                0x08004bc8       0x74 ..\obj\tasks.o
+                0x08004bc8                pcTaskGetTaskName
  .text.vTaskIncrementTick
-                0x08004c80      0x204 ..\obj\tasks.o
-                0x08004c80                vTaskIncrementTick
+                0x08004c3c      0x204 ..\obj\tasks.o
+                0x08004c3c                vTaskIncrementTick
  .text.vTaskSwitchContext
-                0x08004e84      0x1e4 ..\obj\tasks.o
-                0x08004e84                vTaskSwitchContext
+                0x08004e40      0x1e4 ..\obj\tasks.o
+                0x08004e40                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x08005068       0x98 ..\obj\tasks.o
-                0x08005068                vTaskPlaceOnEventList
+                0x08005024       0x98 ..\obj\tasks.o
+                0x08005024                vTaskPlaceOnEventList
  .text.xTaskRemoveFromEventList
-                0x08005100      0x108 ..\obj\tasks.o
-                0x08005100                xTaskRemoveFromEventList
+                0x080050bc      0x108 ..\obj\tasks.o
+                0x080050bc                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x08005208       0x70 ..\obj\tasks.o
-                0x08005208                vTaskSetTimeOutState
+                0x080051c4       0x70 ..\obj\tasks.o
+                0x080051c4                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x08005278      0x118 ..\obj\tasks.o
-                0x08005278                xTaskCheckForTimeOut
+                0x08005234      0x118 ..\obj\tasks.o
+                0x08005234                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x08005390       0x18 ..\obj\tasks.o
-                0x08005390                vTaskMissedYield
+                0x0800534c       0x18 ..\obj\tasks.o
+                0x0800534c                vTaskMissedYield
  .text.prvIdleTask
-                0x080053a8       0x14 ..\obj\tasks.o
+                0x08005364       0x14 ..\obj\tasks.o
  .text.prvInitialiseTCBVariables
-                0x080053bc       0x88 ..\obj\tasks.o
+                0x08005378       0x88 ..\obj\tasks.o
  .text.prvInitialiseTaskLists
-                0x08005444       0x8c ..\obj\tasks.o
+                0x08005400       0x8c ..\obj\tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x080054d0        0xc ..\obj\tasks.o
+                0x0800548c        0xc ..\obj\tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x080054dc       0x8c ..\obj\tasks.o
+                0x08005498       0x8c ..\obj\tasks.o
  .text.prvAllocateTCBAndStack
-                0x08005568       0x74 ..\obj\tasks.o
+                0x08005524       0x74 ..\obj\tasks.o
  .text.xTaskGetCurrentTaskHandle
-                0x080055dc       0x20 ..\obj\tasks.o
-                0x080055dc                xTaskGetCurrentTaskHandle
+                0x08005598       0x20 ..\obj\tasks.o
+                0x08005598                xTaskGetCurrentTaskHandle
  .text.vTaskPriorityInherit
-                0x080055fc      0x118 ..\obj\tasks.o
-                0x080055fc                vTaskPriorityInherit
+                0x080055b8      0x118 ..\obj\tasks.o
+                0x080055b8                vTaskPriorityInherit
  .text.vTaskPriorityDisinherit
-                0x08005714       0x90 ..\obj\tasks.o
-                0x08005714                vTaskPriorityDisinherit
+                0x080056d0       0x90 ..\obj\tasks.o
+                0x080056d0                vTaskPriorityDisinherit
  .text.GPIO_Init
-                0x080057a4      0x144 ..\obj\stm32f4xx_gpio.o
-                0x080057a4                GPIO_Init
+                0x08005760      0x144 ..\obj\stm32f4xx_gpio.o
+                0x08005760                GPIO_Init
  .text.GPIO_PinAFConfig
-                0x080058e8       0xa8 ..\obj\stm32f4xx_gpio.o
-                0x080058e8                GPIO_PinAFConfig
- .text          0x08005990       0x30 ..\obj\sh_cmd.o
-                0x08005990                SH_DoCommand
-                0x080059a6                HardFault_Handler
+                0x080058a4       0xa8 ..\obj\stm32f4xx_gpio.o
+                0x080058a4                GPIO_PinAFConfig
+ .text          0x0800594c       0x30 ..\obj\sh_cmd.o
+                0x0800594c                SH_DoCommand
+                0x08005962                HardFault_Handler
  .text.vListInitialise
-                0x080059c0       0x40 ..\obj\list.o
-                0x080059c0                vListInitialise
+                0x0800597c       0x40 ..\obj\list.o
+                0x0800597c                vListInitialise
  .text.vListInitialiseItem
-                0x08005a00       0x1c ..\obj\list.o
-                0x08005a00                vListInitialiseItem
+                0x080059bc       0x1c ..\obj\list.o
+                0x080059bc                vListInitialiseItem
  .text.vListInsertEnd
-                0x08005a1c       0x50 ..\obj\list.o
-                0x08005a1c                vListInsertEnd
+                0x080059d8       0x50 ..\obj\list.o
+                0x080059d8                vListInsertEnd
  .text.vListInsert
-                0x08005a6c       0x74 ..\obj\list.o
-                0x08005a6c                vListInsert
+                0x08005a28       0x74 ..\obj\list.o
+                0x08005a28                vListInsert
  .text.vListRemove
-                0x08005ae0       0x54 ..\obj\list.o
-                0x08005ae0                vListRemove
+                0x08005a9c       0x54 ..\obj\list.o
+                0x08005a9c                vListRemove
  .text.SystemInit
-                0x08005b34       0xb0 ..\obj\system_stm32f4xx.o
-                0x08005b34                SystemInit
+                0x08005af0       0xb0 ..\obj\system_stm32f4xx.o
+                0x08005af0                SystemInit
  .text.SystemCoreClockUpdate
-                0x08005be4      0x170 ..\obj\system_stm32f4xx.o
-                0x08005be4                SystemCoreClockUpdate
+                0x08005ba0      0x170 ..\obj\system_stm32f4xx.o
+                0x08005ba0                SystemCoreClockUpdate
  .text.SetSysClock
-                0x08005d54      0x188 ..\obj\system_stm32f4xx.o
- .text._sbrk    0x08005edc       0x5c ..\obj\syscalls.o
-                0x08005edc                _sbrk
+                0x08005d10      0x188 ..\obj\system_stm32f4xx.o
+ .text._sbrk    0x08005e98       0x5c ..\obj\syscalls.o
+                0x08005e98                _sbrk
  .text.vGPSInit
-                0x08005f38       0x48 ..\obj\gps.o
-                0x08005f38                vGPSInit
+                0x08005ef4       0x48 ..\obj\gps.o
+                0x08005ef4                vGPSInit
  .text.ucGPSInitTest
-                0x08005f80       0x50 ..\obj\gps.o
-                0x08005f80                ucGPSInitTest
+                0x08005f3c       0x50 ..\obj\gps.o
+                0x08005f3c                ucGPSInitTest
  .text.vGPSGetData
-                0x08005fd0       0x5c ..\obj\gps.o
-                0x08005fd0                vGPSGetData
+                0x08005f8c       0x5c ..\obj\gps.o
+                0x08005f8c                vGPSGetData
  .text.eGPSDataValid
-                0x0800602c       0x18 ..\obj\gps.o
-                0x0800602c                eGPSDataValid
+                0x08005fe8       0x18 ..\obj\gps.o
+                0x08005fe8                eGPSDataValid
  .text.pxPortInitialiseStack
-                0x08006044       0x68 ..\obj\port.o
-                0x08006044                pxPortInitialiseStack
+                0x08006000       0x68 ..\obj\port.o
+                0x08006000                pxPortInitialiseStack
  .text.SVC_Handler
-                0x080060ac       0x20 ..\obj\port.o
-                0x080060ac                SVC_Handler
+                0x08006068       0x20 ..\obj\port.o
+                0x08006068                SVC_Handler
  .text.vPortStartFirstTask
-                0x080060cc       0x14 ..\obj\port.o
-                0x080060cc                vPortStartFirstTask
+                0x08006088       0x14 ..\obj\port.o
+                0x08006088                vPortStartFirstTask
  .text.xPortStartScheduler
-                0x080060e0       0x54 ..\obj\port.o
-                0x080060e0                xPortStartScheduler
+                0x0800609c       0x54 ..\obj\port.o
+                0x0800609c                xPortStartScheduler
  .text.vPortYieldFromISR
-                0x08006134       0x18 ..\obj\port.o
-                0x08006134                vPortYieldFromISR
+                0x080060f0       0x18 ..\obj\port.o
+                0x080060f0                vPortYieldFromISR
  .text.vPortEnterCritical
-                0x0800614c       0x2c ..\obj\port.o
-                0x0800614c                vPortEnterCritical
+                0x08006108       0x2c ..\obj\port.o
+                0x08006108                vPortEnterCritical
  .text.vPortExitCritical
-                0x08006178       0x38 ..\obj\port.o
-                0x08006178                vPortExitCritical
+                0x08006134       0x38 ..\obj\port.o
+                0x08006134                vPortExitCritical
  .text.PendSV_Handler
-                0x080061b0       0x58 ..\obj\port.o
-                0x080061b0                PendSV_Handler
+                0x0800616c       0x58 ..\obj\port.o
+                0x0800616c                PendSV_Handler
  .text.SysTick_Handler
-                0x08006208       0x38 ..\obj\port.o
-                0x08006208                SysTick_Handler
+                0x080061c4       0x38 ..\obj\port.o
+                0x080061c4                SysTick_Handler
  .text.prvSetupTimerInterrupt
-                0x08006240       0x40 ..\obj\port.o
+                0x080061fc       0x40 ..\obj\port.o
  .text.xQueueCreate
-                0x08006280      0x194 ..\obj\queue.o
-                0x08006280                xQueueCreate
+                0x0800623c      0x194 ..\obj\queue.o
+                0x0800623c                xQueueCreate
  .text.xQueueGenericSend
-                0x08006414      0x23c ..\obj\queue.o
-                0x08006414                xQueueGenericSend
+                0x080063d0      0x23c ..\obj\queue.o
+                0x080063d0                xQueueGenericSend
  .text.xQueueGenericReceive
-                0x08006650      0x2a0 ..\obj\queue.o
-                0x08006650                xQueueGenericReceive
+                0x0800660c      0x2a0 ..\obj\queue.o
+                0x0800660c                xQueueGenericReceive
  .text.prvCopyDataToQueue
-                0x080068f0       0xc4 ..\obj\queue.o
+                0x080068ac       0xc4 ..\obj\queue.o
  .text.prvCopyDataFromQueue
-                0x080069b4       0x50 ..\obj\queue.o
+                0x08006970       0x50 ..\obj\queue.o
  .text.prvUnlockQueue
-                0x08006a04       0xa0 ..\obj\queue.o
+                0x080069c0       0xa0 ..\obj\queue.o
  .text.prvIsQueueEmpty
-                0x08006aa4       0x2c ..\obj\queue.o
+                0x08006a60       0x2c ..\obj\queue.o
  .text.prvIsQueueFull
-                0x08006ad0       0x30 ..\obj\queue.o
+                0x08006a8c       0x30 ..\obj\queue.o
  .text.vDebugUARTInit
-                0x08006b00      0x100 ..\obj\debug.o
-                0x08006b00                vDebugUARTInit
+                0x08006abc      0x100 ..\obj\debug.o
+                0x08006abc                vDebugUARTInit
  .text.ulDebugMsg
-                0x08006c00       0x40 ..\obj\debug.o
-                0x08006c00                ulDebugMsg
+                0x08006bbc       0x40 ..\obj\debug.o
+                0x08006bbc                ulDebugMsg
  .text.vDebugUARTPutchar
-                0x08006c40       0x3c ..\obj\debug.o
-                0x08006c40                vDebugUARTPutchar
- .text.malloc   0x08006c7c       0x10 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
-                0x08006c7c                malloc
- .text.free     0x08006c8c       0x10 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
-                0x08006c8c                free
+                0x08006bfc       0x3c ..\obj\debug.o
+                0x08006bfc                vDebugUARTPutchar
+ .text.malloc   0x08006c38       0x10 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
+                0x08006c38                malloc
+ .text.free     0x08006c48       0x10 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
+                0x08006c48                free
  .text._malloc_r
-                0x08006c9c      0x55c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mallocr.o)
-                0x08006c9c                _malloc_r
- .text.memcpy   0x080071f8      0x144 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memcpy.o)
-                0x080071f8                memcpy
- .text.memset   0x0800733c      0x12c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
-                0x0800733c                memset
+                0x08006c58      0x55c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mallocr.o)
+                0x08006c58                _malloc_r
+ .text.memcpy   0x080071b4      0x144 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memcpy.o)
+                0x080071b4                memcpy
+ .text.memset   0x080072f8      0x12c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
+                0x080072f8                memset
  .text.__malloc_lock
-                0x08007468        0x4 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
-                0x08007468                __malloc_lock
+                0x08007424        0x4 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
+                0x08007424                __malloc_lock
  .text.__malloc_unlock
-                0x0800746c        0x4 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
-                0x0800746c                __malloc_unlock
- .text._sbrk_r  0x08007470       0x24 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-sbrkr.o)
-                0x08007470                _sbrk_r
- .text.strncpy  0x08007494      0x110 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-strncpy.o)
-                0x08007494                strncpy
+                0x08007428        0x4 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
+                0x08007428                __malloc_unlock
+ .text._sbrk_r  0x0800742c       0x24 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-sbrkr.o)
+                0x0800742c                _sbrk_r
+ .text.strncpy  0x08007450      0x110 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-strncpy.o)
+                0x08007450                strncpy
  .text._malloc_trim_r
-                0x080075a4       0x98 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
-                0x080075a4                _malloc_trim_r
- .text._free_r  0x0800763c      0x194 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
-                0x0800763c                _free_r
+                0x08007560       0x98 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
+                0x08007560                _malloc_trim_r
+ .text._free_r  0x080075f8      0x194 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
+                0x080075f8                _free_r
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
- .rodata        0x080077d0      0x10c ..\obj\imu.o
- .rodata        0x080078dc       0x88 ..\obj\zigbee.o
- .rodata        0x08007964      0x16c ..\obj\telemeter.o
- .rodata        0x08007ad0      0x120 ..\obj\flight.o
-                0x08007ad0                xStationaryFlightMvt
-                0x08007ae8                xStationaryFlightCmd
- .rodata        0x08007bf0       0x24 ..\obj\printf.o
- .rodata        0x08007c14      0xd20 ..\obj\drone.o
-                0x08007c14                xDfltDroneConfig
-                0x08007c48                xInitDroneState
- .rodata        0x08008934      0x19c ..\obj\tasks.o
- .rodata        0x08008ad0       0x64 ..\obj\gps.o
- .rodata        0x08008b34      0x17c ..\obj\queue.o
- .rodata        0x08008cb0      0x14c ..\obj\debug.o
+ .rodata        0x0800778c      0x10c ..\obj\imu.o
+ .rodata        0x08007898       0x88 ..\obj\zigbee.o
+ .rodata        0x08007920      0x16c ..\obj\telemeter.o
+ .rodata        0x08007a8c      0x120 ..\obj\flight.o
+                0x08007a8c                xStationaryFlightMvt
+                0x08007aa4                xStationaryFlightCmd
+ .rodata        0x08007bac       0x24 ..\obj\printf.o
+ .rodata        0x08007bd0      0xcf0 ..\obj\drone.o
+                0x08007bd0                xDfltDroneConfig
+                0x08007c04                xInitDroneState
+ .rodata        0x080088c0      0x19c ..\obj\tasks.o
+ .rodata        0x08008a5c       0x64 ..\obj\gps.o
+ .rodata        0x08008ac0      0x17c ..\obj\queue.o
+ .rodata        0x08008c3c      0x14c ..\obj\debug.o
 
-.vfp11_veneer   0x08008dfc        0x0
+.vfp11_veneer   0x08008d88        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08008dfc        0x0
+.v4_bx          0x08008d88        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08008dfc        0x0
+.iplt           0x08008d88        0x0
  .iplt          0x00000000        0x0 ..\obj\semihosting.o
 
-.rel.dyn        0x08008dfc        0x0
+.rel.dyn        0x08008d88        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\semihosting.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08008dfc                __exidx_start = .
+                0x08008d88                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08008dfc                __exidx_end = .
-                0x08008dfc                . = ALIGN (0x4)
-                0x08008dfc                _etext = .
-                0x08008dfc                _sidata = .
+                0x08008d88                __exidx_end = .
+                0x08008d88                . = ALIGN (0x4)
+                0x08008d88                _etext = .
+                0x08008d88                _sidata = .
 
-.data           0x20000000      0x86c load address 0x08008dfc
+.data           0x20000000      0x86c load address 0x08008d88
                 0x20000000                _sdata = .
  *(.data .data.*)
  .data          0x20000000       0x10 ..\obj\stm32f4xx_rcc.o
@@ -1338,10 +1338,10 @@ Linker script and memory map
                 0x2000086c                . = ALIGN (0x4)
                 0x2000086c                _edata = .
 
-.igot.plt       0x2000086c        0x0 load address 0x08009668
+.igot.plt       0x2000086c        0x0 load address 0x080095f4
  .igot.plt      0x00000000        0x0 ..\obj\semihosting.o
 
-.bss            0x2000086c      0x218 load address 0x08009668
+.bss            0x2000086c      0x218 load address 0x080095f4
                 0x2000086c                _sbss = .
  *(.bss .bss.*)
  .bss           0x2000086c       0xb4 ..\obj\drone.o
@@ -1373,7 +1373,7 @@ Linker script and memory map
                 0x20000a84                . = ALIGN (0x4)
                 0x20000a84                _ebss = .
 
-.co_stack       0x20000a84      0x804 load address 0x08009880
+.co_stack       0x20000a84      0x804 load address 0x0800980c
                 0x20000a88                . = ALIGN (0x8)
  *fill*         0x20000a84        0x4 00
  *(.co_stack .co_stack.*)
@@ -1422,26 +1422,26 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm
 END GROUP
 OUTPUT(drone.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x851f
- .debug_info    0x00000000      0x654 ..\obj\imu.o
- .debug_info    0x00000654      0xa65 ..\obj\stm32f4xx_usart.o
- .debug_info    0x000010b9      0x393 ..\obj\zigbee.o
- .debug_info    0x0000144c      0x2df ..\obj\telemeter.o
- .debug_info    0x0000172b      0x103 ..\obj\startup_stm32f4xx.o
- .debug_info    0x0000182e      0xd49 ..\obj\stm32f4xx_rcc.o
- .debug_info    0x00002577      0x493 ..\obj\flight.o
- .debug_info    0x00002a0a      0xf8e ..\obj\printf.o
- .debug_info    0x00003998     0x1761 ..\obj\drone.o
- .debug_info    0x000050f9      0xec0 ..\obj\tasks.o
- .debug_info    0x00005fb9      0x640 ..\obj\stm32f4xx_gpio.o
- .debug_info    0x000065f9       0xd1 ..\obj\sh_cmd.o
- .debug_info    0x000066ca      0x2d8 ..\obj\list.o
- .debug_info    0x000069a2      0x5f5 ..\obj\system_stm32f4xx.o
- .debug_info    0x00006f97      0x443 ..\obj\syscalls.o
- .debug_info    0x000073da      0x27f ..\obj\gps.o
- .debug_info    0x00007659      0x247 ..\obj\port.o
- .debug_info    0x000078a0      0x798 ..\obj\queue.o
- .debug_info    0x00008038      0x4e7 ..\obj\debug.o
+.debug_info     0x00000000     0x8520
+ .debug_info    0x00000000      0x655 ..\obj\imu.o
+ .debug_info    0x00000655      0xa65 ..\obj\stm32f4xx_usart.o
+ .debug_info    0x000010ba      0x393 ..\obj\zigbee.o
+ .debug_info    0x0000144d      0x2df ..\obj\telemeter.o
+ .debug_info    0x0000172c      0x103 ..\obj\startup_stm32f4xx.o
+ .debug_info    0x0000182f      0xd49 ..\obj\stm32f4xx_rcc.o
+ .debug_info    0x00002578      0x493 ..\obj\flight.o
+ .debug_info    0x00002a0b      0xf8e ..\obj\printf.o
+ .debug_info    0x00003999     0x1761 ..\obj\drone.o
+ .debug_info    0x000050fa      0xec0 ..\obj\tasks.o
+ .debug_info    0x00005fba      0x640 ..\obj\stm32f4xx_gpio.o
+ .debug_info    0x000065fa       0xd1 ..\obj\sh_cmd.o
+ .debug_info    0x000066cb      0x2d8 ..\obj\list.o
+ .debug_info    0x000069a3      0x5f5 ..\obj\system_stm32f4xx.o
+ .debug_info    0x00006f98      0x443 ..\obj\syscalls.o
+ .debug_info    0x000073db      0x27f ..\obj\gps.o
+ .debug_info    0x0000765a      0x247 ..\obj\port.o
+ .debug_info    0x000078a1      0x798 ..\obj\queue.o
+ .debug_info    0x00008039      0x4e7 ..\obj\debug.o
 
 .debug_abbrev   0x00000000     0x19c2
  .debug_abbrev  0x00000000      0x1ff ..\obj\imu.o
@@ -1464,7 +1464,7 @@ OUTPUT(drone.elf elf32-littlearm)
  .debug_abbrev  0x00001737      0x14b ..\obj\queue.o
  .debug_abbrev  0x00001882      0x140 ..\obj\debug.o
 
-.debug_loc      0x00000000     0x3ad4
+.debug_loc      0x00000000     0x3ac8
  .debug_loc     0x00000000      0x1fa ..\obj\imu.o
  .debug_loc     0x000001fa      0x658 ..\obj\stm32f4xx_usart.o
  .debug_loc     0x00000852      0x118 ..\obj\zigbee.o
@@ -1473,16 +1473,16 @@ OUTPUT(drone.elf elf32-littlearm)
  .debug_loc     0x00000b8e      0x97c ..\obj\stm32f4xx_rcc.o
  .debug_loc     0x0000150a      0x188 ..\obj\flight.o
  .debug_loc     0x00001692      0x3ea ..\obj\printf.o
- .debug_loc     0x00001a7c      0xb80 ..\obj\drone.o
- .debug_loc     0x000025fc      0x770 ..\obj\tasks.o
- .debug_loc     0x00002d6c      0x310 ..\obj\stm32f4xx_gpio.o
- .debug_loc     0x0000307c      0x118 ..\obj\list.o
- .debug_loc     0x00003194       0x9c ..\obj\system_stm32f4xx.o
- .debug_loc     0x00003230      0x1ec ..\obj\syscalls.o
- .debug_loc     0x0000341c      0x118 ..\obj\gps.o
- .debug_loc     0x00003534      0x178 ..\obj\port.o
- .debug_loc     0x000036ac      0x380 ..\obj\queue.o
- .debug_loc     0x00003a2c       0xa8 ..\obj\debug.o
+ .debug_loc     0x00001a7c      0xb74 ..\obj\drone.o
+ .debug_loc     0x000025f0      0x770 ..\obj\tasks.o
+ .debug_loc     0x00002d60      0x310 ..\obj\stm32f4xx_gpio.o
+ .debug_loc     0x00003070      0x118 ..\obj\list.o
+ .debug_loc     0x00003188       0x9c ..\obj\system_stm32f4xx.o
+ .debug_loc     0x00003224      0x1ec ..\obj\syscalls.o
+ .debug_loc     0x00003410      0x118 ..\obj\gps.o
+ .debug_loc     0x00003528      0x178 ..\obj\port.o
+ .debug_loc     0x000036a0      0x380 ..\obj\queue.o
+ .debug_loc     0x00003a20       0xa8 ..\obj\debug.o
 
 .debug_aranges  0x00000000      0xa68
  .debug_aranges
@@ -1544,28 +1544,28 @@ OUTPUT(drone.elf elf32-littlearm)
  .debug_ranges  0x00000880       0x88 ..\obj\queue.o
  .debug_ranges  0x00000908       0x20 ..\obj\debug.o
 
-.debug_line     0x00000000     0x4497
- .debug_line    0x00000000      0x372 ..\obj\imu.o
- .debug_line    0x00000372      0x4df ..\obj\stm32f4xx_usart.o
- .debug_line    0x00000851      0x259 ..\obj\zigbee.o
- .debug_line    0x00000aaa      0x230 ..\obj\telemeter.o
- .debug_line    0x00000cda       0xbc ..\obj\startup_stm32f4xx.o
- .debug_line    0x00000d96      0x5d6 ..\obj\stm32f4xx_rcc.o
- .debug_line    0x0000136c      0x224 ..\obj\flight.o
- .debug_line    0x00001590      0x477 ..\obj\printf.o
- .debug_line    0x00001a07      0x9d0 ..\obj\drone.o
- .debug_line    0x000023d7      0x87e ..\obj\tasks.o
- .debug_line    0x00002c55      0x37a ..\obj\stm32f4xx_gpio.o
- .debug_line    0x00002fcf       0x9c ..\obj\sh_cmd.o
- .debug_line    0x0000306b      0x2cc ..\obj\list.o
- .debug_line    0x00003337      0x1f1 ..\obj\system_stm32f4xx.o
- .debug_line    0x00003528      0x1bc ..\obj\syscalls.o
- .debug_line    0x000036e4      0x1ae ..\obj\gps.o
- .debug_line    0x00003892      0x3a2 ..\obj\port.o
- .debug_line    0x00003c34      0x5ef ..\obj\queue.o
- .debug_line    0x00004223      0x274 ..\obj\debug.o
+.debug_line     0x00000000     0x4496
+ .debug_line    0x00000000      0x373 ..\obj\imu.o
+ .debug_line    0x00000373      0x4df ..\obj\stm32f4xx_usart.o
+ .debug_line    0x00000852      0x259 ..\obj\zigbee.o
+ .debug_line    0x00000aab      0x230 ..\obj\telemeter.o
+ .debug_line    0x00000cdb       0xbc ..\obj\startup_stm32f4xx.o
+ .debug_line    0x00000d97      0x5d6 ..\obj\stm32f4xx_rcc.o
+ .debug_line    0x0000136d      0x224 ..\obj\flight.o
+ .debug_line    0x00001591      0x477 ..\obj\printf.o
+ .debug_line    0x00001a08      0x9ce ..\obj\drone.o
+ .debug_line    0x000023d6      0x87e ..\obj\tasks.o
+ .debug_line    0x00002c54      0x37a ..\obj\stm32f4xx_gpio.o
+ .debug_line    0x00002fce       0x9c ..\obj\sh_cmd.o
+ .debug_line    0x0000306a      0x2cc ..\obj\list.o
+ .debug_line    0x00003336      0x1f1 ..\obj\system_stm32f4xx.o
+ .debug_line    0x00003527      0x1bc ..\obj\syscalls.o
+ .debug_line    0x000036e3      0x1ae ..\obj\gps.o
+ .debug_line    0x00003891      0x3a2 ..\obj\port.o
+ .debug_line    0x00003c33      0x5ef ..\obj\queue.o
+ .debug_line    0x00004222      0x274 ..\obj\debug.o
 
-.debug_str      0x00000000     0x390e
+.debug_str      0x00000000     0x390f
  .debug_str     0x00000000      0x501 ..\obj\imu.o
                                 0x567 (size before relaxing)
  .debug_str     0x00000501      0x43e ..\obj\stm32f4xx_usart.o
@@ -1582,25 +1582,25 @@ OUTPUT(drone.elf elf32-littlearm)
                                 0x402 (size before relaxing)
  .debug_str     0x000016c1      0x4cc ..\obj\printf.o
                                 0x676 (size before relaxing)
- .debug_str     0x00001b8d      0xa7b ..\obj\drone.o
-                               0x117f (size before relaxing)
- .debug_str     0x00002608      0x884 ..\obj\tasks.o
+ .debug_str     0x00001b8d      0xa7c ..\obj\drone.o
+                               0x1180 (size before relaxing)
+ .debug_str     0x00002609      0x884 ..\obj\tasks.o
                                 0xa21 (size before relaxing)
- .debug_str     0x00002e8c      0x1bd ..\obj\stm32f4xx_gpio.o
+ .debug_str     0x00002e8d      0x1bd ..\obj\stm32f4xx_gpio.o
                                 0x460 (size before relaxing)
- .debug_str     0x00003049       0xe5 ..\obj\list.o
+ .debug_str     0x0000304a       0xe5 ..\obj\list.o
                                 0x2cc (size before relaxing)
- .debug_str     0x0000312e       0xde ..\obj\system_stm32f4xx.o
+ .debug_str     0x0000312f       0xde ..\obj\system_stm32f4xx.o
                                 0x367 (size before relaxing)
- .debug_str     0x0000320c      0x164 ..\obj\syscalls.o
+ .debug_str     0x0000320d      0x164 ..\obj\syscalls.o
                                 0x2d1 (size before relaxing)
- .debug_str     0x00003370       0x8d ..\obj\gps.o
+ .debug_str     0x00003371       0x8d ..\obj\gps.o
                                 0x28b (size before relaxing)
- .debug_str     0x000033fd      0x16a ..\obj\port.o
+ .debug_str     0x000033fe      0x16a ..\obj\port.o
                                 0x2f8 (size before relaxing)
- .debug_str     0x00003567      0x2ee ..\obj\queue.o
+ .debug_str     0x00003568      0x2ee ..\obj\queue.o
                                 0x556 (size before relaxing)
- .debug_str     0x00003855       0xb9 ..\obj\debug.o
+ .debug_str     0x00003856       0xb9 ..\obj\debug.o
                                 0x4a2 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1683,7 +1683,7 @@ OUTPUT(drone.elf elf32-littlearm)
  .ARM.attributes
                 0x000005c9       0x34 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-reent.o)
 
-.debug_frame    0x00000000     0x2400
+.debug_frame    0x00000000     0x23fc
  .debug_frame   0x00000000      0x134 ..\obj\imu.o
  .debug_frame   0x00000134      0x344 ..\obj\stm32f4xx_usart.o
  .debug_frame   0x00000478       0xbc ..\obj\zigbee.o
@@ -1692,22 +1692,22 @@ OUTPUT(drone.elf elf32-littlearm)
  .debug_frame   0x000006a0      0x4d8 ..\obj\stm32f4xx_rcc.o
  .debug_frame   0x00000b78      0x104 ..\obj\flight.o
  .debug_frame   0x00000c7c      0x248 ..\obj\printf.o
- .debug_frame   0x00000ec4      0x6f4 ..\obj\drone.o
- .debug_frame   0x000015b8      0x458 ..\obj\tasks.o
- .debug_frame   0x00001a10      0x19c ..\obj\stm32f4xx_gpio.o
- .debug_frame   0x00001bac       0x9c ..\obj\list.o
- .debug_frame   0x00001c48       0x64 ..\obj\system_stm32f4xx.o
- .debug_frame   0x00001cac      0x108 ..\obj\syscalls.o
- .debug_frame   0x00001db4       0xb4 ..\obj\gps.o
- .debug_frame   0x00001e68      0x110 ..\obj\port.o
- .debug_frame   0x00001f78      0x210 ..\obj\queue.o
- .debug_frame   0x00002188       0x70 ..\obj\debug.o
- .debug_frame   0x000021f8       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
- .debug_frame   0x00002228       0x38 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mallocr.o)
- .debug_frame   0x00002260       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memcpy.o)
- .debug_frame   0x00002290       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
- .debug_frame   0x000022bc       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
- .debug_frame   0x000022ec       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x00002318       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-strncpy.o)
- .debug_frame   0x00002344       0x50 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
- .debug_frame   0x00002394       0x6c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-reent.o)
+ .debug_frame   0x00000ec4      0x6f0 ..\obj\drone.o
+ .debug_frame   0x000015b4      0x458 ..\obj\tasks.o
+ .debug_frame   0x00001a0c      0x19c ..\obj\stm32f4xx_gpio.o
+ .debug_frame   0x00001ba8       0x9c ..\obj\list.o
+ .debug_frame   0x00001c44       0x64 ..\obj\system_stm32f4xx.o
+ .debug_frame   0x00001ca8      0x108 ..\obj\syscalls.o
+ .debug_frame   0x00001db0       0xb4 ..\obj\gps.o
+ .debug_frame   0x00001e64      0x110 ..\obj\port.o
+ .debug_frame   0x00001f74      0x210 ..\obj\queue.o
+ .debug_frame   0x00002184       0x70 ..\obj\debug.o
+ .debug_frame   0x000021f4       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00002224       0x38 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000225c       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000228c       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-memset.o)
+ .debug_frame   0x000022b8       0x30 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-mlock.o)
+ .debug_frame   0x000022e8       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x00002314       0x2c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x00002340       0x50 c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-freer.o)
+ .debug_frame   0x00002390       0x6c c:/program files (x86)/gnu tools arm embedded/4.7 2013q3/bin/../lib/gcc/arm-none-eabi/4.7.4/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc.a(lib_a-reent.o)

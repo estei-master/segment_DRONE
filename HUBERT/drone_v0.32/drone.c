@@ -332,7 +332,7 @@ static inline uint8_t prvZigbeeTimedout( const struct droneZigbeeWrapper * const
 		const struct droneConfig * const pxCurrDroneConfig );
 static inline uint8_t prvFltCmdTimedout( const struct droneZigbeeWrapper * const pxCurrZigbeeWrapper,
 		const struct droneConfig * const pxCurrDroneConfig );
-static inline uint8_t ucBatteryInitTest( void );
+static inline uint8_t prvBatteryInitTest( void );
 static inline void prvHandleTimouts( const struct droneTelemeterWrapper * const pxCurrTelemeterWrapper,
 		const struct droneBatteryWrapper * const pxCurrBatteryWrapper,
 		const struct droneIMUWrapper * const pxCurrIMUWrapper,
@@ -416,7 +416,7 @@ struct zigbeeData xLocZigbeeData;
 	}
 
 	/* Binary semaphore used to wake up the flight control task */
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating xFlightCtrlSem" );
 	/* Same as vSemaphoreCreateBinary( xFlightCtrlSem ); with a semaphore
 	initialized as taken instead of free. */
@@ -455,32 +455,32 @@ struct zigbeeData xLocZigbeeData;
 		}
 	}
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvDetectObstacleTask" );
 	xTaskCreate( prvDetectObstacleTask, ( signed char * ) "Obs",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneDETECT_OBSTACLE_PRIO, &xDetectObstacleHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvBatteryMonitoringTask" );
 	xTaskCreate( prvBatteryMonitoringTask,
 			( signed char * ) "Bat",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneBATTERY_MONITORING_PRIO, &xBatteryMonitoringHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvFlightCtrlTask" );
 	xTaskCreate( prvFlightCtrlTask, ( signed char * ) "Flt",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneFLIGHT_CTRL_PRIO, &xFlightCtrlHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvZigbeeReceiveTask" );
 	xTaskCreate( prvZigbeeReceiveTask, ( signed char * ) "Zig",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneZIGBEE_RECEIVE_PRIO, &xZigbeeReceiveHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvGPSReceiveTask" );
 
 	/* At this point, the drone is hopefully correctly initialized and waiting
@@ -541,7 +541,7 @@ struct zigbeeData xLocZigbeeData;
 //	vTaskSetApplicationTaskTag( xBatteryMonitoringHandle, ( void * ) 5 );
 //	vTaskSetApplicationTaskTag( xDetectObstacleHandle, ( void * ) 6 );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Starting scheduler" );
 	vTaskStartScheduler();
 	ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0,
@@ -766,7 +766,7 @@ enum IMUErrorMask eIMUError;
 
 	while( 1 )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvFlightCtrlTask()",
 				"Woken up" );
 
@@ -941,7 +941,7 @@ enum IMUErrorMask eIMUError;
 			vFlightExecuteMvt( &xNextFltMvt );
 		}
 
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvFlightCtrlTask()",
 				"Trying to take xFlightCtrlSem" );
 		xSemaphoreTake( xFlightCtrlSem, xCurrConfig.xFlightCtrlPeriod );
@@ -971,7 +971,7 @@ struct droneTelemeterWrapper xCurrTlmWrapper;
 
 	while( 1 )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvZigbeeReceiveTask()",
 				"Woken up" );
 
@@ -1165,7 +1165,7 @@ struct droneTelemeterWrapper xCurrTlmWrapper;
 			taskEXIT_CRITICAL();
 		}
 
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvZigbeeReceiveTask()",
 				"Delayed" );
 
@@ -1189,7 +1189,7 @@ struct droneBatteryWrapper xNewBatteryWrapper;
 
 	while( 1 )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,
 				"prvBatteryMonitoringTask()", "Woken up" );
 
@@ -1221,7 +1221,7 @@ struct droneBatteryWrapper xNewBatteryWrapper;
 		if( prvBatteryCritical( &( xNewBatteryWrapper.ulPowerLvl ),
 				&xCurrConfig ) )
 		{
-			ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+			ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 					uxTaskPriorityGet( NULL ), MODULE,
 					"prvBatteryMonitoringTask()",
 					"Critical battery level detected" );
@@ -1229,7 +1229,7 @@ struct droneBatteryWrapper xNewBatteryWrapper;
 			prvSafeSetDroneState( &xCurrDroneState );
 		}
 
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,
 				"prvBatteryMonitoringTask()", "Delayed" );
 		vTaskDelayUntil( &xNextWakeTime,
@@ -1255,7 +1255,7 @@ struct droneState xCurrDroneState;
 
 	while( 1 )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvGPSReceiveTask()",
 				"Woken up" );
 
@@ -1281,7 +1281,7 @@ struct droneState xCurrDroneState;
 		/* Update local copy of xDroneConfig */
 		prvSafeGetDroneConfig( &xCurrConfig );
 
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvGPSReceiveTask()",
 				"Delayed" );
 
@@ -1299,11 +1299,11 @@ struct droneState xCurrDroneState;
 /** Executed when no other task is runnable. Could be used to simulate events */
 void vApplicationIdleHook( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "vApplicationIdleHook()",
 			"Entering idle task" );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "vApplicationIdleHook()",
 			"Going into sleep mode" );
 	/* Wait for interrupt to save power (sleeping mode) */
@@ -1336,8 +1336,9 @@ static inline void prvSetupHardware( void )
 	SystemInit();
 	SystemCoreClockUpdate();
 
-	ulDebugMsg( 0, "INFO ", ( signed char * ) "---", 0, MODULE, "prvSetupHardware()",
-			"MCU initialized" );
+	/* It cannot work : UART not yet initialized */
+	//ulDebugMsg( 0, "INFO ", ( signed char * ) "---", 0, MODULE, "prvSetupHardware()",
+	//		"MCU initialized" );
 }
 
 /** Initializes the ADC for battery level measurement */
@@ -1359,7 +1360,7 @@ static inline void prvInitPeriph( void )
 }
 
 /** @todo Implement ucGPSInitTest(), ucIMUInitTest(), ucZigbeeInitTest(),
-ucTelemeterInitTest(), ucBatteryInitTest(). */
+ucTelemeterInitTest(), prvBatteryInitTest(). */
 /** Executes the PBITs (power-on built-in tests) and returns a code to identify
 the failed tests, or 0 if no test failed. */
 static inline enum droneError prvInitTestPeriph( void )
@@ -1376,7 +1377,7 @@ enum droneError eErrorMask = DRN_ERR_NONE;
 		eErrorMask |= DRN_ERR_RX_TOUT;
 	if( ucTelemeterInitTest() )
 		eErrorMask |= DRN_ERR_TLM_TOUT;
-	if( ucBatteryInitTest() )
+	if( prvBatteryInitTest() )
 		eErrorMask |= DRN_ERR_BATT_TOUT;
 
 	return eErrorMask;
@@ -1777,7 +1778,7 @@ static inline void prvSafeSetIMUData( const struct IMUData * const pxNewIMUData 
 	xIMUWrapper.xUpdateTime = xTaskGetTickCount() * portTICK_RATE_MS;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetIMUData()",
 			"xIMUData updated" );
 }
@@ -1792,7 +1793,7 @@ static inline void prvSafeSetGPSData( const struct GPSData * const pxNewGPSData 
 	xGPSWrapper.xUpdateTime = xTaskGetTickCount() * portTICK_RATE_MS;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetGPSData()",
 			"xGPSData updated" );
 }
@@ -1808,7 +1809,7 @@ static inline void prvSafeSetZigbeeData( const struct flightCommand * const pxNe
 	xZigbeeWrapper.xZigbeeUpdateTime = xTaskGetTickCount() * portTICK_RATE_MS;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetFltCmd()",
 			"xFlightCmd updated" );
 }
@@ -1823,7 +1824,7 @@ static inline void prvSafeSetBatteryData( const uint32_t * const pulNewBatteryLv
 	xBatteryWrapper.xUpdateTime = xTaskGetTickCount() * portTICK_RATE_MS;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetBatteryData()",
 			"ulPowerLvl updated" );
 }
@@ -1836,7 +1837,7 @@ static inline void prvSafeSetDroneConfig( const struct droneConfig * const pxNew
 	xDroneConfig = *pxNewDroneConfig;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetDroneConfig()",
 			"xDroneConfig updated" );
 }
@@ -1851,7 +1852,7 @@ static inline void prvSafeSetTelemeterData( const struct telemeterData * const p
 	xTelemeterWrapper.xUpdateTime = xTaskGetTickCount() * portTICK_RATE_MS;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetTelemeterData()",
 			"xTelemeterData updated" );
 }
@@ -1865,7 +1866,7 @@ static inline void prvSafeSetDroneState( const struct droneState * const pxNewDr
 	xDroneState.eErrorMask = pxNewDroneState->eErrorMask;
 	taskEXIT_CRITICAL();
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvSafeSetDroneState()",
 			"xDroneState updated" );
 }
@@ -1933,7 +1934,7 @@ static inline void prvSafeGetDroneState( struct droneState * const pxNewState )
 static inline void prvEnableVideo( void )
 {
 	/** @todo Implement prvEnableVideo() */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvEnableVideo()",
 			"Does nothing ATM" );
 	/* GPIO_SetBits(GPIOx, GPIO_Pin) */
@@ -1942,7 +1943,7 @@ static inline void prvEnableVideo( void )
 static inline void prvDisableVideo( void )
 {
 	/** @todo Implement prvDisableVideo() */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvDisableVideo()",
 			"Does nothing ATM" );
 }
@@ -1954,14 +1955,14 @@ static inline uint8_t prvTakeoffDone( const struct IMUData * const pxCurrIMUData
 {
 	if( xIMUWrapper.xIMUData.lAltitude < xDroneConfig.ulTakeoffAltitude )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvTakeoffDone()",
 				"Takeoff altitude not yet reached" );
 		return 1;
 	}
 	else
 	{
-		ulDebugMsg( xTaskGetTickCount(), "INFO", pcTaskGetTaskName( NULL ),
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 				uxTaskPriorityGet( NULL ), MODULE,  "prvTakeoffDone()",
 				"Takeoff altitude reached" );
 		return 0;
@@ -1973,7 +1974,7 @@ static inline uint8_t prvLandingDone( const struct IMUData * const pxCurrIMUData
 		const struct droneConfig * const pxCurrDroneConfig )
 {
 	/** @todo Implement prvLandingDone() */
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvLandingDone()",
 			"Does nothing ATM" );
 	return 0;
@@ -2070,10 +2071,10 @@ portTickType ulTimeElapsed;
 	return ulTimeElapsed > ( pxCurrDroneConfig->xZigbeeCmdTimeout * pxCurrDroneConfig->xZigbeeReceivePeriod );
 }
 
-static inline uint8_t ucBatteryInitTest( void )
+static inline uint8_t prvBatteryInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
-			uxTaskPriorityGet( NULL ), MODULE, "ucBatteryInitTest()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---",
+			uxTaskPriorityGet( NULL ), MODULE, "prvBatteryInitTest()",
 			"Does nothing ATM" );
 
 	return 0;
@@ -2184,7 +2185,7 @@ static inline void prvInitAltitude( const struct droneIMUWrapper * const pxCurrI
 
 static inline void prvGetBatteryLvl( uint32_t *pulBatteryLvl )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", pcTaskGetTaskName( NULL ),
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE,  "prvGetBatteryData()",
 			"Does nothing ATM" );
 	/** @todo Implement prvGetBatteryLvl() */
@@ -2193,7 +2194,7 @@ static inline void prvGetBatteryLvl( uint32_t *pulBatteryLvl )
 /** Reboot the MCU. DO NOT DO THIS WHILE FLYING ! */
 static inline void prvReboot( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO", ( signed char * ) "---",
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---",
 			uxTaskPriorityGet( NULL ), MODULE,  "prvReboot()",
 			"Rebooting" );
 
@@ -2202,7 +2203,7 @@ static inline void prvReboot( void )
 
 static inline void prvShutdown( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---",
 			uxTaskPriorityGet( NULL ), MODULE,  "prvShutdown()",
 			"Does nothing ATM" );
 
