@@ -103,13 +103,14 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt><a class="anchor" id="_todo000001"></a>File <a class="el" href="drone_8c.html">drone.c</a>  </dt>
-<dd><p class="startdd"><a class="el" href="drone_8c.html">drone.c</a> description </p>
+<dd><p class="startdd"><a class="el" href="drone_8c.html">drone.c</a> in-depth description </p>
 <p>Watchdog on <a class="el" href="drone_8c.html#a82a6ebf7a4c139c50e1a7e812c8cb6ff">prvFlightCtrlTask()</a> in non-ground mode </p>
 <p>Test FreeRTOS API function return value </p>
 <p>Measure maximum critical section time </p>
 <p>Get rid of drone*Wrapper to allow better header definitions </p>
 <p>Adapt variables type to their size </p>
-<p class="enddd">Run ZigBee reset if initialization failed </p>
+<p>Run ZigBee reset if initialization failed </p>
+<p class="enddd">Refactor debugging output of prvSend* into independent functions </p>
 </dd>
 <dt><a class="anchor" id="_todo000003"></a>Class <a class="el" href="structdroneConfig.html">droneConfig</a>  </dt>
 <dd>Add macros to define maximum and minimum possible configuration  </dd>
@@ -127,7 +128,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dd>think of an initialization value (Magic number ?)  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Global <a class="el" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>  </dt>
 <dd>fix xStationaryFlightMvt (angles ? speeds ? reference ?)  </dd>
-<dt><a class="anchor" id="_todo000011"></a>Global <a class="el" href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a>  </dt>
+<dt><a class="anchor" id="_todo000012"></a>Global <a class="el" href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a>  </dt>
 <dd>Expand enum zigbeeCommandId as necessary </dd>
 </dl>
 </div></div><!-- contents -->
@@ -135,7 +136,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 28 2014 18:55:16 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 23:57:06 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

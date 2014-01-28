@@ -68,28 +68,19 @@ inline uint8_t ucIMUTest( void )
 /** Gets IMU attitude measurements */
 inline void vIMUGetData( struct IMUData * const pxIMUData )
 {
+/* A 30 bytes buffer is filled in 0.26 ms at 115200 bauds */
 uint16_t pusBuff[ FRAME_LEN ];
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "vIMUGetData()", "Receiving IMU measurements" );
 
-	/** @todo replace critical section by attempt counter in imu_main : if no
-	critical section, the task gets preempted (sleeping/waking up constantly),
-	otherwise it blocks the whole system if communication is lost.
-	Sample of no critical section output :
-	...
-	1022  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_IN()  Task running
-	1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
-	1023  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_IN()  Task running
-	1024  INFO  Flt     4  FreeRTOS  traceTASK_SWITCHED_OUT()  Task switched out of running state
-	...
-	*/
-
-	/* Now reception is handled by an interrupt */
+	/* Reception is now handled by an interrupt */
 	//taskENTER_CRITICAL();
 	//imu_receive_frame( pusBuff );
 	//taskEXIT_CRITICAL();
 
+	/** @todo  Ensure pusBuff is protected from overwriting while it is being
+	parsed. */
 	imu_parse_frame( pusBuff, pxIMUData );
 
 	/* Displaced to prvSendStatus() */
@@ -276,8 +267,11 @@ NVIC_InitTypeDef NVIC_InitStructure;
 	/* Enable USART3 receive interrupt */
 	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
-	/** @todo Check USART3 priority to use with FreeRTOS (must be > 11 ?) */
-	/* Sets the priority group of the USART3 interrupts */
+
+	/* Sets the priority group of the USART3 interrupts. As the interrupt
+	handler does not use any FreeRTOS API function, it can afford to have a
+	priority above configMAX_SYSCALL_INTERRUPT_PRIORITY (i.e. a value inferior
+	to 11). */
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 	/* Sets the subpriority inside the group */
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
@@ -294,6 +288,7 @@ static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] )
 {
 /* Static to be conserved between interrupts */
 static uint8_t ucIndex = 0;
+uint16_t usTemp;
 
 	/** @todo Switch to reception on interrupt and only parsing in the task
 	itself */
@@ -309,22 +304,24 @@ static uint8_t ucIndex = 0;
 //			/* Do nothing */
 //		}
 
+		usTemp = USART_ReceiveData( USART3 );
 		/* Return to the start of pusBuff if start of frame character is
 		received */
 		/** @todo Check we don't go past index FRAME_LEN-1 of pusBuff */
-		if( ucIndex > 0 && USART_ReceiveData( USART3 ) == 'R' )
+		if( ( ucIndex > 0 ) && ( usTemp == 'R' ) )
 		{
 			ucIndex = 0;
 		}
 
-		pusBuff[ ucIndex ] = USART_ReceiveData( USART3 );
+		pusBuff[ ucIndex ] = usTemp;
 		ucIndex++;
 	}
 }
 
 /** Converts the received frame from pusBuff into int16_t numbers, and updates
 pxIMUData */
-static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ], struct IMUData * const pxIMUData )
+static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ],
+		struct IMUData * const pxIMUData )
 {
 uint8_t ucIndex = 0;
 
@@ -348,7 +345,8 @@ uint8_t ucIndex = 0;
 			ucIndex++;
 			while( pusBuff[ ucIndex ] != 'P' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_X ] = pxIMUData->plAngle[ IMU_AXIS_X ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_X ] = 10 * pxIMUData->plAngle[ IMU_AXIS_X ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 			pxIMUData->plAngle[ IMU_AXIS_X ] = -pxIMUData->plAngle[ IMU_AXIS_X ];
@@ -357,7 +355,8 @@ uint8_t ucIndex = 0;
 		{
 			while( pusBuff[ ucIndex ] != 'P' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_X ] =  pxIMUData->plAngle[ IMU_AXIS_X ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_X ] =  10 * pxIMUData->plAngle[ IMU_AXIS_X ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 		}
@@ -369,7 +368,8 @@ uint8_t ucIndex = 0;
 			ucIndex++;
 			while( pusBuff[ ucIndex ] != 'Y' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_Y ] = pxIMUData->plAngle[ IMU_AXIS_Y ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_Y ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Y ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 			pxIMUData->plAngle[ IMU_AXIS_Y ] = -pxIMUData->plAngle[ IMU_AXIS_Y ];
@@ -378,7 +378,8 @@ uint8_t ucIndex = 0;
 		{
 			while( pusBuff[ ucIndex ] != 'Y' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_Y ] = pxIMUData->plAngle[ IMU_AXIS_Y ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_Y ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Y ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 		}
@@ -390,7 +391,8 @@ uint8_t ucIndex = 0;
 			ucIndex++;
 			while( pusBuff[ ucIndex ] != 'A' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_Z ] = pxIMUData->plAngle[ IMU_AXIS_Z ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_Z ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Z ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 			pxIMUData->plAngle[ IMU_AXIS_Z ] = -pxIMUData->plAngle[ IMU_AXIS_Z ];
@@ -399,7 +401,8 @@ uint8_t ucIndex = 0;
 		{
 			while( pusBuff[ ucIndex ] != 'A' )
 			{
-				pxIMUData->plAngle[ IMU_AXIS_Z ] = pxIMUData->plAngle[ IMU_AXIS_Z ] * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->plAngle[ IMU_AXIS_Z ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Z ]
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 		}
@@ -411,7 +414,8 @@ uint8_t ucIndex = 0;
 			ucIndex++;
 			while( pusBuff[ ucIndex ] != 'S' )
 			{
-				pxIMUData->lAltitude = pxIMUData->lAltitude * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->lAltitude = 10 * pxIMUData->lAltitude
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 			pxIMUData->lAltitude = -pxIMUData->lAltitude;
@@ -420,7 +424,8 @@ uint8_t ucIndex = 0;
 		{
 			while( pusBuff[ ucIndex ] != 'S' )
 			{
-				pxIMUData->lAltitude = pxIMUData->lAltitude * 10 + ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
+				pxIMUData->lAltitude = 10 * pxIMUData->lAltitude
+						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
 				ucIndex++;
 			}
 		}
@@ -434,7 +439,73 @@ void USART3_IRQHandler( void )
 	if( USART_GetITStatus( USART3, USART_IT_RXNE ) == SET )
 	{
 		imu_receive_frame( pusBuff );
-		/* Clear interruption bit */
+		/* Clear interruption bit. Potentially redundant with
+		USART_ReceiveData() from imu_receive_frame(). */
 		USART_ClearITPendingBit( USART3, USART_IT_RXNE );
 	}
 }
+
+/** @todo Complete double buffer handling below */
+//#define BUFF_NB_ROWS		30
+//#define BUFF_NB_LINES		2
+//
+///** Buffer to read several frames while treating only the latest (LIFO). When
+//both lines are full, the oldest is overwritten. The ucWritableLine index gives
+//the index of the currently writable line (once the oldest full line). The
+//ucBeingRead flag implements mutual exclusion between read and write operations
+//on single line, to avoid it being overwritten while its content is being
+//processed. The write operation is then redirected to the oldest full line
+//(the last written one if only the buffer contains only two lines). */
+//struct LIFOBuffer
+//{
+//	/** One is being written while the other is kept for reading */
+//	uint16_t usBuff[ BUFF_NB_LINES ][ BUFF_NB_ROWS ];
+//	/** Line index for buffer not yet full */
+//	uint8_t ucWritableLine;
+//	/** Mutex flag to avoid overwriting a line while it is read. */
+//	int8_t ucBeingRead;
+//	/** Index to write the next element */
+//	uint8_t ucNextWriteIndex;
+//	/** Index to read the next element */
+//	uint8_t ucNextReadIndex;
+//};
+//
+//void bufferInit( struct LIFOBuffer *const pxBuff )
+//{
+//	pxBuff->ucWritableLine = 0;
+//	/* No line is being read */
+//	pxBuff->ucBeingRead = -1;
+//}
+//
+//void bufferWrite( uint16_t usData, struct LIFOBuffer *const pxBuff )
+//{
+//	if( pxBuff->ucNextWriteIndex < BUFF_NB_ROWS )
+//	{
+//		/* Buffer line not yet full */
+//		if( pxBuff->ucBeingRead == -1 )
+//		{
+//
+//		}
+//	}
+//	else
+//	{
+//		/* Buffer line full */
+//		if( pxBuff->ucBeingRead == -1 )
+//		{
+//			/* No line is being read, overwrite the oldest from the first
+//			row */
+//			pxBuff->ucWritableLine = ( pxBuff->ucWritableLine + 1 ) % BUFF_NB_LINES;
+//			pxBuff->usBuff[ pxBuff->ucWritableLine ][ 0 ];
+//			pxBuff->ucNextWriteIndex = 1;
+//		}
+//		else if( pxBuff->ucBeingRead == ( pxBuff->ucWritableLine + 1 ) % BUFF_NB_LINES )
+//		{
+//			/* skip to next or ditch data ? */
+//		}
+//	}
+//}
+//
+//uint16_t bufferRead( void )
+//{
+//	return;
+//}

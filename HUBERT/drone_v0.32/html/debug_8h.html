@@ -195,12 +195,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>( ( x ) == 0 ) <a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">\</a></div>
 <div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">		ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
-<div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;configASSERT()&quot;</span>, <span class="stringliteral">&quot;failed !&quot;</span> )</div>
+<div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;configASSERT()&quot;</span>, <span class="stringliteral">&quot;failed : &quot;</span> #x <span class="stringliteral">&quot; == 0&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
 <div class="ttc" id="debug_8h_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
 </div><!-- fragment --><p>Macro used to check parameter consistency inside FreeRTOS </p>
 
-<p>Definition at line <a class="el" href="debug_8h_source.html#l00135">135</a> of file <a class="el" href="debug_8h_source.html">debug.h</a>.</p>
+<p>Definition at line <a class="el" href="debug_8h_source.html#l00127">127</a> of file <a class="el" href="debug_8h_source.html">debug.h</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="debug_8h.html">debug.h</a></li>
-    <li class="footer">Generated on Tue Jan 28 2014 18:55:15 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 23:57:05 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

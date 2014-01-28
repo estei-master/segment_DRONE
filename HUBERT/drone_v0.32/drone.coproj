@@ -113,8 +113,8 @@
     <File name="zigbee.c" path="zigbee.c" type="1"/>
     <File name="includes/flight.h" path="flight.h" type="1"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_adc.c" path="cmsis_lib/source/stm32f4xx_adc.c" type="1"/>
     <File name="FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h" path="FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_adc.c" path="cmsis_lib/source/stm32f4xx_adc.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="FreeRTOS/Source/include/portable.h" path="FreeRTOS/Source/include/portable.h" type="1"/>
@@ -131,8 +131,8 @@
     <File name="cmsis_lib/source/stm32f4xx_dac.c" path="cmsis_lib/source/stm32f4xx_dac.c" type="1"/>
     <File name="FreeRTOS/Source/list.c" path="FreeRTOS/Source/list.c" type="1"/>
     <File name="FreeRTOS/Source/timers.c" path="FreeRTOS/Source/timers.c" type="1"/>
-    <File name="includes/gps.h" path="gps.h" type="1"/>
     <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="includes/gps.h" path="gps.h" type="1"/>
     <File name="FreeRTOS/Source/include" path="" type="2"/>
     <File name="FreeRTOS/Source" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>

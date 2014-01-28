@@ -2,13 +2,14 @@
  ** 	@file drone.c
  ** 	Drone control program, using FreeRTOS real-time kernel.
  **
- **		@todo drone.c description
+ **		@todo drone.c in-depth description
  **		@todo Watchdog on prvFlightCtrlTask() in non-ground mode
  **		@todo Test FreeRTOS API function return value
  **		@todo Measure maximum critical section time
  **		@todo Get rid of drone*Wrapper to allow better header definitions
  **		@todo Adapt variables type to their size
  **		@todo Run ZigBee reset if initialization failed
+ **		@todo Refactor debugging output of prvSend* into independent functions
  **
  **		1 tabulation = 4 spaces
  **
@@ -1335,7 +1336,7 @@ static inline void prvSetupHardware( void )
 {
 	/* Ensure all priority bits are assigned as preemption priority bits
     if using a ARM Cortex-M microcontroller. */
-	NVIC_SetPriorityGrouping( 0 );
+	NVIC_SetPriorityGrouping( NVIC_PriorityGroup_4 );
 
 	SystemInit();
 	SystemCoreClockUpdate();

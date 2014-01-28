@@ -122,19 +122,11 @@ associated with the task being selected to run on DAC1. */
 				uxTaskPriorityGet( pxCurrentTCB ), debugMODULE, \
 				"traceTASK_DELAY()", "Task delayed" )
 
-/*
-#define configASSERT( x ) if( ( x ) == 0 ) { \
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", "configASSERT()", "failed at " ); \
-		debugPUTS( __FILE__ ); \
-		debugPUTS( ":" ); \
-		debugPUTS( __LINE__ ); \
-}
-*/
 /** Macro used to check parameter consistency inside FreeRTOS */
 /* Triggered at tasks.c line 506 (alignment of the initialized stack) */
 #define configASSERT( x ) if( ( x ) == 0 ) \
 		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, \
-				debugMODULE, "configASSERT()", "failed !" )
+				debugMODULE, "configASSERT()", "failed : " #x " == 0" )
 
 /******************************************************************************
  **	 	 EXPORTED FUNCTIONS DECLARATION

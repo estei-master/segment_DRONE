@@ -11,18 +11,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="imu.c" partName="imu.c" path="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/imu.c" title="imu.c" tooltip="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/imu.c" workbook="org.eclipse.ui.internal.EditorStack@120565e">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/drone/imu.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10497" selectionTopPixel="4408"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="drone.c" partName="drone.c" path="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/drone.c" title="drone.c" tooltip="C:/Users/Hubert/Documents/GitHub/segment_DRONE/HUBERT/drone_v0.32/drone.c" workbook="org.eclipse.ui.internal.EditorStack@120565e">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/drone/drone.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15398" selectionTopPixel="3960"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15996" selectionTopPixel="7034"/>
 </editor>
 </editors>
 <views>
@@ -32,20 +27,13 @@
 </viewState>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="9">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/drone"/>
-<element path="/drone/cmsis"/>
-<element path="/drone/cmsis_lib"/>
-<element path="/drone/cmsis_lib/include"/>
-<element path="/drone/cmsis_lib/source"/>
-<element path="/drone/FreeRTOS"/>
-<element path="/drone/FreeRTOS/Source"/>
-<element path="/drone/FreeRTOS/Source/include"/>
 <element path="/drone/includes"/>
 </expanded>
 <selection>
-<element path="/drone/FreeRTOS/Source/include/FreeRTOSConfig.h"/>
+<element path="/drone/includes/debug.h"/>
 </selection>
 </viewState>
 </view>
@@ -226,70 +214,51 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@a7476f" ratio="0.71246004" ratioLeft="669" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@a7476f" ratio="0.71246004" ratioLeft="669" ratioRight="270" relationship="4" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@11c486a" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a7476f">
-<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@11c486a" ratio="0.5" ratioLeft="636" ratioRight="636" relationship="2" relative="org.eclipse.ui.internal.ViewStack@a7476f">&#x0A;<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d654da" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d654da" ratio="0.75" ratioLeft="954" ratioRight="318" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13874538" ratioLeft="188" ratioRight="1167" relationship="2" relative="org.eclipse.ui.internal.ViewStack@5cdd29"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f2d035" ratio="0.62922" ratioLeft="1081" ratioRight="637" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f2d035" ratio="0.62922" ratioLeft="1081" ratioRight="637" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </mainWindow>
-<hiddenWindow height="394" width="758" x="654" y="449">
-<view id="org.eclipse.ui.views.ProgressView"/>
+<hiddenWindow height="394" width="758" x="654" y="449">&#x0A;<view id="org.eclipse.ui.views.ProgressView"/>
 </hiddenWindow>
 </layout>
 </perspective>
@@ -298,73 +267,24 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/imu.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_lib/source/stm32f4xx_usart.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/drone.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_lib/source/stm32f4xx_usart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/FreeRTOS/Source/include/FreeRTOSConfig.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_boot/startup/startup_stm32f4xx.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/drone.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/FreeRTOS/Source/include/FreeRTOSConfig.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_lib/include/stm32f4xx_dac.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/cmsis_lib/source/stm32f4xx_dac.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/imu.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/drone.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/drone/includes/debug.h"/>
 </editors>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="13864" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="drone.c" index="1">
-<position/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="FreeRTOSConfig.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="FreeRTOSConfig.h" index="3">
-<position info="not_deleted" x="3239" y="23"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="drone.c" index="1">
-<position info="not_deleted" x="15398" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14086" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="10144" y="17"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14073" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14013" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="14081" y="0"/>
-</item>
-<item historyLabel="imu.c" index="0">
-<position info="not_deleted" x="10144" y="17"/>
-</item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="13950" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
 <item historyLabel="imu.c" index="0">
@@ -373,40 +293,40 @@
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="10205" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="13950" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position/>
 </item>
-<item historyLabel="drone.c" index="5">
+<item historyLabel="drone.c" index="2">
 <position info="not_deleted" x="15398" y="0"/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="10277" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="53040" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52617" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52748" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="53191" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52648" y="0"/>
 </item>
 <item historyLabel="imu.c" index="0">
@@ -421,38 +341,92 @@
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="10497" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52538" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52139" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52950" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="53016" y="0"/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="14013" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="53191" y="0"/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="13950" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_usart.c" index="2">
+<item historyLabel="stm32f4xx_usart.c" index="1">
 <position info="not_deleted" x="52538" y="0"/>
 </item>
 <item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="14013" y="0"/>
 </item>
-<item historyLabel="drone.c" index="5">
+<item historyLabel="drone.c" index="2">
 <position info="not_deleted" x="15398" y="0"/>
 </item>
-<item active="true" historyLabel="imu.c" index="0">
+<item historyLabel="imu.c" index="0">
 <position info="not_deleted" x="10497" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_usart.c" index="3">
+<position info="not_deleted" x="21391" y="17"/>
+</item>
+<item historyLabel="imu.c" index="0">
+<position/>
+</item>
+<item historyLabel="drone.c" index="4">
+<position info="not_deleted" x="15398" y="0"/>
+</item>
+<item historyLabel="drone.c" index="4">
+<position info="not_deleted" x="47197" y="0"/>
+</item>
+<item historyLabel="imu.c" index="0">
+<position info="not_deleted" x="10374" y="0"/>
+</item>
+<item historyLabel="FreeRTOSConfig.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FreeRTOSConfig.h" index="5">
+<position info="not_deleted" x="4395" y="36"/>
+</item>
+<item historyLabel="imu.c" index="0">
+<position/>
+</item>
+<item historyLabel="stm32f4xx_dac.h" index="6">
+<position info="not_deleted" x="14035" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_dac.c" index="7">
+<position info="not_deleted" x="8513" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_dac.h" index="6">
+<position info="not_deleted" x="14035" y="0"/>
+</item>
+<item historyLabel="imu.c" index="0">
+<position info="not_deleted" x="13589" y="0"/>
+</item>
+<item historyLabel="drone.c" index="4">
+<position info="not_deleted" x="628" y="0"/>
+</item>
+<item historyLabel="imu.c" index="8">
+<position info="not_deleted" x="13589" y="0"/>
+</item>
+<item historyLabel="drone.c" index="9">
+<position info="not_deleted" x="566" y="0"/>
+</item>
+<item historyLabel="imu.c" index="8">
+<position info="not_deleted" x="9695" y="0"/>
+</item>
+<item historyLabel="debug.h" index="10">
+<position info="not_deleted" x="5341" y="0"/>
+</item>
+<item active="true" historyLabel="imu.c" index="8">
+<position info="not_deleted" x="9695" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -461,36 +435,32 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="debug.h" tooltip="drone/includes/debug.h">
+<persistable path="/drone/includes/debug.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="drone.c" tooltip="drone/drone.c">
+<persistable path="/drone/drone.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_dac.c" tooltip="drone/cmsis_lib/source/stm32f4xx_dac.c">
+<persistable path="/drone/cmsis_lib/source/stm32f4xx_dac.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_dac.h" tooltip="drone/cmsis_lib/include/stm32f4xx_dac.h">
+<persistable path="/drone/cmsis_lib/include/stm32f4xx_dac.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FreeRTOSConfig.h" tooltip="drone/FreeRTOS/Source/include/FreeRTOSConfig.h">
+<persistable path="/drone/FreeRTOS/Source/include/FreeRTOSConfig.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_usart.c" tooltip="drone/cmsis_lib/source/stm32f4xx_usart.c">
 <persistable path="/drone/cmsis_lib/source/stm32f4xx_usart.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="drone/cmsis_boot/startup/startup_stm32f4xx.c">
 <persistable path="/drone/cmsis_boot/startup/startup_stm32f4xx.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FreeRTOSConfig.h" tooltip="drone/FreeRTOS/Source/include/FreeRTOSConfig.h">
-<persistable path="/drone/FreeRTOS/Source/include/FreeRTOSConfig.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="drone.c" tooltip="drone/drone.c">
-<persistable path="/drone/drone.c"/>
-</file>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage" name="" tooltip="">
-<persistable>
-<org.coocox.welcome.ui.WelcomePage/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_usart.c" tooltip="progimu/cmsis_lib/source/stm32f4xx_usart.c">
 <persistable path="/progimu/cmsis_lib/source/stm32f4xx_usart.c"/>
 </file>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage" name="" tooltip="">
-<persistable>
-<org.coocox.welcome.ui.WelcomePage/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="drone/cmsis_lib/include/misc.h">
 <persistable path="/drone/cmsis_lib/include/misc.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="debug.h" tooltip="drone/includes/debug.h">
-<persistable path="/drone/includes/debug.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="port.c" tooltip="drone/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
 <persistable path="/drone/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c"/>
@@ -507,6 +477,9 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="debug.c" tooltip="drone/debug.c">
 <persistable path="/drone/debug.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="drone/cmsis_boot/startup/startup_stm32f4xx.c">
+<persistable path="/drone/cmsis_boot/startup/startup_stm32f4xx.c"/>
 </file>
 </mruList>
 </workbench>
