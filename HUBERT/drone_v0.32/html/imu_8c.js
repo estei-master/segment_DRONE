@@ -10,6 +10,8 @@ var imu_8c =
     [ "prvAngleValid", "imu_8c.html#a15d3894e6c2b0df70cc268e908342b44", null ],
     [ "ucIMUInitTest", "imu_8c.html#a585f070e778f42d47703fb0b2b3402a4", null ],
     [ "ucIMUTest", "imu_8c.html#ad43e88b3f6d91611cfa20a582b4dd03a", null ],
+    [ "USART3_IRQHandler", "imu_8c.html#a0d108a3468b2051548183ee5ca2158a0", null ],
     [ "vIMUGetData", "imu_8c.html#ac4ad027278ff7ebbcd4b4f1686aaa404", null ],
-    [ "vIMUInit", "imu_8c.html#aa04aa36cb66d8820b22c7138373c114a", null ]
+    [ "vIMUInit", "imu_8c.html#aa04aa36cb66d8820b22c7138373c114a", null ],
+    [ "pusBuff", "imu_8c.html#a0fa7a8c21e1d9af7532ad25e1c3d14a7", null ]
 ];

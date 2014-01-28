@@ -458,26 +458,26 @@ struct zigbeeData xLocZigbeeData;
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvDetectObstacleTask" );
-	xTaskCreate( prvDetectObstacleTask, ( signed char * ) "Obs",
+	xTaskCreate( prvDetectObstacleTask, ( signed char * ) "Obst",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneDETECT_OBSTACLE_PRIO, &xDetectObstacleHandle );
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvBatteryMonitoringTask" );
 	xTaskCreate( prvBatteryMonitoringTask,
-			( signed char * ) "Bat",
+			( signed char * ) "Batt",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneBATTERY_MONITORING_PRIO, &xBatteryMonitoringHandle );
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvFlightCtrlTask" );
-	xTaskCreate( prvFlightCtrlTask, ( signed char * ) "Flt",
+	xTaskCreate( prvFlightCtrlTask, ( signed char * ) "Flt ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneFLIGHT_CTRL_PRIO, &xFlightCtrlHandle );
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvZigbeeReceiveTask" );
-	xTaskCreate( prvZigbeeReceiveTask, ( signed char * ) "Zig",
+	xTaskCreate( prvZigbeeReceiveTask, ( signed char * ) "Zig ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneZIGBEE_RECEIVE_PRIO, &xZigbeeReceiveHandle );
 
@@ -489,7 +489,7 @@ struct zigbeeData xLocZigbeeData;
 	xDroneState.eFltState = STATE_GROUND_RDY;
 	/** @todo buzzer ready signal */
 
-	xTaskCreate( prvGPSReceiveTask, ( signed char * ) "GPS",
+	xTaskCreate( prvGPSReceiveTask, ( signed char * ) "GPS ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneGPS_RECEIVE_PRIO, &xGPSReceiveHandle );
 

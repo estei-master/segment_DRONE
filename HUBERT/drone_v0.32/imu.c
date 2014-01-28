@@ -12,6 +12,13 @@
 #define FRAME_LEN	30
 
 /******************************************************************************
+ **	 	 STATIC VARIABLES DECLARATION
+ *****************************************************************************/
+
+/** Global buffer to be accessed by the UART3 IRQ handler */
+static uint16_t pusBuff[ FRAME_LEN ];
+
+/******************************************************************************
  **	 	 STATIC FUNCTIONS DECLARATION
  *****************************************************************************/
 
@@ -20,7 +27,9 @@ static inline enum IMUErrorMask prvAngleValid( const struct IMUData * const pxIM
 //static inline enum IMUErrorMask prvSpeedValid( const struct IMUData * const pxIMUData );
 //static inline enum IMUErrorMask prvAccelValid( const struct IMUData * const pxIMUData );
 static inline void imu_usart_init( void );
+/** @todo Remove pusBuff in prototype if IRQ-driven reception is validated */
 static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ], struct IMUData * const pxIMUData );
+/** @todo Remove pusBuff in prototype if IRQ-driven reception is validated */
 static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] );
 
 /******************************************************************************
@@ -76,10 +85,10 @@ uint16_t pusBuff[ FRAME_LEN ];
 	...
 	*/
 
-	/** @todo reactivate IMU */
-	taskENTER_CRITICAL();
-	imu_receive_frame( pusBuff );
-	taskEXIT_CRITICAL();
+	/* Now reception is handled by an interrupt */
+	//taskENTER_CRITICAL();
+	//imu_receive_frame( pusBuff );
+	//taskEXIT_CRITICAL();
 
 	imu_parse_frame( pusBuff, pxIMUData );
 
@@ -215,13 +224,15 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 
 /* Set to static to avoid collisions */
 
-/** Sets up the USART3 for IMU communication */
+/** Sets up the USART3 for IMU communication with interrupt on RXNE
+@note Rx on PD9 */
 static inline void imu_usart_init( void )
 {
 /** @todo reuse the same GPIO_InitTypeDef and USART_InitTypeDef to initialize
 every USART (memory saving) */
 GPIO_InitTypeDef GPIO_InitStructure;
 USART_InitTypeDef USART_InitStructure;
+NVIC_InitTypeDef NVIC_InitStructure;
 
 	/* Enable GPIO clock */
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
@@ -229,8 +240,7 @@ USART_InitTypeDef USART_InitStructure;
 	/* Enable UART clock */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
 
-	/* Connect PXx to USARTx_Rx*/
-
+	/* Connect PXx to USARTx_Rx */
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource8, GPIO_AF_USART3);
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
@@ -263,27 +273,41 @@ USART_InitTypeDef USART_InitStructure;
 	/* USART configuration */
 	USART_Init(USART3, &USART_InitStructure);
 
-	/* Enable USART */
+	/* Enable USART3 receive interrupt */
+	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+	NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
+	/** @todo Check USART3 priority to use with FreeRTOS (must be > 11 ?) */
+	/* Sets the priority group of the USART3 interrupts */
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	/* Sets the subpriority inside the group */
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	/* Globally enable USART3 interrupts */
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
+
+	/* Enable USART3 */
 	USART_Cmd(USART3, ENABLE);
 }
 
 /** Receives the IMU frame via USART3 and puts it into pusBuff */
 static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] )
 {
-uint8_t ucIndex = 0;
+/* Static to be conserved between interrupts */
+static uint8_t ucIndex = 0;
 
 	/** @todo Switch to reception on interrupt and only parsing in the task
 	itself */
 
 	/* Reception of the IMU string, while the last character of frame has not
 	been received (character of start of next frame) */
-	while( pusBuff[ ucIndex ] != 'S' )
+	if( pusBuff[ ucIndex ] != 'S' )
+//	while( pusBuff[ ucIndex ] != 'S' )
 	{
 		/* Wait for a received byte */
-		while( USART_GetFlagStatus( USART3, USART_FLAG_RXNE ) == RESET )
-		{
-			/* Do nothing */
-		}
+//		while( USART_GetFlagStatus( USART3, USART_FLAG_RXNE ) == RESET )
+//		{
+//			/* Do nothing */
+//		}
 
 		/* Return to the start of pusBuff if start of frame character is
 		received */
@@ -291,7 +315,6 @@ uint8_t ucIndex = 0;
 		if( ucIndex > 0 && USART_ReceiveData( USART3 ) == 'R' )
 		{
 			ucIndex = 0;
-			pusBuff[ ucIndex ] = USART_ReceiveData( USART3 );
 		}
 
 		pusBuff[ ucIndex ] = USART_ReceiveData( USART3 );
@@ -401,5 +424,17 @@ uint8_t ucIndex = 0;
 				ucIndex++;
 			}
 		}
+	}
+}
+
+/** Interrupt handler for ALL USART3 interrupts */
+void USART3_IRQHandler( void )
+{
+	/* Checks if the USART3 receive interrupt flag was set */
+	if( USART_GetITStatus( USART3, USART_IT_RXNE ) == SET )
+	{
+		imu_receive_frame( pusBuff );
+		/* Clear interruption bit */
+		USART_ClearITPendingBit( USART3, USART_IT_RXNE );
 	}
 }

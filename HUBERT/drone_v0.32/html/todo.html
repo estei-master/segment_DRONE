@@ -115,6 +115,10 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dd>Add macros to define maximum and minimum possible configuration  </dd>
 <dt><a class="anchor" id="_todo000007"></a>Class <a class="el" href="structflightMovement.html">flightMovement</a>  </dt>
 <dd>absolute or relative ? Angle or angular rate ?  </dd>
+<dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="imu_8c.html#a8cecc7528ae55248ba7ddb1e741773cc">imu_parse_frame</a>  (uint16_t pusBuff[FRAME_LEN], struct <a class="el" href="structIMUData.html">IMUData</a> *const pxIMUData)</dt>
+<dd>Remove pusBuff in prototype if IRQ-driven reception is validated  </dd>
+<dt><a class="anchor" id="_todo000010"></a>Global <a class="el" href="imu_8c.html#a3212d76b46ae733497c4c6f6cc0c1e74">imu_receive_frame</a>  (uint16_t pusBuff[FRAME_LEN])</dt>
+<dd>Remove pusBuff in prototype if IRQ-driven reception is validated  </dd>
 <dt><a class="anchor" id="_todo000006"></a>Global <a class="el" href="flight_8h.html#a012b2b748783aff0385d79f1990a8eed">ucFlightAutotuneMvt</a>  (struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxMovement, const struct <a class="el" href="structIMUData.html">IMUData</a> *const pxIMUData, const struct <a class="el" href="structtelemeterData.html">telemeterData</a> *const pxTelemeterData)</dt>
 <dd>Implement <a class="el" href="flight_8c.html#a012b2b748783aff0385d79f1990a8eed">ucFlightAutotuneMvt()</a>  </dd>
 <dt><a class="anchor" id="_todo000005"></a>Global <a class="el" href="flight_8h.html#a0bbe0839f1ce8a871c43a2f5295b3b62">ucFlightStationary</a>  (const struct <a class="el" href="structflightMovement.html">flightMovement</a> *const pxFlightMvt)</dt>
@@ -123,7 +127,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dd>think of an initialization value (Magic number ?)  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Global <a class="el" href="flight_8c.html#ae33cee69ac52f41333ff2de50e6e0720">xStationaryFlightMvt</a>  </dt>
 <dd>fix xStationaryFlightMvt (angles ? speeds ? reference ?)  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a>  </dt>
+<dt><a class="anchor" id="_todo000011"></a>Global <a class="el" href="zigbee_8h.html#aa8a212aca1d1f49ff85fe2ac4b74cbb6">zigbeeCommandId</a>  </dt>
 <dd>Expand enum zigbeeCommandId as necessary </dd>
 </dl>
 </div></div><!-- contents -->
@@ -131,7 +135,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 28 2014 14:28:43 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Tue Jan 28 2014 18:55:16 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
