@@ -26,7 +26,7 @@ struct droneConfig
 	/** Distance to activate obstacle avoidance */
 	uint16_t usCritObstacleDist;
 	/** Critical drone-base link level - yet unused */
-	uint32_t ulCritZigbeeSignalLvl;
+	uint8_t ulCritZigbeeSignalLvl;
 	/* Task periods */
 	/** Period of the battery monitoring task (ms) */
 	portTickType xBatteryMonitoringPeriod;

@@ -64,8 +64,8 @@ struct zigbeeData
 	enum zigbeeCommandId eCmdId;
 	/** Command parameters */
 	union zigbeeCommandParam xCmdParam;
-	/** Signal power level */
-	uint32_t ulSignalLvl;
+	/** Signal power level, between 26 and 88 (negative dBm) */
+	uint8_t ulSignalLvl;
 };
 
 /** Zigbee module initialization routine, sets up the UART and DMA for zigbee
@@ -75,7 +75,7 @@ inline void vZigbeeInit( void );
 inline uint8_t ucZigbeeInitTest( void );
 /** Zigbee normal test routine. Yet unused and undefined. */
 inline uint8_t ucZigbeeTest( void );
-///** Zigbee data emission routine */
+/* Zigbee data emission routine */
 //inline void vZigbeeSendData( const uint8_t * const pucData );
 /** Zigbee data reception routine */
 inline void vZigbeeReceiveData( struct zigbeeData * const pxZigbeeData );

@@ -8,7 +8,24 @@
 /** GPS frame data structure */
 struct GPSData
 {
-	/** @todo add relevant fields */
+	/** Message identifier */
+	int8_t messageId[7];
+	/** UTC time */
+	int8_t UTCTime[11];
+	/** Latitude, first character is the sign */
+	int8_t lattitude[11];
+	/** North/south indicator. Issue if \0 not used as 2nd character */
+	int8_t latIndicator[2];
+	/** Longitude, first character is the sign */
+	int8_t longitude[12];
+	/** West/east indicator. Issue if \0 not used as 2nd character */
+	int8_t longIndicator[2];
+	/** Signal stability */
+	int8_t fixIndicator[2];
+	/** Number of satellites */
+	int8_t satellitesUsed[3];
+	/** Mean sea level altitude */
+	int8_t MSLAltitude[5];
 	/** Power level of the GPS signal */
 	uint32_t ulSignalLvl;
 };

@@ -150,7 +150,7 @@ struct droneZigbeeWrapper
 	/** Raw maneuver requested by the base */
 	struct flightCommand xFlightCmd;
 	/** ZigBee signal level */
-	uint32_t ulSignalLvl;
+	uint8_t ulSignalLvl;
 	/** Time of last Zigbee reception (ms) */
 	portTickType xZigbeeUpdateTime;
 	/** Time of last command update (ms) */
@@ -201,7 +201,7 @@ const struct droneConfig xDfltDroneConfig = {
 	.usMinAltitude				= 2000,	/** @todo sensible value */
 	.ulCritBatteryLvl			= 15,	/** @todo sensible value */
 	.usCritObstacleDist			= 750,	/** @todo sensible value */
-	.ulCritZigbeeSignalLvl		= 5,	/** @todo sensible value */
+	.ulCritZigbeeSignalLvl		= 88,	/** @todo sensible value */
 	.ulRefAltitude				= 0,
 	/* task periods (ms) */
 	.xBatteryMonitoringPeriod	= 30000 / portTICK_RATE_MS,
@@ -975,6 +975,8 @@ struct droneTelemeterWrapper xCurrTlmWrapper;
 				uxTaskPriorityGet( NULL ), MODULE,  "prvZigbeeReceiveTask()",
 				"Woken up" );
 
+		/** @todo Add multiple command reception (number of commands is stored
+		at the beginning of  frame) */
 		/* Receive drone orders */
 		vZigbeeReceiveData( &xNewZigbeeData );
 
