@@ -8,6 +8,7 @@ var searchData=
   ['prvanglevalid',['prvAngleValid',['../imu_8c.html#a15d3894e6c2b0df70cc268e908342b44',1,'imu.c']]],
   ['prvbatterycritical',['prvBatteryCritical',['../drone_8c.html#a933cc0454396f7bcf7739819287e8403',1,'drone.c']]],
   ['prvbatteryinit',['prvBatteryInit',['../drone_8c.html#a8b31e9a2dce476e9add26d89bc6fb5b9',1,'drone.c']]],
+  ['prvbatteryinittest',['prvBatteryInitTest',['../drone_8c.html#aa23c2b8c33abf39d52a6b3a2d2b02f5e',1,'drone.c']]],
   ['prvbatterymonitoringtask',['prvBatteryMonitoringTask',['../drone_8c.html#abbdcc9b7762286ffa0216c945cb83a42',1,'drone.c']]],
   ['prvbatterytimedout',['prvBatteryTimedout',['../drone_8c.html#ab0b8e7c4d4d11484a45ec2552b5f996a',1,'drone.c']]],
   ['prvbatteryvalid',['prvBatteryValid',['../drone_8c.html#abfc35b7fc0649dac5fb29fc313d4e1dc',1,'drone.c']]],

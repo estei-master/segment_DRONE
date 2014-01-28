@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['module',['MODULE',['../drone_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;drone.c'],['../flight_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;flight.c'],['../gps_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;gps.c'],['../imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;imu.c'],['../pwm_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;pwm.c'],['../telemeter_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;telemeter.c'],['../zigbee_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486',1,'MODULE():&#160;zigbee.c']]]
+  ['imumax_5fvalid_5faltitude',['imuMAX_VALID_ALTITUDE',['../imu_8h.html#a49b579ee3e6556a28ec062c046085f6e',1,'imu.h']]],
+  ['imumax_5fvalid_5fangle',['imuMAX_VALID_ANGLE',['../imu_8h.html#a4f195b75b7e9d9faa6d4ef3b25db5e1b',1,'imu.h']]],
+  ['imumin_5fvalid_5faltitude',['imuMIN_VALID_ALTITUDE',['../imu_8h.html#a5788a1c8199c4b7921561aa425100f17',1,'imu.h']]],
+  ['imumin_5fvalid_5fangle',['imuMIN_VALID_ANGLE',['../imu_8h.html#ab00f83379eb6a57bcd37dc8c46baf944',1,'imu.h']]]
 ];

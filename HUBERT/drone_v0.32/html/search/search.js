@@ -14,7 +14,7 @@ var indexSectionsWithContent =
   4: "ceflmpsux",
   5: "dgiptz",
   6: "cdgipst",
-  7: "cdimt",
+  7: "cdfimt",
   8: "t"
 };
 

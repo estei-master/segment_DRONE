@@ -1,5 +1,6 @@
 var imu_8c =
 [
+    [ "FRAME_LEN", "imu_8c.html#a7d356b7d5a77c1e2fb7e8154f65ebfcf", null ],
     [ "MODULE", "imu_8c.html#a2c63ae95fe7c6106ae1ec9c283afa486", null ],
     [ "eIMUDataValid", "imu_8c.html#a7b7fe9abd036c5cfb45d7cb3d0e3e8c8", null ],
     [ "imu_main", "imu_8c.html#aca879914f925252303e5b27fcb454a24", null ],

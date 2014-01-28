@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ucbatteryinittest',['ucBatteryInitTest',['../drone_8c.html#a2157f133b73a40a4e5f788ec29e842e5',1,'drone.c']]],
   ['ucflightautotunemvt',['ucFlightAutotuneMvt',['../flight_8c.html#a012b2b748783aff0385d79f1990a8eed',1,'ucFlightAutotuneMvt(struct flightMovement *const pxMovement, const struct IMUData *const pxIMUData, const struct telemeterData *const pxTelemeterData):&#160;flight.c'],['../flight_8h.html#a012b2b748783aff0385d79f1990a8eed',1,'ucFlightAutotuneMvt(struct flightMovement *const pxMovement, const struct IMUData *const pxIMUData, const struct telemeterData *const pxTelemeterData):&#160;flight.c']]],
   ['ucflightcmdvalid',['ucFlightCmdValid',['../flight_8c.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0',1,'ucFlightCmdValid(const struct flightCommand *const pxFlightCmd):&#160;flight.c'],['../flight_8h.html#a1e83905ebd5ae1ca2d6c4f627cc76ab0',1,'ucFlightCmdValid(const struct flightCommand *const pxFlightCmd):&#160;flight.c']]],
   ['ucflightstationary',['ucFlightStationary',['../flight_8c.html#a0bbe0839f1ce8a871c43a2f5295b3b62',1,'ucFlightStationary(const struct flightMovement *const pxFlightMvt):&#160;flight.c'],['../flight_8h.html#a0bbe0839f1ce8a871c43a2f5295b3b62',1,'ucFlightStationary(const struct flightMovement *const pxFlightMvt):&#160;flight.c']]],
