@@ -16,7 +16,7 @@
  *****************************************************************************/
 
 /** Global buffer to be accessed by the UART3 IRQ handler */
-static uint16_t pusBuff[ FRAME_LEN ];
+static volatile uint16_t pusBuff[ FRAME_LEN ];
 
 /******************************************************************************
  **	 	 STATIC FUNCTIONS DECLARATION
@@ -27,10 +27,8 @@ static inline enum IMUErrorMask prvAngleValid( const struct IMUData * const pxIM
 //static inline enum IMUErrorMask prvSpeedValid( const struct IMUData * const pxIMUData );
 //static inline enum IMUErrorMask prvAccelValid( const struct IMUData * const pxIMUData );
 static inline void imu_usart_init( void );
-/** @todo Remove pusBuff in prototype if IRQ-driven reception is validated */
-static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ], struct IMUData * const pxIMUData );
-/** @todo Remove pusBuff in prototype if IRQ-driven reception is validated */
-static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] );
+static inline void imu_parse_frame( struct IMUData * const pxIMUData );
+static inline void imu_receive_frame( void );
 
 /******************************************************************************
  **	 	 PUBLIC FUNCTIONS DEFINITION
@@ -68,9 +66,6 @@ inline uint8_t ucIMUTest( void )
 /** Gets IMU attitude measurements */
 inline void vIMUGetData( struct IMUData * const pxIMUData )
 {
-/* A 30 bytes buffer is filled in 0.26 ms at 115200 bauds */
-uint16_t pusBuff[ FRAME_LEN ];
-
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
 			uxTaskPriorityGet( NULL ), MODULE, "vIMUGetData()", "Receiving IMU measurements" );
 
@@ -81,7 +76,7 @@ uint16_t pusBuff[ FRAME_LEN ];
 
 	/** @todo  Ensure pusBuff is protected from overwriting while it is being
 	parsed. */
-	imu_parse_frame( pusBuff, pxIMUData );
+	imu_parse_frame( pxIMUData );
 
 	/* Displaced to prvSendStatus() */
 //	printf( "\r\n\t\tIMU measurements :"
@@ -106,12 +101,14 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 	if( eErrorMask == IMU_ERR_NONE )
 	{
 		ulDebugMsg( xTaskGetTickCount(), "INFO ", pcTaskGetTaskName( NULL ),
-				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()", "IMU measure is in valid range" );
+				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()",
+				"IMU measure is in valid range" );
 	}
 	else
 	{
 		ulDebugMsg( xTaskGetTickCount(), "ERROR", pcTaskGetTaskName( NULL ),
-				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()", "IMU measure is not in valid range !" );
+				uxTaskPriorityGet( NULL ), MODULE, "eIMUDataValid()",
+				"IMU measure is not in valid range !" );
 	}
 
 	return eErrorMask;
@@ -128,7 +125,11 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 	if( pxIMUData->lAltitude > imuMAX_VALID_ALTITUDE
 			|| pxIMUData->lAltitude < imuMIN_VALID_ALTITUDE )
 	{
-		eErrorMask = IMU_ERR_ALTITUDE;
+		eErrorMask |= IMU_ERR_ALTITUDE;
+	}
+	else
+	{
+		eErrorMask &= ~IMU_ERR_ALTITUDE;
 	}
 
 	return eErrorMask;
@@ -143,17 +144,29 @@ enum IMUErrorMask eErrorMask = IMU_ERR_NONE;
 	{
 		eErrorMask |= IMU_ERR_XANGLE;
 	}
+	else
+	{
+		eErrorMask &= ~IMU_ERR_XANGLE;
+	}
 
 	if( pxIMUData->plAngle[ IMU_AXIS_Y ] > imuMAX_VALID_ANGLE
 			|| pxIMUData->plAngle[ IMU_AXIS_Y ] < imuMIN_VALID_ANGLE )
 	{
 		eErrorMask |= IMU_ERR_YANGLE;
 	}
+	else
+	{
+		eErrorMask &= ~IMU_ERR_YANGLE;
+	}
 
 	if( pxIMUData->plAngle[ IMU_AXIS_Z ] > imuMAX_VALID_ANGLE
 			|| pxIMUData->plAngle[ IMU_AXIS_Z ] < imuMIN_VALID_ANGLE )
 	{
 		eErrorMask |= IMU_ERR_ZANGLE;
+	}
+	else
+	{
+		eErrorMask &= ~IMU_ERR_ZANGLE;
 	}
 
 	return eErrorMask;
@@ -284,30 +297,19 @@ NVIC_InitTypeDef NVIC_InitStructure;
 }
 
 /** Receives the IMU frame via USART3 and puts it into pusBuff */
-static inline void imu_receive_frame( uint16_t pusBuff[ FRAME_LEN ] )
+static inline void imu_receive_frame( void )
 {
 /* Static to be conserved between interrupts */
 static uint8_t ucIndex = 0;
 uint16_t usTemp;
 
-	/** @todo Switch to reception on interrupt and only parsing in the task
-	itself */
-
 	/* Reception of the IMU string, while the last character of frame has not
 	been received (character of start of next frame) */
-	if( pusBuff[ ucIndex ] != 'S' )
-//	while( pusBuff[ ucIndex ] != 'S' )
+	if( ( pusBuff[ ucIndex ] != 'S' ) && ucIndex < FRAME_LEN )
 	{
-		/* Wait for a received byte */
-//		while( USART_GetFlagStatus( USART3, USART_FLAG_RXNE ) == RESET )
-//		{
-//			/* Do nothing */
-//		}
-
 		usTemp = USART_ReceiveData( USART3 );
 		/* Return to the start of pusBuff if start of frame character is
 		received */
-		/** @todo Check we don't go past index FRAME_LEN-1 of pusBuff */
 		if( ( ucIndex > 0 ) && ( usTemp == 'R' ) )
 		{
 			ucIndex = 0;
@@ -316,12 +318,15 @@ uint16_t usTemp;
 		pusBuff[ ucIndex ] = usTemp;
 		ucIndex++;
 	}
+	else
+	{
+		ucIndex = 0;
+	}
 }
 
 /** Converts the received frame from pusBuff into int16_t numbers, and updates
 pxIMUData */
-static inline void imu_parse_frame( uint16_t pusBuff[ FRAME_LEN ],
-		struct IMUData * const pxIMUData )
+static inline void imu_parse_frame( struct IMUData * const pxIMUData )
 {
 uint8_t ucIndex = 0;
 
@@ -343,7 +348,7 @@ uint8_t ucIndex = 0;
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
-			while( pusBuff[ ucIndex ] != 'P' )
+			while( ( pusBuff[ ucIndex ] != 'P' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_X ] = 10 * pxIMUData->plAngle[ IMU_AXIS_X ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -353,7 +358,7 @@ uint8_t ucIndex = 0;
 		}
 		else
 		{
-			while( pusBuff[ ucIndex ] != 'P' )
+			while( ( pusBuff[ ucIndex ] != 'P' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_X ] =  10 * pxIMUData->plAngle[ IMU_AXIS_X ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -366,7 +371,7 @@ uint8_t ucIndex = 0;
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
-			while( pusBuff[ ucIndex ] != 'Y' )
+			while( ( pusBuff[ ucIndex ] != 'Y' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Y ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Y ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -376,7 +381,7 @@ uint8_t ucIndex = 0;
 		}
 		else
 		{
-			while( pusBuff[ ucIndex ] != 'Y' )
+			while( ( pusBuff[ ucIndex ] != 'Y' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Y ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Y ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -389,7 +394,7 @@ uint8_t ucIndex = 0;
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
-			while( pusBuff[ ucIndex ] != 'A' )
+			while( ( pusBuff[ ucIndex ] != 'A' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Z ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Z ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -399,7 +404,7 @@ uint8_t ucIndex = 0;
 		}
 		else
 		{
-			while( pusBuff[ ucIndex ] != 'A' )
+			while( ( pusBuff[ ucIndex ] != 'A' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->plAngle[ IMU_AXIS_Z ] = 10 * pxIMUData->plAngle[ IMU_AXIS_Z ]
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -412,7 +417,7 @@ uint8_t ucIndex = 0;
 		if( pusBuff[ ucIndex ] == '-' )
 		{
 			ucIndex++;
-			while( pusBuff[ ucIndex ] != 'S' )
+			while( ( pusBuff[ ucIndex ] != 'S' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->lAltitude = 10 * pxIMUData->lAltitude
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -422,7 +427,7 @@ uint8_t ucIndex = 0;
 		}
 		else
 		{
-			while( pusBuff[ ucIndex ] != 'S' )
+			while( ( pusBuff[ ucIndex ] != 'S' ) && ( ucIndex < FRAME_LEN ) )
 			{
 				pxIMUData->lAltitude = 10 * pxIMUData->lAltitude
 						+ ( ( int16_t ) pusBuff[ ucIndex ] ) - '0';
@@ -438,7 +443,7 @@ void USART3_IRQHandler( void )
 	/* Checks if the USART3 receive interrupt flag was set */
 	if( USART_GetITStatus( USART3, USART_IT_RXNE ) == SET )
 	{
-		imu_receive_frame( pusBuff );
+		imu_receive_frame();
 		/* Clear interruption bit. Potentially redundant with
 		USART_ReceiveData() from imu_receive_frame(). */
 		USART_ClearITPendingBit( USART3, USART_IT_RXNE );

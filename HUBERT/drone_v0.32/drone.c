@@ -9,7 +9,8 @@
  **		@todo Get rid of drone*Wrapper to allow better header definitions
  **		@todo Adapt variables type to their size
  **		@todo Run ZigBee reset if initialization failed
- **		@todo Refactor debugging output of prvSend* into independent functions
+ **		@todo Ensure error masks are cleared when test succeeds (in
+ **		peripherals)
  **
  **		1 tabulation = 4 spaces
  **
@@ -210,7 +211,7 @@ const struct droneConfig xDfltDroneConfig = {
 	.xDetectObstaclePeriod		= 5000 / portTICK_RATE_MS,
 	.xFlightCtrlPeriod			= 500 / portTICK_RATE_MS,
 	.xGPSReceivePeriod			= 1000 / portTICK_RATE_MS,
-	.xZigbeeReceivePeriod		= 5000 / portTICK_RATE_MS,
+	.xZigbeeReceivePeriod		= 1000 / portTICK_RATE_MS,
 	/* Timeouts for data validity */
 	.xIMUDataTimeout			= 3,
 	.xZigbeeCmdTimeout 			= 2,
@@ -280,7 +281,7 @@ static void prvGPSReceiveTask( void *pvParam );
 
 /*****  Utility routines  ****************************************************/
 
-/** Initialization routines */
+/* Initialization routines */
 static inline void prvSetupHardware( void );
 static inline void prvInitDroneConfig( void );
 static inline void prvInitPeriph( void );
@@ -289,7 +290,7 @@ static inline enum droneError prvInitTestPeriph( void );
 static inline void prvInitAltitude( const struct droneIMUWrapper * const pxCurrIMUWrapper,
 		struct droneConfig * const pxCurrDroneConfig );
 
-/** Thread-safe global variable update routines */
+/* Thread-safe global variable update routines */
 static inline void prvSafeSetIMUData( const struct IMUData * const pxNewIMUData );
 static inline void prvSafeSetGPSData( const struct GPSData * const pxNewGPSData );
 static inline void prvSafeSetZigbeeData( const struct flightCommand * const pxNewFltCmd );
@@ -298,7 +299,7 @@ static inline void prvSafeSetDroneConfig( const struct droneConfig * const pxNew
 static inline void prvSafeSetDroneState( const struct droneState * const xNewDroneState );
 static inline void prvSafeSetTelemeterData( const struct telemeterData * const pxNewTelemeterData );
 
-/** Thread-safe global variable read routines */
+/* Thread-safe global variable read routines */
 static inline void prvSafeGetIMUData( struct droneIMUWrapper * const pxNewIMUWrapper );
 static inline void prvSafeGetGPSData( struct droneGPSWrapper * const pxNewGPSWrapper );
 static inline void prvSafeGetZigbeeData( struct droneZigbeeWrapper * const pxNewZigbeeWrapper );
@@ -307,12 +308,12 @@ static inline void prvSafeGetTelemeterData( struct droneTelemeterWrapper * const
 static inline void prvSafeGetDroneConfig( struct droneConfig * const pxNewConfig );
 static inline void prvSafeGetDroneState( struct droneState * const pxNewState );
 
-/** Video control routines */
+/* Video control routines */
 static inline void prvEnableVideo( void );
 static inline void prvDisableVideo( void );
 //static inline void prvToggleVideo( void );
 
-/** Tests routines */
+/* Tests routines */
 static inline uint8_t prvTakeoffDone( const struct IMUData * const pxCurrIMUData,
 		const struct droneConfig * const pxCurrDroneConfig );
 static inline uint8_t prvLandingDone( const struct IMUData * const pxCurrIMUData,
@@ -358,6 +359,14 @@ static inline void prvSelectErrorState( struct droneState * const pxCurrState );
 static inline void prvGetBatteryLvl( uint32_t *pulBatteryLvl );
 static inline void prvReboot( void );
 static inline void prvShutdown( void );
+
+/* Debug display functions */
+static inline void prvDisplayBattery( const struct droneBatteryWrapper *const pxCurrBattWrapper );
+static inline void prvDisplayTelemeter( const struct droneTelemeterWrapper *const pxCurrTlmWrapper );
+static inline void prvDisplayGPS( const struct droneGPSWrapper *const pxCurrGPSWrapper );
+static inline void prvDisplayZigbee( const struct droneZigbeeWrapper *const pxCurrZigbeeWrapper );
+static inline void prvDisplayIMU( const struct droneIMUWrapper *const pxCurrIMUWrapper );
+static inline void prvDisplayState( const struct droneState *const pxCurrState );
 
 /******************************************************************************
  **	 	 MAIN FUNCTION
@@ -542,9 +551,6 @@ struct zigbeeData xLocZigbeeData;
 //	vTaskSetApplicationTaskTag( xFlightCtrlHandle, ( void * ) 4 );
 //	vTaskSetApplicationTaskTag( xBatteryMonitoringHandle, ( void * ) 5 );
 //	vTaskSetApplicationTaskTag( xDetectObstacleHandle, ( void * ) 6 );
-
-	/** @todo Forces prvSendStatus()... remove the following line for release */
-	prvSendStatus( &xDroneState, &xIMUWrapper, &xZigbeeWrapper, &xGPSWrapper, &xTelemeterWrapper, &xBatteryWrapper );
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Starting scheduler" );
@@ -827,6 +833,9 @@ enum IMUErrorMask eIMUError;
 			xCurrDroneState.eErrorMask &= ~DRN_ERR_IMU_INVAL;
 			prvSafeSetDroneState( &xCurrDroneState );
 		}
+
+		/** @todo Remove for release */
+		prvDisplayIMU( &xNewIMUWrapper );
 
 		/* Update local data for centralized timeout checking */
 		prvSafeGetTelemeterData( &xCurrTlmWrapper );
@@ -1452,191 +1461,12 @@ static inline void prvSendStatus( const struct droneState *const pxCurrState,
 	/** @todo Implement prvSendStatus() */
 
 	/* Start of debugging display */
-	switch( pxCurrState->eFltState )
-	{
-	case STATE_STARTING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_STARTING" );
-		break;
-	case STATE_GROUND_RDY:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_RDY" );
-		break;
-	case STATE_GROUND_ERR:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_ERR" );
-		break;
-	case STATE_TAKEOFF:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_TAKEOFF" );
-		break;
-	case STATE_FLIGHT:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT" );
-		break;
-	case STATE_AUTOTUNING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_AUTOTUNING" );
-		break;
-	case STATE_FLIGHT_ERR:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT_ERR" );
-		break;
-	case STATE_LANDING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_LANDING" );
-		break;
-	default:
-		printf( "\r\n\t\tpxCurrState->eFltState : UNKNOWN" );
-		break;
-	}
-
-	/* Errors are not exclusive */
-	if( pxCurrState->eErrorMask == DRN_ERR_NONE )
-	{
-		printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_NONE" );
-	}
-	else
-	{
-		if( pxCurrState->eErrorMask | DRN_ERR_TLM_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_TLM_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_BATT_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_BATT_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CMD )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CMD_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CONFIG )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CONFIG" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_GPS_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_GPS_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_IMU_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_IMU_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_INIT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_INIT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_RX_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_RX_TOUT" );
-		}
-	}
-
-	/* IMU */
-	printf( "\r\n" );
-	printf( "\r\n\t\tAltitude : %d", pxCurrIMUWrapper->xIMUData.lAltitude );
-	printf( "\r\n\t\tRoll     : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_X ] );
-	printf( "\r\n\t\tPitch    : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_Y ] );
-	printf( "\r\n\t\tYaw      : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_Z ] );
-	printf( "\r\n\t\tIMU update : %d", pxCurrIMUWrapper->xUpdateTime );
-
-	/* ZigBee */
-	printf( "\r\n" );
-	printf( "\r\n\t\tCommand TransX : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransX );
-	printf( "\r\n\t\tCommand TransY : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransY );
-	printf( "\r\n\t\tCommand TransZ : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransZ );
-	printf( "\r\n\t\tCommand RotZ   : %d", pxCurrZigbeeWrapper->xFlightCmd.cRotZ );
-	printf( "\r\n\t\tCommand update : %d", pxCurrZigbeeWrapper->xCmdUpdateTime );
-	printf( "\r\n\t\tZigbee update  : %d", pxCurrZigbeeWrapper->xZigbeeUpdateTime );
-	printf( "\r\n\t\tZigbee signal lvl : %d", pxCurrZigbeeWrapper->ulSignalLvl );
-
-	/* GPS */
-	/** @todo Add debug for GPS in prvSendConfig() (struct currently
-	unknown) */
-	printf( "\r\n" );
-	printf( "\r\n\t\tGPS update : %d", pxCurrGPSWrapper->xUpdateTime );
-
-	/* Telemeter */
-	printf( "\r\n" );
-	/* Values are not exclusive */
-	if( pxCurrTlmWrapper->xTelemeterData.eIdMask == TLM_NONE )
-	{
-		printf( "\r\n\t\txTelemeterData.eIdMask : TLM_NONE" );
-	}
-	else
-	{
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_FRT )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_FRT" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_LFT_FRT )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_LFT_FRT" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_RGT_FRT )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_RGT_FRT" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_BCK )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_BCK" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_LFT_BCK )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_LFT_BCK" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_RGT_BCK )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_RGT_BCK" );
-		}
-
-		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_BOT )
-		{
-			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_BOT" );
-		}
-	}
-	printf( "\r\n\t\tFront dist       : %d", pxCurrTlmWrapper->xTelemeterData.usFrontDist );
-	printf( "\r\n\t\tLeft front dist  : %d", pxCurrTlmWrapper->xTelemeterData.usLeftFrontDist );
-	printf( "\r\n\t\tRight front dist : %d", pxCurrTlmWrapper->xTelemeterData.usRightFrontDist );
-	printf( "\r\n\t\tBack dist        : %d", pxCurrTlmWrapper->xTelemeterData.usBackDist );
-	printf( "\r\n\t\tLeft back dist   : %d", pxCurrTlmWrapper->xTelemeterData.usLeftBackDist );
-	printf( "\r\n\t\tRight back dist  : %d", pxCurrTlmWrapper->xTelemeterData.usRightBackDist );
-	printf( "\r\n\t\tBottom dist      : %d", pxCurrTlmWrapper->xTelemeterData.usBottomDist );
-	printf( "\r\n\t\tTelemeter update : %d", pxCurrTlmWrapper->xUpdateTime );
-
-	/* Battery */
-	printf( "\r\n" );
-	printf( "\r\n\t\tBattery lvl : %d", pxCurrBattWrapper->ulPowerLvl );
-	printf( "\r\n\t\tBattery update : %d", pxCurrBattWrapper->xUpdateTime );
+	prvDisplayState( pxCurrState);
+	prvDisplayIMU( pxCurrIMUWrapper );
+	prvDisplayTelemeter( pxCurrTlmWrapper );
+	prvDisplayGPS( pxCurrGPSWrapper );
+	prvDisplayZigbee( pxCurrZigbeeWrapper );
+	prvDisplayBattery( pxCurrBattWrapper );
 	/* End of debugging display */
 }
 
@@ -1644,111 +1474,8 @@ static inline void prvSendError( const struct droneState * const pxCurrState )
 {
 	/** @todo Implement prvSendError() */
 
-	/* Start of debugging display */
-	switch( pxCurrState->eFltState )
-	{
-	case STATE_STARTING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_STARTING" );
-		break;
-	case STATE_GROUND_RDY:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_RDY" );
-		break;
-	case STATE_GROUND_ERR:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_ERR" );
-		break;
-	case STATE_TAKEOFF:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_TAKEOFF" );
-		break;
-	case STATE_FLIGHT:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT" );
-		break;
-	case STATE_AUTOTUNING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_AUTOTUNING" );
-		break;
-	case STATE_FLIGHT_ERR:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT_ERR" );
-		break;
-	case STATE_LANDING:
-		printf( "\r\n\t\tpxCurrState->eFltState : STATE_LANDING" );
-		break;
-	default:
-		printf( "\r\n\t\tpxCurrState->eFltState : UNKNOWN" );
-		break;
-	}
-
-	/* Errors are not exclusive */
-	if( pxCurrState->eErrorMask == DRN_ERR_NONE )
-	{
-		printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_NONE" );
-	}
-	else
-	{
-		if( pxCurrState->eErrorMask | DRN_ERR_TLM_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_TLM_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_BATT_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_BATT_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CMD )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CMD_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_CONFIG )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CONFIG" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_GPS_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_GPS_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_IMU_INVAL )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_INVAL" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_IMU_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_TOUT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_INIT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_INIT" );
-		}
-
-		if( pxCurrState->eErrorMask | DRN_ERR_RX_TOUT )
-		{
-			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_RX_TOUT" );
-		}
-	}
-	/* End of debugging display */
+	/* Debugging display */
+	prvDisplayState( pxCurrState );
 }
 
 /** Resets the global drone configuration */
@@ -2209,6 +1936,7 @@ static inline void prvReboot( void )
 	NVIC_SystemReset();
 }
 
+/** Stops the FreeRTOS kernel and shutdowns the MCU */
 static inline void prvShutdown( void )
 {
 	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---",
@@ -2217,4 +1945,209 @@ static inline void prvShutdown( void )
 
 	/** @todo Implement prvShutdown() */
 	__WFI();
+}
+
+/** Debug output function for droneState */
+static inline void prvDisplayState( const struct droneState *const pxCurrState )
+{
+	switch( pxCurrState->eFltState )
+	{
+	case STATE_STARTING:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_STARTING" );
+		break;
+	case STATE_GROUND_RDY:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_RDY" );
+		break;
+	case STATE_GROUND_ERR:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_GROUND_ERR" );
+		break;
+	case STATE_TAKEOFF:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_TAKEOFF" );
+		break;
+	case STATE_FLIGHT:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT" );
+		break;
+	case STATE_AUTOTUNING:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_AUTOTUNING" );
+		break;
+	case STATE_FLIGHT_ERR:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_FLIGHT_ERR" );
+		break;
+	case STATE_LANDING:
+		printf( "\r\n\t\tpxCurrState->eFltState : STATE_LANDING" );
+		break;
+	default:
+		printf( "\r\n\t\tpxCurrState->eFltState : UNKNOWN" );
+		break;
+	}
+
+	/* Errors are not exclusive */
+	if( pxCurrState->eErrorMask == DRN_ERR_NONE )
+	{
+		printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_NONE" );
+	}
+	else
+	{
+		if( pxCurrState->eErrorMask | DRN_ERR_TLM_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_TOUT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_TLM_INVAL )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_TLM_INVAL" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_BATT_INVAL )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_INVAL" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_BATT_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_BATT_TOUT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_CMD )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_CMD_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CMD_TOUT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_CONFIG )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_CONFIG" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_GPS_INVAL )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_INVAL" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_GPS_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_GPS_TOUT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_IMU_INVAL )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_INVAL" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_IMU_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_IMU_TOUT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_INIT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_INIT" );
+		}
+
+		if( pxCurrState->eErrorMask | DRN_ERR_RX_TOUT )
+		{
+			printf( "\r\n\t\tpxCurrState->eErrorMask : DRN_ERR_RX_TOUT" );
+		}
+	}
+}
+
+/** Debug output function for droneIMUWrapper */
+static inline void prvDisplayIMU( const struct droneIMUWrapper *const pxCurrIMUWrapper )
+{
+	printf( "\r\n" );
+	printf( "\r\n\t\tAltitude : %d", pxCurrIMUWrapper->xIMUData.lAltitude );
+	printf( "\r\n\t\tRoll     : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_X ] );
+	printf( "\r\n\t\tPitch    : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_Y ] );
+	printf( "\r\n\t\tYaw      : %d", pxCurrIMUWrapper->xIMUData.plAngle[ IMU_AXIS_Z ] );
+	printf( "\r\n\t\tIMU update : %d", pxCurrIMUWrapper->xUpdateTime );
+}
+
+/** Debug output function for droneZigbeeWrapper */
+static inline void prvDisplayZigbee( const struct droneZigbeeWrapper *const pxCurrZigbeeWrapper )
+{
+	printf( "\r\n" );
+	printf( "\r\n\t\tCommand TransX : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransX );
+	printf( "\r\n\t\tCommand TransY : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransY );
+	printf( "\r\n\t\tCommand TransZ : %d", pxCurrZigbeeWrapper->xFlightCmd.cTransZ );
+	printf( "\r\n\t\tCommand RotZ   : %d", pxCurrZigbeeWrapper->xFlightCmd.cRotZ );
+	printf( "\r\n\t\tCommand update : %d", pxCurrZigbeeWrapper->xCmdUpdateTime );
+	printf( "\r\n\t\tZigbee update  : %d", pxCurrZigbeeWrapper->xZigbeeUpdateTime );
+	printf( "\r\n\t\tZigbee signal lvl : %d", pxCurrZigbeeWrapper->ulSignalLvl );
+}
+
+/** Debug output function for droneGPSWrapper */
+static inline void prvDisplayGPS( const struct droneGPSWrapper *const pxCurrGPSWrapper )
+{
+	/** @todo Add debug for GPS in prvSendConfig() (struct currently
+	unknown) */
+	printf( "\r\n" );
+	printf( "\r\n\t\tGPS update : %d", pxCurrGPSWrapper->xUpdateTime );
+}
+
+/** Debug output function for droneTelemeterWrapper */
+static inline void prvDisplayTelemeter( const struct droneTelemeterWrapper *const pxCurrTlmWrapper )
+{
+	printf( "\r\n" );
+	/* Values are not exclusive */
+	if( pxCurrTlmWrapper->xTelemeterData.eIdMask == TLM_NONE )
+	{
+		printf( "\r\n\t\txTelemeterData.eIdMask : TLM_NONE" );
+	}
+	else
+	{
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_FRT )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_FRT" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_LFT_FRT )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_LFT_FRT" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_RGT_FRT )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_RGT_FRT" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_BCK )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_BCK" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_LFT_BCK )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_LFT_BCK" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_RGT_BCK )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_RGT_BCK" );
+		}
+
+		if( pxCurrTlmWrapper->xTelemeterData.eIdMask | TLM_BOT )
+		{
+			printf( "\r\n\t\txTelemeterData.eIdMask : TLM_BOT" );
+		}
+	}
+	printf( "\r\n\t\tFront dist       : %d", pxCurrTlmWrapper->xTelemeterData.usFrontDist );
+	printf( "\r\n\t\tLeft front dist  : %d", pxCurrTlmWrapper->xTelemeterData.usLeftFrontDist );
+	printf( "\r\n\t\tRight front dist : %d", pxCurrTlmWrapper->xTelemeterData.usRightFrontDist );
+	printf( "\r\n\t\tBack dist        : %d", pxCurrTlmWrapper->xTelemeterData.usBackDist );
+	printf( "\r\n\t\tLeft back dist   : %d", pxCurrTlmWrapper->xTelemeterData.usLeftBackDist );
+	printf( "\r\n\t\tRight back dist  : %d", pxCurrTlmWrapper->xTelemeterData.usRightBackDist );
+	printf( "\r\n\t\tBottom dist      : %d", pxCurrTlmWrapper->xTelemeterData.usBottomDist );
+	printf( "\r\n\t\tTelemeter update : %d", pxCurrTlmWrapper->xUpdateTime );
+}
+
+/** Debug output function for droneBatteryWrapper */
+static inline void prvDisplayBattery( const struct droneBatteryWrapper *const pxCurrBattWrapper )
+{
+	printf( "\r\n" );
+	printf( "\r\n\t\tBattery lvl : %d", pxCurrBattWrapper->ulPowerLvl );
+	printf( "\r\n\t\tBattery update : %d", pxCurrBattWrapper->xUpdateTime );
 }

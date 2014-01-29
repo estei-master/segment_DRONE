@@ -1,0 +1,8 @@
+<map id="prvSendStatus" name="prvSendStatus">
+<area shape="rect" id="node2" href="$drone_8c.html#a718092e950abac230de7075c17e3adc5" title="prvDisplayState" alt="" coords="173,5,285,32"/>
+<area shape="rect" id="node3" href="$drone_8c.html#ad06a1414dd18b6a3deec75516e832176" title="prvDisplayIMU" alt="" coords="177,56,281,83"/>
+<area shape="rect" id="node4" href="$drone_8c.html#ab81c7572cf5126762e60ebec33507ef2" title="prvDisplayTelemeter" alt="" coords="160,107,299,133"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a94d78faaf0730b1f9cad893ede972da8" title="prvDisplayGPS" alt="" coords="175,157,284,184"/>
+<area shape="rect" id="node6" href="$drone_8c.html#a8148f21dc3ba79720137567085f9386c" title="prvDisplayZigbee" alt="" coords="170,208,289,235"/>
+<area shape="rect" id="node7" href="$drone_8c.html#a5cdd1dbdc1489191229e0f1e63ad24d3" title="prvDisplayBattery" alt="" coords="168,259,291,285"/>
+</map>
