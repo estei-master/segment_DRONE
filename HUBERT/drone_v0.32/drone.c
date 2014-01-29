@@ -494,11 +494,6 @@ struct zigbeeData xLocZigbeeData;
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Creating prvGPSReceiveTask" );
 
-	/* At this point, the drone is hopefully correctly initialized and waiting
-	for orders */
-	xDroneState.eFltState = STATE_GROUND_RDY;
-	/** @todo buzzer ready signal */
-
 	xTaskCreate( prvGPSReceiveTask, ( signed char * ) "GPS ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneGPS_RECEIVE_PRIO, &xGPSReceiveHandle );
@@ -551,6 +546,11 @@ struct zigbeeData xLocZigbeeData;
 //	vTaskSetApplicationTaskTag( xFlightCtrlHandle, ( void * ) 4 );
 //	vTaskSetApplicationTaskTag( xBatteryMonitoringHandle, ( void * ) 5 );
 //	vTaskSetApplicationTaskTag( xDetectObstacleHandle, ( void * ) 6 );
+
+	/* At this point, the drone is hopefully correctly initialized and waiting
+	for orders */
+	xDroneState.eFltState = STATE_GROUND_RDY;
+	/** @todo buzzer ready signal */
 
 	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
 			"main()", "Starting scheduler" );
@@ -835,7 +835,8 @@ enum IMUErrorMask eIMUError;
 		}
 
 		/** @todo Remove for release */
-		prvDisplayIMU( &xNewIMUWrapper );
+		prvDisplayState( &xCurrDroneState );
+		prvDisplayIMU( &xNewIMUWrapper );	/* xUpdateTime not set here (value not from prvSafeGet*) */
 
 		/* Update local data for centralized timeout checking */
 		prvSafeGetTelemeterData( &xCurrTlmWrapper );

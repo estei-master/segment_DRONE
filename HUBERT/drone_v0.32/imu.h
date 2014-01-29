@@ -14,9 +14,9 @@
 //#define imuMIN_VALID_ACCEL			-100		/* @todo sensible value */
 //#define imuMAX_VALID_ACCEL			100			/* @todo sensible value */
 /** Minimum altitude received from the IMU to be considered valid */
-#define imuMIN_VALID_ALTITUDE		0			/** @todo sensible value */
+#define imuMIN_VALID_ALTITUDE		-2147483647	/** @todo sensible value */
 /** Maximum altitude received from the IMU to be considered valid */
-#define imuMAX_VALID_ALTITUDE		0xFFFFFFFF	/** @todo sensible value */
+#define imuMAX_VALID_ALTITUDE		2147483647 	/** @todo sensible value */
 
 /** Used as a mask to describe the fields of an IMUData that are out of
 consistent measurement range. */
