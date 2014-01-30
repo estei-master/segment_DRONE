@@ -1,0 +1,6 @@
+<map id="ucTelemeterIdValid" name="ucTelemeterIdValid">
+<area shape="rect" id="node2" href="$telemeter_8h.html#afa90e065b5e3087b7e0e87497330e0b6" title="usTelemeterGetDist" alt="" coords="187,5,325,32"/>
+<area shape="rect" id="node3" href="$telemeter_8h.html#ab4fff6ea13609ac80d79fdfeab2b472b" title="vTelemeterGetData" alt="" coords="374,5,506,32"/>
+<area shape="rect" id="node4" href="$drone_8c.html#a2f26a5a0f6e36469031ef12396418848" title="prvDetectObstacleTask" alt="" coords="555,5,711,32"/>
+<area shape="rect" id="node5" href="$drone_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="760,5,811,32"/>
+</map>

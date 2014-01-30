@@ -194,7 +194,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>( ( x ) == 0 ) <a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">\</a></div>
-<div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">		ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">		ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;configASSERT()&quot;</span>, <span class="stringliteral">&quot;failed : &quot;</span> #x <span class="stringliteral">&quot; == 0&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
 <div class="ttc" id="debug_8h_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
@@ -320,7 +320,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceBLOCKING_ON_QUEUE_RECEIVE()&quot;</span>, \</div>
 <div class="line">                <span class="stringliteral">&quot;Task blocking on queue (receive)&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
@@ -343,7 +343,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceBLOCKING_ON_QUEUE_SEND()&quot;</span>, \</div>
 <div class="line">                <span class="stringliteral">&quot;Task blocking on queue (send)&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
@@ -366,7 +366,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceQUEUE_CREATE()&quot;</span>, \</div>
 <div class="line">                <span class="stringliteral">&quot;Queue created successfully&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
@@ -388,7 +388,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceQUEUE_CREATE_FAILED()&quot;</span>, \</div>
 <div class="line">                <span class="stringliteral">&quot;Queue creation failed !&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
@@ -411,7 +411,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceQUEUE_RECEIVE()&quot;</span>, <span class="stringliteral">&quot;Queue received&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
 <div class="ttc" id="debug_8h_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
@@ -433,7 +433,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;INFO &quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceQUEUE_SEND()&quot;</span>, <span class="stringliteral">&quot;Sending to queue&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
 <div class="ttc" id="debug_8h_html_a2d3888037c45cc6599c5ab1dea029e02"><div class="ttname"><a href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a></div><div class="ttdeci">uint32_t ulDebugMsg(unsigned long ulTickCnt, char *pcTag, signed char *pcTask, unsigned long ulTaskPrio, char *pcModule, char *pcFunc, char *pcMessage)</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00056">debug.c:56</a></div></div>
@@ -477,7 +477,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;---&quot;</span>, 0, \</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="debug_8h.html#a2d3888037c45cc6599c5ab1dea029e02">ulDebugMsg</a>( xTaskGetTickCount(), <span class="stringliteral">&quot;ERROR&quot;</span>, ( <span class="keywordtype">signed</span> <span class="keywordtype">char</span> * ) <span class="stringliteral">&quot;----&quot;</span>, 0, \</div>
 <div class="line">                <a class="code" href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a>, <span class="stringliteral">&quot;traceTASK_CREATE_FAILED()&quot;</span>, \</div>
 <div class="line">                <span class="stringliteral">&quot;Task creation failed !&quot;</span> )</div>
 <div class="ttc" id="debug_8h_html_a4e007ca27a0ff1c0d980080023dfd63c"><div class="ttname"><a href="debug_8h.html#a4e007ca27a0ff1c0d980080023dfd63c">debugMODULE</a></div><div class="ttdeci">#define debugMODULE</div><div class="ttdef"><b>Definition:</b> <a href="debug_8h_source.html#l00022">debug.h:22</a></div></div>
@@ -746,7 +746,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="debug_8h.html">debug.h</a></li>
-    <li class="footer">Generated on Wed Jan 29 2014 16:54:41 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Thu Jan 30 2014 14:21:59 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

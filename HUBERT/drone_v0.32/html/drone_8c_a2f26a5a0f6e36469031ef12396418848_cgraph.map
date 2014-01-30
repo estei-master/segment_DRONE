@@ -2,10 +2,11 @@
 <area shape="rect" id="node2" href="$drone_8c.html#a52ed89dea0bcfffadeca6535234ee8a6" title="prvSafeGetDroneConfig" alt="" coords="211,5,365,32"/>
 <area shape="rect" id="node3" href="$drone_8c.html#a95e9ad134d650153cb01a06003aeb343" title="prvSafeGetDroneState" alt="" coords="213,56,363,83"/>
 <area shape="rect" id="node4" href="$telemeter_8c.html#ab4fff6ea13609ac80d79fdfeab2b472b" title="vTelemeterGetData" alt="" coords="222,107,354,133"/>
-<area shape="rect" id="node6" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="630,233,725,260"/>
-<area shape="rect" id="node7" href="$telemeter_8c.html#a53d13696e8abaca90e11486947b236d0" title="ucTelemeterDataValid" alt="" coords="213,208,363,235"/>
-<area shape="rect" id="node9" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="423,309,572,336"/>
-<area shape="rect" id="node10" href="$drone_8c.html#afe4bece13abfc26bfff4fc4a4c80a175" title="prvSafeSetTelemeterData" alt="" coords="413,360,581,387"/>
-<area shape="rect" id="node5" href="$telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6" title="usTelemeterGetDist" alt="" coords="429,107,566,133"/>
-<area shape="rect" id="node8" href="$telemeter_8c.html#ab296df0488f8812504b6201a0e913328" title="prvTelemeterDistValid" alt="" coords="424,259,571,285"/>
+<area shape="rect" id="node7" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="827,208,922,235"/>
+<area shape="rect" id="node8" href="$telemeter_8c.html#a53d13696e8abaca90e11486947b236d0" title="ucTelemeterDataValid" alt="" coords="413,208,563,235"/>
+<area shape="rect" id="node10" href="$drone_8c.html#aba79a8c759d64b5d1df90fe8028cdd18" title="prvSafeSetDroneState" alt="" coords="413,291,563,317"/>
+<area shape="rect" id="node11" href="$drone_8c.html#afe4bece13abfc26bfff4fc4a4c80a175" title="prvSafeSetTelemeterData" alt="" coords="611,360,779,387"/>
+<area shape="rect" id="node5" href="$telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6" title="usTelemeterGetDist" alt="" coords="419,107,557,133"/>
+<area shape="rect" id="node6" href="$telemeter_8c.html#a80c272944cbc38095f2363049a5d133e" title="ucTelemeterIdValid" alt="" coords="629,56,761,83"/>
+<area shape="rect" id="node9" href="$telemeter_8c.html#ab296df0488f8812504b6201a0e913328" title="prvTelemeterDistValid" alt="" coords="621,259,768,285"/>
 </map>

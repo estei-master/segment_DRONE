@@ -8,5 +8,6 @@ var telemeter_8c =
     [ "ucTelemeterTest", "telemeter_8c.html#a58fa0fc79822fa1115ad5ff60a9a9ea3", null ],
     [ "usTelemeterGetDist", "telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6", null ],
     [ "vTelemeterGetData", "telemeter_8c.html#ab4fff6ea13609ac80d79fdfeab2b472b", null ],
-    [ "vTelemeterInit", "telemeter_8c.html#ad678b2e6df6594950ddb7529f93ad777", null ]
+    [ "vTelemeterInit", "telemeter_8c.html#ad678b2e6df6594950ddb7529f93ad777", null ],
+    [ "pusADCConvertedValues", "telemeter_8c.html#ae092173f88c901ca8545d00d7309cc65", null ]
 ];

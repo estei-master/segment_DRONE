@@ -1,4 +1,5 @@
 <map id="vTelemeterGetData" name="vTelemeterGetData">
-<area shape="rect" id="node2" href="$telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6" title="usTelemeterGetDist" alt="" coords="187,5,325,32"/>
-<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="374,5,469,32"/>
+<area shape="rect" id="node2" href="$telemeter_8c.html#afa90e065b5e3087b7e0e87497330e0b6" title="usTelemeterGetDist" alt="" coords="187,31,325,57"/>
+<area shape="rect" id="node3" href="$telemeter_8c.html#a80c272944cbc38095f2363049a5d133e" title="ucTelemeterIdValid" alt="" coords="374,5,506,32"/>
+<area shape="rect" id="node4" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="555,31,650,57"/>
 </map>

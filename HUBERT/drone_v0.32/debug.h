@@ -72,33 +72,33 @@ associated with the task being selected to run on DAC1. */
 
 /* For queues (messages/semaphores/mutexes) */
 #define traceQUEUE_CREATE( pxNewQueue ) \
-		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, \
 				debugMODULE, "traceQUEUE_CREATE()", \
 				"Queue created successfully" )
 
 /* For queues (messages/semaphores/mutexes) */
 #define traceQUEUE_CREATE_FAILED() \
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0, \
 				debugMODULE, "traceQUEUE_CREATE_FAILED()", \
 				"Queue creation failed !" )
 
 /* For queues (messages/semaphores/mutexes take) */
 #define traceQUEUE_RECEIVE( pxQueue ) \
-		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, \
 				debugMODULE, "traceQUEUE_RECEIVE()", "Queue received" )
 
 #define traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue ) \
-		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, \
 				debugMODULE, "traceBLOCKING_ON_QUEUE_RECEIVE()", \
 				"Task blocking on queue (receive)" )
 
 /* For queues (messages/semaphores/mutexes give) */
 #define traceQUEUE_SEND( pxQueue ) \
-		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, \
 				debugMODULE, "traceQUEUE_SEND()", "Sending to queue" )
 
 #define traceBLOCKING_ON_QUEUE_SEND( pxQueue ) \
-		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, \
 				debugMODULE, "traceBLOCKING_ON_QUEUE_SEND()", \
 				"Task blocking on queue (send)" )
 
@@ -108,7 +108,7 @@ associated with the task being selected to run on DAC1. */
 				"traceTASK_CREATE()", "Task created successfully" )
 
 #define traceTASK_CREATE_FAILED() \
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0, \
 				debugMODULE, "traceTASK_CREATE_FAILED()", \
 				"Task creation failed !" )
 
@@ -125,7 +125,7 @@ associated with the task being selected to run on DAC1. */
 /** Macro used to check parameter consistency inside FreeRTOS */
 /* Triggered at tasks.c line 506 (alignment of the initialized stack) */
 #define configASSERT( x ) if( ( x ) == 0 ) \
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, \
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0, \
 				debugMODULE, "configASSERT()", "failed : " #x " == 0" )
 
 /******************************************************************************

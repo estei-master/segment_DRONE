@@ -1,3 +1,4 @@
 <map id="usTelemeterGetDist" name="usTelemeterGetDist">
-<area shape="rect" id="node2" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="193,5,287,32"/>
+<area shape="rect" id="node2" href="$telemeter_8c.html#a80c272944cbc38095f2363049a5d133e" title="ucTelemeterIdValid" alt="" coords="193,5,325,32"/>
+<area shape="rect" id="node3" href="$debug_8c.html#a2d3888037c45cc6599c5ab1dea029e02" title="ulDebugMsg" alt="" coords="374,31,469,57"/>
 </map>

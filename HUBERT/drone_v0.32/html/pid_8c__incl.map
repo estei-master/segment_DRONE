@@ -1,6 +1,6 @@
 <map id="pid.c" name="pid.c">
-<area shape="rect" id="node2" href="$pid_8h.html" title="pid.h" alt="" coords="321,80,372,107"/>
-<area shape="rect" id="node15" href="$pwm_8h.html" title="pwm.h" alt="" coords="397,80,456,107"/>
-<area shape="rect" id="node3" href="$common_8h.html" title="common.h" alt="" coords="345,155,428,181"/>
-<area shape="rect" id="node10" href="$debug_8h.html" title="debug.h" alt="" coords="294,229,361,256"/>
+<area shape="rect" id="node2" href="$pid_8h.html" title="pid.h" alt="" coords="459,80,509,107"/>
+<area shape="rect" id="node17" href="$pwm_8h.html" title="pwm.h" alt="" coords="534,80,593,107"/>
+<area shape="rect" id="node3" href="$common_8h.html" title="common.h" alt="" coords="483,155,565,181"/>
+<area shape="rect" id="node12" href="$debug_8h.html" title="debug.h" alt="" coords="294,229,361,256"/>
 </map>

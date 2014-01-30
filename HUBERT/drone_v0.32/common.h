@@ -15,6 +15,8 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_syscfg.h"
+#include "stm32f4xx_dma.h"
+#include "stm32f4xx_adc.h"
 #include "misc.h"
 
 /*****  Custom debugging header file, for UART and semihosting output ********/

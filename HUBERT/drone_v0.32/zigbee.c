@@ -8,7 +8,7 @@
 
 inline void vZigbeeInit( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----", 0,
 			MODULE, "vZigbeeInit()", "Does nothing ATM" );
 }
 
@@ -16,7 +16,7 @@ inline void vZigbeeInit( void )
 @return 0 if test successful, 1 otherwise */
 inline uint8_t ucZigbeeInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----", 0,
 			MODULE, "ucZigbeeInitTest()", "Does nothing ATM" );
 
 	return 0;

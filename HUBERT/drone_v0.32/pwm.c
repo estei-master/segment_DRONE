@@ -8,13 +8,13 @@
 
 inline void vPWMInit( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "----", 0,
 			MODULE, "vPWMInit", "Does nothing ATM" );
 }
 
 inline uint8_t ucPWMInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO", ( signed char * ) "----", 0,
 			MODULE, "ucPWMInitTest", "Does nothing ATM" );
 
 	return 0;

@@ -395,7 +395,7 @@ struct zigbeeData xLocZigbeeData;
 			&& ( xDroneState.eErrorMask != DRN_ERR_GPS_TOUT ) )
 	{
 		ulDebugMsg( xTaskGetTickCount(), "ERROR",
-				 ( signed char * ) "---", 0, MODULE, "main()",
+				 ( signed char * ) "----", 0, MODULE, "main()",
 				"Bad initialization of some critical peripheral !" );
 
 		/* We should add some tests there in case the peripheral eventually
@@ -427,7 +427,7 @@ struct zigbeeData xLocZigbeeData;
 	}
 
 	/* Binary semaphore used to wake up the flight control task */
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating xFlightCtrlSem" );
 	/* Same as vSemaphoreCreateBinary( xFlightCtrlSem ); with a semaphore
 	initialized as taken instead of free. */
@@ -435,7 +435,7 @@ struct zigbeeData xLocZigbeeData;
 			semSEMAPHORE_QUEUE_ITEM_LENGTH );
 	if( xFlightCtrlSem == NULL )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0,
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0,
 				MODULE, "main()", "xFlightCtrlSem creation failed !" );
 
 		/* Anonymous initialization error */
@@ -466,32 +466,32 @@ struct zigbeeData xLocZigbeeData;
 		}
 	}
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating prvDetectObstacleTask" );
 	xTaskCreate( prvDetectObstacleTask, ( signed char * ) "Obst",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneDETECT_OBSTACLE_PRIO, &xDetectObstacleHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating prvBatteryMonitoringTask" );
 	xTaskCreate( prvBatteryMonitoringTask,
 			( signed char * ) "Batt",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneBATTERY_MONITORING_PRIO, &xBatteryMonitoringHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating prvFlightCtrlTask" );
 	xTaskCreate( prvFlightCtrlTask, ( signed char * ) "Flt ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneFLIGHT_CTRL_PRIO, &xFlightCtrlHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating prvZigbeeReceiveTask" );
 	xTaskCreate( prvZigbeeReceiveTask, ( signed char * ) "Zig ",
 			configMINIMAL_STACK_SIZE, NULL,
 			droneZIGBEE_RECEIVE_PRIO, &xZigbeeReceiveHandle );
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Creating prvGPSReceiveTask" );
 
 	xTaskCreate( prvGPSReceiveTask, ( signed char * ) "GPS ",
@@ -505,7 +505,7 @@ struct zigbeeData xLocZigbeeData;
 			|| ( xBatteryMonitoringHandle == NULL )
 			|| ( xGPSReceiveHandle == NULL ) )
 	{
-		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0, MODULE,
+		ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0, MODULE,
 				"main()", "Tasks creation failed !" );
 
 		/* Unspecified initialization error */
@@ -552,10 +552,10 @@ struct zigbeeData xLocZigbeeData;
 	xDroneState.eFltState = STATE_GROUND_RDY;
 	/** @todo buzzer ready signal */
 
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE,
 			"main()", "Starting scheduler" );
 	vTaskStartScheduler();
-	ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "ERROR", ( signed char * ) "----", 0,
 			MODULE, "main()", "Scheduler returned !" );
 
 	/* If all is well, the scheduler will now be running, and the following
@@ -1336,7 +1336,7 @@ static inline void prvInitDroneConfig( void )
 	/* Drone state initialization */
 	xDroneState = xInitDroneState;
 
-	ulDebugMsg( 0, "INFO ", ( signed char * ) "---", 0, MODULE, "prvInitDroneConfig()",
+	ulDebugMsg( 0, "INFO ", ( signed char * ) "----", 0, MODULE, "prvInitDroneConfig()",
 				"xDroneConfig and xDroneState initialized to default value" );
 }
 
@@ -1352,7 +1352,7 @@ static inline void prvSetupHardware( void )
 	SystemCoreClockUpdate();
 
 	/* It cannot work : UART not yet initialized */
-	//ulDebugMsg( 0, "INFO ", ( signed char * ) "---", 0, MODULE, "prvSetupHardware()",
+	//ulDebugMsg( 0, "INFO ", ( signed char * ) "----", 0, MODULE, "prvSetupHardware()",
 	//		"MCU initialized" );
 }
 
@@ -1360,7 +1360,7 @@ static inline void prvSetupHardware( void )
 static inline void prvBatteryInit( void )
 {
 	/** @todo Implement at integration */
-	ulDebugMsg( 0, "TODO ", ( signed char * ) "---", 0, MODULE, "prvBatteryInit()",
+	ulDebugMsg( 0, "TODO ", ( signed char * ) "----", 0, MODULE, "prvBatteryInit()",
 				"Does nothing ATM" );
 }
 
@@ -1447,7 +1447,7 @@ static inline uint8_t prvBatteryValid( const uint32_t * const pulNewBattLvl )
 /** Transmits current configuration to the base */
 static inline void prvSendConfig( const struct droneConfig * const pxDroneConfig )
 {
-	ulDebugMsg( 0, "TODO ", ( signed char * ) "---", 0, MODULE,
+	ulDebugMsg( 0, "TODO ", ( signed char * ) "----", 0, MODULE,
 			"prvSendConfig()", "Does nothing ATM" );
 }
 
@@ -1810,7 +1810,7 @@ portTickType ulTimeElapsed;
 
 static inline uint8_t prvBatteryInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----",
 			0, MODULE, "prvBatteryInitTest()", "Does nothing ATM" );
 
 	return 0;
@@ -1930,7 +1930,7 @@ static inline void prvGetBatteryLvl( uint32_t *pulBatteryLvl )
 /** Reboot the MCU. DO NOT DO THIS WHILE FLYING ! */
 static inline void prvReboot( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---",
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----",
 			uxTaskPriorityGet( NULL ), MODULE,  "prvReboot()",
 			"Rebooting" );
 
@@ -1940,7 +1940,7 @@ static inline void prvReboot( void )
 /** Stops the FreeRTOS kernel and shutdowns the MCU */
 static inline void prvShutdown( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----",
 			uxTaskPriorityGet( NULL ), MODULE,  "prvShutdown()",
 			"Does nothing ATM" );
 

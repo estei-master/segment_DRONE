@@ -171,33 +171,33 @@ $(document).ready(function(){initNavTree('debug_8h_source.html','');});
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">/* For queues (messages/semaphores/mutexes) */</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="debug_8h.html#a62dcc27e040063ec72e174c985740f96">   74</a></span>&#160;<span class="preprocessor">#define traceQUEUE_CREATE( pxNewQueue ) \</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceQUEUE_CREATE()&quot;, \</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">                &quot;Queue created successfully&quot; )</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* For queues (messages/semaphores/mutexes) */</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="debug_8h.html#a390bc69caae7eeb326f24a5c97d41737">   80</a></span>&#160;<span class="preprocessor">#define traceQUEUE_CREATE_FAILED() \</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceQUEUE_CREATE_FAILED()&quot;, \</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">                &quot;Queue creation failed !&quot; )</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">/* For queues (messages/semaphores/mutexes take) */</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="debug_8h.html#a82b39aa722910a5e43793e882ded0faf">   86</a></span>&#160;<span class="preprocessor">#define traceQUEUE_RECEIVE( pxQueue ) \</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceQUEUE_RECEIVE()&quot;, &quot;Queue received&quot; )</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="debug_8h.html#a657997eddb8c89bef7157e74bac003e2">   90</a></span>&#160;<span class="preprocessor">#define traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue ) \</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceBLOCKING_ON_QUEUE_RECEIVE()&quot;, \</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">                &quot;Task blocking on queue (receive)&quot; )</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/* For queues (messages/semaphores/mutexes give) */</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="debug_8h.html#a5cfc9dd899c89966172cb329740f551a">   96</a></span>&#160;<span class="preprocessor">#define traceQUEUE_SEND( pxQueue ) \</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceQUEUE_SEND()&quot;, &quot;Sending to queue&quot; )</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="debug_8h.html#a9484f4523e4bec2ab2dc233f2556c3c5">  100</a></span>&#160;<span class="preprocessor">#define traceBLOCKING_ON_QUEUE_SEND( pxQueue ) \</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;INFO &quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceBLOCKING_ON_QUEUE_SEND()&quot;, \</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">                &quot;Task blocking on queue (send)&quot; )</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span></div>
@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('debug_8h_source.html','');});
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">                &quot;traceTASK_CREATE()&quot;, &quot;Task created successfully&quot; )</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="debug_8h.html#a82a6a366facc1fb8b0209bfe2e5ce546">  110</a></span>&#160;<span class="preprocessor">#define traceTASK_CREATE_FAILED() \</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">                debugMODULE, &quot;traceTASK_CREATE_FAILED()&quot;, \</span></div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">                &quot;Task creation failed !&quot; )</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"></span></div>
@@ -223,7 +223,7 @@ $(document).ready(function(){initNavTree('debug_8h_source.html','');});
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">/* Triggered at tasks.c line 506 (alignment of the initialized stack) */</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="debug_8h.html#a228c70cd48927d6ab730ed1a6dfbe35f">  127</a></span>&#160;<span class="preprocessor">#define configASSERT( x ) if( ( x ) == 0 ) \</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;---&quot;, 0, \</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">        ulDebugMsg( xTaskGetTickCount(), &quot;ERROR&quot;, ( signed char * ) &quot;----&quot;, 0, \</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">                debugMODULE, &quot;configASSERT()&quot;, &quot;failed : &quot; #x &quot; == 0&quot; )</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">/******************************************************************************</span></div>
@@ -246,7 +246,7 @@ $(document).ready(function(){initNavTree('debug_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="debug_8h.html">debug.h</a></li>
-    <li class="footer">Generated on Wed Jan 29 2014 16:54:41 for Drone hexacoptère, segment vol by
+    <li class="footer">Generated on Thu Jan 30 2014 14:21:59 for Drone hexacoptère, segment vol by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

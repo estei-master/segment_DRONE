@@ -16,7 +16,7 @@
 
 inline void vGPSInit( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----", 0,
 			MODULE, "vGPSInit", "Does nothing ATM" );
 }
 
@@ -24,7 +24,7 @@ inline void vGPSInit( void )
 @return 0 if test successful, 1 otherwise */
 inline uint8_t ucGPSInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0,
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----", 0,
 			MODULE, "ucGPSInitTest", "Does nothing ATM" );
 
 	return 0;

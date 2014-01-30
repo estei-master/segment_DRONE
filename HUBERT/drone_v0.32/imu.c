@@ -37,7 +37,7 @@ static inline void imu_receive_frame( void );
 /** Initializes the IMU */
 inline void vIMUInit( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "---", 0, MODULE, "vIMUInit()",
+	ulDebugMsg( xTaskGetTickCount(), "INFO ", ( signed char * ) "----", 0, MODULE, "vIMUInit()",
 			"Initializing IMU UART communication" );
 
 	imu_usart_init();
@@ -47,7 +47,7 @@ inline void vIMUInit( void )
 @return 0 if test successful, 1 otherwise. */
 inline uint8_t ucIMUInitTest( void )
 {
-	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "---", 0, MODULE, "ucIMUInitTest()",
+	ulDebugMsg( xTaskGetTickCount(), "TODO ", ( signed char * ) "----", 0, MODULE, "ucIMUInitTest()",
 			"Does nothing ATM" );
 
 	/** @todo Implement ucIMUInitTest() during integration */
