@@ -25,15 +25,14 @@ Fichiers :
 Intégré
 -
 
-* IMU (angles, partiellement)
+* IMU (angles, altitude)
+* Télémètres (à tester)
+* Batterie (à tester)
 
 À intégrer
 -
 
-* IMU (altitude)
 * GPS
-* Batterie
 * Gestion moteur
 * Communication ZigBee
 * Niveau RSSI ZigBee
-* Télémètres
