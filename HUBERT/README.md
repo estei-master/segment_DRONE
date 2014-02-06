@@ -36,3 +36,8 @@ Intégré
 * Gestion moteur
 * Communication ZigBee
 * Niveau RSSI ZigBee
+
+Fixme
+-
+
+* Tâche GPS, droneState utilisé avant récupération.
