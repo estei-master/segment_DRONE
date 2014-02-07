@@ -10,7 +10,7 @@
 /** Buffer for converted values */
 static volatile uint16_t pusADCConvertedValues[ 8 ];
 
-/** Range : 300 à 5000 (mm). If distance is lower/higher, values stick to the
+/** Range : 300 to 5000 (mm). If distance is lower/higher, values stick to the
 extremes. */
 static inline uint8_t prvTelemeterDistValid( const uint16_t * const pusDistance )
 {
